@@ -112,6 +112,8 @@ or downlaod zip into `./_theme_packages` and
 
 > 上网查后得知原来是 jeklly 默认 markdown 引擎 maruku 的问题，将引擎改为 rdiscount 即可。做法是修改 `_config.yml` 文件，在 pygments: true 上面添加一行 `markdown: rdiscount`
 
+同时, 在默认的 maruku 下, 在 gist 之后的文字有时候会显示不出来. 在改成 rdiscount 后, 就好了. 
+
 # Math/LaTeX #
 
 [reference 1](http://jiyeqian.github.com/2012/07/host-your-pages-at-github-using-jekyll/)

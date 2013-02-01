@@ -19,4 +19,10 @@ show line number
 
 	grep -n 'boss' file
 	
+# Diff #
+
+Compare 2 folders:
+
+	diff -bur folder1/ folder2/
+
 [xahlee](http://xahlee.info/UnixResource_dir/unix_shell_text_processing.html)
