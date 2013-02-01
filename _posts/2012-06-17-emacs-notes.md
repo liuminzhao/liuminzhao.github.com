@@ -83,3 +83,6 @@ reference: <http://www.gnu.org/software/emacs/manual/html_node/emacs/Rectangles.
 	ENTER: mark
 	M-n : insert number 
 	
+# Move #
+
+	M-x forward-whitespace

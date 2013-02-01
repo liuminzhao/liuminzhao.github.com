@@ -16,7 +16,7 @@ First let me show the screenshot:
 
 idea is  from <http://lhzhang.com/about.html> . I made a R code but not satisfied since it is too complicated. I believe there is simpler way to do that. 
 
-<script src="https://gist.github.com/3971075.js?file=email_translation.R"></script>
+<script src="https://gist.github.com/3971075.js"></script>
 
 Inspired by [roowe](http://www.iroowe.com/me_guestbook/), another example is by `openssl`:
 
