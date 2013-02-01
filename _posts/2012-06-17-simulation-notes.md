@@ -3,7 +3,6 @@ layout: post
 title: "simulation notes"
 description: ""
 category: 
-tags: []
 ---
 {% include JB/setup %}
 

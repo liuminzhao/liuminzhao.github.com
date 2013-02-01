@@ -3,7 +3,6 @@ layout: post
 title: "programmer notes"
 description: ""
 category: 
-tags: []
 ---
 {% include JB/setup %}
 

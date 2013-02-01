@@ -3,7 +3,6 @@ layout: post
 title: "statcomp2 notes"
 description: ""
 category: 
-tags: []
 ---
 {% include JB/setup %}
 
