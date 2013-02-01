@@ -2,7 +2,7 @@
 layout: post
 title: "emacs notes"
 description: ""
-category: []
+category: 
 tags: [emacs]
 ---
 {% include JB/setup %}
