@@ -199,3 +199,5 @@ check exist in a list
 
 	    C-c C-c
 		C-c | # region
+
+emacs for python <https://github.com/gabrielelanaro/emacs-for-python/>

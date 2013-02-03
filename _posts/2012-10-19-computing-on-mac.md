@@ -114,7 +114,11 @@ check for cpu
 check cpu usage, ordered by cpu, and list username, cpu, time, which command. 
 
 	top -o cpu -stats user,cpu,time,command
-	
+
+Standby vs hibernate (deep sleep):
+
+	sudo pmset -a standbydelay 42000
+
 # Your .profile #
 
 Make `ls` colorful

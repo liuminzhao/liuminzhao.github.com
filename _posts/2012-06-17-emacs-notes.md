@@ -86,3 +86,10 @@ reference: <http://www.gnu.org/software/emacs/manual/html_node/emacs/Rectangles.
 # Move #
 
 	M-x forward-whitespace
+
+# Scratch #
+
+	C-j : eval line
+	C-x b *scratch* RET : open scratch 
+	M-x text-mode 
+	M-x apropos-command -mode$ RET : search for mode 
