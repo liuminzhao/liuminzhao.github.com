@@ -45,6 +45,8 @@ three data types
 	else:
 		print
 
+	print "Hello" if True else "World"
+
 # function #
 
 	def fun(bill, param2):
@@ -82,6 +84,12 @@ base 10 to binary
 
 	x = bin(30)[2:]
 	int(x, 2)
+
+## Join List to String ##
+
+	teams = ["Packers", "49ers", "Ravens", "Patriots"]
+	print ", ".join(teams)
+	>>> 'Packers, 49ers, Ravens, Patriots'
 
 # Method #
 
@@ -136,6 +144,7 @@ strings
 	mydict = {'a': 1, 'b':2, 'c':3}
 	sorted(.., key = lambda key: mydict[key])
 	number = ''.join(sorted(hand[0:14:3], key = carddict.get))
+
 
 
 
@@ -201,3 +210,87 @@ check exist in a list
 		C-c | # region
 
 emacs for python <https://github.com/gabrielelanaro/emacs-for-python/>
+
+* install ipython
+* install nose
+* install readline
+
+# Debug #
+
+- `c` : continue to breakpoint
+- `n` : next
+- `p` : watch variable 
+- `w` and `u`, `d`
+
+# Tips #
+
+## Change Var ##
+
+	x, y = y, x
+
+## Compare ##
+
+	if 3 > x > 1:
+
+## Simultaneous Loop ##
+
+	nfc = ["Packers", "49ers"]
+	afc = ["Ravens", "Patriots"]
+	for teama, teamb in zip(nfc, afc):
+		print teama + " vs. " + teamb
+	>>>; Packers vs. Ravens
+	>>>; 49ers vs. Patriots
+
+## Enumerate ##
+
+	teams = ["Packers", "49ers", "Ravens", "Patriots"]
+	for index, team in enumerate(teams):
+		print index, team
+	>>> 0 Packers
+	>>> 1 49ers
+	>>> 2 Ravens
+	>>> 3 Patriots
+
+## Dict ##
+
+	teams = ["Packers", "49ers", "Ravens", "Patriots"]
+	print {key: value for value, key in enumerate(teams)}
+	>>> {'49ers': 1, 'Ravens': 2, 'Patriots': 3, 'Packers': 0}
+	
+## Initial ##
+
+	item = [0]*3  # [0, 0, 0]
+	
+## Subset in List ##
+
+	x[:3] # first three
+	x[3:] # last three
+	x[::2] # odds item
+	x[1::2] # even item
+	
+## Counter ##	
+	
+	from collections import Counter
+	print Counter("hello")
+	>>> Counter({'l': 2, 'h': 1, 'e': 1, 'o': 1})
+	
+## Itertools ##
+	
+	from itertools import combinations
+	teams = ["Packers", "49ers", "Ravens", "Patriots"]
+	for game in combinations(teams, 2):
+	print game
+	>>> ('Packers', '49ers')
+	>>> ('Packers', 'Ravens')
+	>>> ('Packers', 'Patriots')
+	>>> ('49ers', 'Ravens')
+	>>> ('49ers', 'Patriots')
+	>>> ('Ravens', 'Patriots')
+	
+## Other ##
+	
+	"fizz"[x%3*4::]
+	
+# Reference #
+
+1. <http://maxburstein.com/blog/python-shortcuts-for-the-python-beginner/>
