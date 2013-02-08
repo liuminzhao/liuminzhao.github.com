@@ -86,6 +86,8 @@ reference: <http://www.gnu.org/software/emacs/manual/html_node/emacs/Rectangles.
 # Move #
 
 	M-x forward-whitespace
+	M-< # begin
+	M-> # end
 
 # Scratch #
 
@@ -93,3 +95,9 @@ reference: <http://www.gnu.org/software/emacs/manual/html_node/emacs/Rectangles.
 	C-x b *scratch* RET : open scratch 
 	M-x text-mode 
 	M-x apropos-command -mode$ RET : search for mode 
+
+# Help #
+
+	C-h f # function
+	C-h v # variable
+	C-h w # keyboard

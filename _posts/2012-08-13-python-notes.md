@@ -224,6 +224,8 @@ emacs for python <https://github.com/gabrielelanaro/emacs-for-python/>
 
 # Tips #
 
+Do not use `*` to import all. Use `import numpy as np` . 
+
 ## Change Var ##
 
 	x, y = y, x
@@ -290,7 +292,112 @@ emacs for python <https://github.com/gabrielelanaro/emacs-for-python/>
 ## Other ##
 	
 	"fizz"[x%3*4::]
+
+# Python for Scientific Computation #
+
+Book <http://hyry.dip.jp:8000/pydoc/index.html>
+
+## Software ##
+
+- numpy
+- scipy
+- sympy
+
+## Numpy ##
+
+	import numpy as np
 	
+ndarray is much faster than array or list in python.
+
+Create:
+
+	c = np.array([[1, 2, 3, 4],[4, 5, 6, 7], [7, 8, 9, 10]])
+	
+Size
+
+	c.shape
+	
+Reshape : do not change order,  just change shape
+
+	c.shape = 4, 3
+	c.shape = 2, -1 # auto change col dim
+	d = c.reshape((2, 2)) 
+	
+d and c share the same memory. 
+	
+`arange`:
+
+	>>> np.arange(0,1,0.1)
+	array([ 0. ,  0.1,  0.2,  0.3,  0.4,  0.5,  0.6,  0.7,  0.8,  0.9])
+
+`linspace`:
+
+	np.linspace(0, 1, 12)
+	
+`logspace` for dengbi:
+
+	np.logspace(0, 2, 20)
+
+Multi-level array:
+
+	a[4:, 4:]
+
+`struct`
+
+	import numpy as np
+	persontype = np.dtype({
+    'names':['name', 'age', 'weight'],
+    'formats':['S32','i', 'f']})
+	a = np.array([("Zhang",32,75.5),("Wang",24,65.2)],
+    dtype=persontype)
+
+### ufunc ###
+
+	np.sin(x)
+	np.sin(x, x) 
+	np.add
+	subtract
+	multiply
+	divide
+	truedivide
+	floor divide
+	negative
+	power
+	remainder/mod
+	
+	add.reduce
+	add.accumulate(, axis = )
+	
+	np.multiply.outer([1,2,3,4,5],[2,3,4])
+	array([[ 2,  3,  4],
+       [ 4,  6,  8],
+       [ 6,  9, 12],
+       [ 8, 12, 16],
+       [10, 15, 20]])
+
+### Matirx ###
+
+	a = np.matrix
+	a**-1
+	np.dot(a, b)
+	np.alltrue
+	np.inner
+	np.outer
+	np.random.rand(10, 10)
+	np.linalg.solve(a, b)
+
+## Scipy ##
+
+### Least Square ###
+
+	from scipy.optimize import leastsq
+
+# Time #
+
+	import time
+	start = time.clock()
+	time.clock() - start 
+
 # Reference #
 
 1. <http://maxburstein.com/blog/python-shortcuts-for-the-python-beginner/>
