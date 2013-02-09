@@ -8,3 +8,8 @@ Thumbs.db
 
 .rbenv-version
 .rvmrc
+/_backup/categories.html
+/_backup/pages.html
+/_layouts/default.html.bk
+/_layouts/post.html.bk
+/css/style.css
