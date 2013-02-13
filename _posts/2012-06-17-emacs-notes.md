@@ -101,3 +101,10 @@ reference: <http://www.gnu.org/software/emacs/manual/html_node/emacs/Rectangles.
 	C-h f # function
 	C-h v # variable
 	C-h w # keyboard
+
+# Flyspell #
+
+correction: 
+
+	M-$ 
+	

@@ -137,3 +137,6 @@ or
 	$$
 	\alpha
 	$$
+
+supported : <http://docs.mathjax.org/en/latest/tex.html>
+

@@ -13,12 +13,18 @@ Python Notes
 # variable #
 
 	my_variable=10
+
+Global:
+	
+	_a = 1
 	
 three data types 
 
 * integers
 * floats
 * booleans : `True` , `False`
+
+	type(a)
 
 # print #
 
@@ -47,6 +53,9 @@ three data types
 
 	print "Hello" if True else "World"
 
+	x = 3 if (y == 1) else 2
+	x = ((y == 1) ? 3 : 2)
+
 # function #
 
 	def fun(bill, param2):
@@ -70,7 +79,8 @@ three data types
 	book="book"
 	\'
 	"MONTY"[4]
-	
+	'='*10 
+
 	name= [one.strip('"') for one in f.readline().split(",")]
 
 	ord(char) 
@@ -113,6 +123,8 @@ strings
 	for x in range(10):
 		tmp=stat
 		break
+	else: 
+		bla
 
 	while true:
 		statement
@@ -135,7 +147,8 @@ strings
 	f.read()
 	for line in f:
 		print line
-		
+	else: 
+		bla
 	f.close()
 
 # sort #
@@ -159,6 +172,13 @@ check exist in a list
 	
 	if x in prime 
 	
+	
+# Tuple #
+
+protected. 
+
+	a = ("a", 'b')
+
 # unique #
 	
 	list(set(x))
@@ -208,6 +228,7 @@ check exist in a list
 
 	    C-c C-c
 		C-c | # region
+		C-M-x # eval function
 
 emacs for python <https://github.com/gabrielelanaro/emacs-for-python/>
 
@@ -418,11 +439,46 @@ Multi-level array:
 	from scipy import integrate
 	integrate.quad
 
+## Sympy ##
+
+	sympy.factorint
+	sympy.divisors
+
 # Time #
 
 	import time
 	start = time.clock()
 	time.clock() - start 
+
+# Format #
+
+	print "%s, %d" % (str1, num)
+
+# package and module #
+
+package start with `__init__.py`
+
+# gcd #
+
+	from fractions import gcd
+
+# Speed #
+
+- use `dict` than `list`, since dict use hash table
+- use `set` other than `list` for loop in list
+- lazy if 
+- `join` other than `+`
+- print `%s` other than `+`
+- `x , y = y, x`
+- `xrange` other than `range`
+- no global
+- `x < y < z`
+- `while 1` other than `while True`
+- `cython` is 100 time faster
+
+# profile #
+
+	import profile
 
 # Reference #
 
