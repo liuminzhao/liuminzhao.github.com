@@ -297,7 +297,9 @@ based on p(y,r|$\omega$) , instead of p(y|$\theta$). While for ignorable data, b
 - sensitivity for UN-verifiable missing assumption
 - incorporate subjective belief
 
-$p(ymis|yobs, r, \omega_{E})$
+## Pattern Mixture Model ##
+
+$p(y, r | \alpha) = p(y |r,)p(r) = p(ymis|yobs, r)p(yobs|r) p(r)$
 
 ## Sensitivity Analysis ##
 
@@ -305,10 +307,12 @@ $p(ymis|yobs, r, \omega_{E})$
 - exam inference across range
 - assign appropriate prior
 - prefer mixture model than selection model
+- freq: fix $\delta$ and see how inference change with $\delta$
+- Bayesian: specify priors on $\delta$ based on the belief of missing mechanism. 
 
 Examples
 
-## Specify Priors ##
+## Spcify Priors ##
 
 - MAR with no uncertainty
 - MAR with uncertainty

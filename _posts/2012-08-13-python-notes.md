@@ -42,6 +42,11 @@ three data types
 	today = datetime.date.today()
 	today - datetime.timedelta(days=today.weekday())
 
+# Time #
+
+	import time
+	time.time()
+
 # Conditions #
 
 	if 8<9 :
@@ -158,7 +163,7 @@ strings
 	sorted(.., key = lambda key: mydict[key])
 	number = ''.join(sorted(hand[0:14:3], key = carddict.get))
 
-
+	sorted[(a, b)]
 
 
 # list #
@@ -280,6 +285,10 @@ Do not use `*` to import all. Use `import numpy as np` .
 	print {key: value for value, key in enumerate(teams)}
 	>>> {'49ers': 1, 'Ravens': 2, 'Patriots': 3, 'Packers': 0}
 	
+keys:
+
+	dict.keys()
+	
 ## Initial ##
 
 	item = [0]*3  # [0, 0, 0]
@@ -385,6 +394,7 @@ Multi-level array:
 	negative
 	power
 	remainder/mod
+	np.cumsum
 	
 	add.reduce
 	add.accumulate(, axis = )
@@ -409,9 +419,28 @@ Multi-level array:
 
 ## Scipy ##
 
-### Least Square ###
+### Least Square and Plot###
 
 	from scipy.optimize import leastsq
+	import numpy as np
+	import math
+	def res(p, y, x):
+    theta0, theta1 = p
+    return y - theta0*math.e**(-theta1*x)
+	x = np.arange(1, 8)
+	y = [0.1024,0.08471,0.07525,0.06275,0.06131,0.06047,0.05736]
+	from scipy.optimize import leastsq
+	p0 = [0.1, 0]
+	plsq = leastsq(res, p0, args = (y, x))
+	print plsq[0]
+
+	import matplotlib.pyplot as plt
+	def pevel(x, p):
+    return p[0]*math.e**(-p[1]*x)
+	plt.plot(x, pevel(x, plsq[0]), x, y)
+	plt.legend(['ft', 'true'])
+	plt.show()
+
 
 ### fmin ###
 
@@ -439,46 +468,48 @@ Multi-level array:
 	from scipy import integrate
 	integrate.quad
 
-## Sympy ##
 
-	sympy.factorint
-	sympy.divisors
+	import PIL
+	im = Image.open("lena.png")
+	im.show()
+	im.size
+	im.getpixel()
 
-# Time #
+# Pickel #
 
-	import time
-	start = time.clock()
-	time.clock() - start 
+	import pickle
+	pickle.load(f)
 
-# Format #
+# Lambda function #
 
-	print "%s, %d" % (str1, num)
+	#define function in variable then call
+	g = lambda x: x*2
+	g(3)
+	skip variable, just call
+	(lambda x: x*2)(3)
 
-# package and module #
+# Random #
 
-package start with `__init__.py`
+	import random
+	random.randint(a, b)
+	import numpy.random
+	npr.random_integers # much faster than random module
 
-# gcd #
+# Fast Way to Generator Primes #
 
-	from fractions import gcd
+From stackoverflow: <http://stackoverflow.com/questions/2068372/fastest-way-to-list-all-primes-below-n-in-python>
 
-# Speed #
+	def primesfrom2to(n):
+    """ Input n>=6, Returns a array of primes, 2 <= p < n """
+    sieve = np.ones(n/3 + (n%6==2), dtype=np.bool)
+    for i in xrange(1,int(n**0.5)/3+1):
+        if sieve[i]:
+            k=3*i+1|1
+            sieve[       k*k/3     ::2*k] = False
+            sieve[k*(k-2*(i&1)+4)/3::2*k] = False
+    return np.r_[2,3,((3*np.nonzero(sieve)[0][1:]+1)|1)]
 
-- use `dict` than `list`, since dict use hash table
-- use `set` other than `list` for loop in list
-- lazy if 
-- `join` other than `+`
-- print `%s` other than `+`
-- `x , y = y, x`
-- `xrange` other than `range`
-- no global
-- `x < y < z`
-- `while 1` other than `while True`
-- `cython` is 100 time faster
 
-# profile #
-
-	import profile
 
 # Reference #
 
