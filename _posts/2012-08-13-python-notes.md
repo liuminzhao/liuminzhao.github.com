@@ -120,7 +120,7 @@ strings
 
 	import itertools
 	x = list(itertools.permutations([1,2,3]))
-
+	list(itertools.product(*index))
 
 
 # loop #

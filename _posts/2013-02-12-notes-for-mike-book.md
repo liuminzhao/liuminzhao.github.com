@@ -262,6 +262,12 @@ Table here.
 - linear link: $\beta = \sum \phi_s\beta^{s}$
 - nonlinear link: $\beta = \sum_{s} \partial{1}{x} g^{-1}(x\beta^{s}) \phi_{s}(x)$, when $\phi_{s}(x)$ does not depend on x.
 
+So when dealing with mixture model with covariates, be sure to check if 
+
+1. mean is linear in covariates (identical link or something) 
+2. missingness depends on covariates: $r|x$
+3. covariates effects are time varying
+
 ## Shared Parameter Model ##
 
 $y |b$ is independent with $r|b$
