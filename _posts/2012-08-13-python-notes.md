@@ -13,7 +13,7 @@ Python Notes
 # variable #
 
 	my_variable=10
-
+	
 Global:
 	
 	_a = 1
@@ -156,6 +156,12 @@ strings
 		bla
 	f.close()
 
+Use `with`, 
+
+    with open('foo') as myfile:
+	    print myfile.closed
+
+
 # sort #
 
 	list.sort()
@@ -241,6 +247,11 @@ emacs for python <https://github.com/gabrielelanaro/emacs-for-python/>
 * install nose
 * install readline
 
+Jedi <https://github.com/tkf/emacs-jedi>:
+
+	M-x list-package
+	
+
 # Debug #
 
 - `c` : continue to breakpoint
@@ -284,6 +295,8 @@ Do not use `*` to import all. Use `import numpy as np` .
 	teams = ["Packers", "49ers", "Ravens", "Patriots"]
 	print {key: value for value, key in enumerate(teams)}
 	>>> {'49ers': 1, 'Ravens': 2, 'Patriots': 3, 'Packers': 0}
+	
+	teams['49ers']
 	
 keys:
 
@@ -371,6 +384,10 @@ d and c share the same memory.
 Multi-level array:
 
 	a[4:, 4:]
+
+Append:
+
+    np.append([2], primes)
 
 `struct`
 

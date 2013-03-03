@@ -63,6 +63,16 @@ LaTeX notes
 		git latexdiff file
 		git latexdiff --cached file
 
+# Emacs #
+
+## Doc ##
+
+doc-view-mode with auto-revert-mode ?
+
+## format ##
+
+    C-c C-q C-s
+
 # Tips # 
 
 ## Using LaTeX to Split PDF Files ## 
