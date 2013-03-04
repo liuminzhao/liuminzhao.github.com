@@ -293,7 +293,8 @@ cons:
 
 ## Model Selection in Nonignorable Models ##
 
-based on p(y,r|$\omega$) , instead of p(y|$\theta$). While for ignorable data, based on p(y|$\theta$)
+based on p(y,r|$\omega$) , instead of p(y|$\theta$). While for
+ignorable data, based on p(y|$\theta$)
 
 - DIC : can be obtained in winbugs
 - PPL: posterior predictive checks

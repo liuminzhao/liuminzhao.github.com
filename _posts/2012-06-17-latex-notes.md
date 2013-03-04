@@ -69,9 +69,33 @@ LaTeX notes
 
 doc-view-mode with auto-revert-mode ?
 
+## Font ##
+
+`C-c C-f` + 
+
+    C-e : \emph
+	C-b : bold
+	C-c : textsc
+	C-i : textit
+	C-t : texttt
+
+`C-u C-c C-f C-b` : change the current font to ...
+
 ## format ##
 
     C-c C-q C-s
+	M-q
+	
+## Reftex ##
+
+    C-c = : reftex toc
+	C-c [ : insert citation
+	C-c ( : label
+	C-c ) : add reference  = refe
+
+## Environments ##
+
+    C-c ] : close current environment
 
 # Tips # 
 
