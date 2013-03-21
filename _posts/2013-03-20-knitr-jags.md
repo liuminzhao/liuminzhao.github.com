@@ -1,3 +1,12 @@
+---
+layout: post
+title: "Show How to Make Reproducible Homework with Knitr and Jags"
+description: ""
+category: 
+tags: [R]
+---
+{% include JB/setup %}
+
 Show How to Make Reproducible Homework with Knitr and Jags
 ==========
 
