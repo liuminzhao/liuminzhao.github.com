@@ -97,6 +97,20 @@ doc-view-mode with auto-revert-mode ?
 
     C-c ] : close current environment
 
+## Preview under Mac ##
+
+<http://tex.stackexchange.com/questions/28458/preview-latex-in-emacs-auctex-empty-boxes>
+
+    Preview -> Customize -> Browse Options -> Preview GS -> options -> del-dSAFER
+
+`C-x C-s` to save and reload. 
+
+## Latex-pretty-symbols ##
+
+    M-x latex-unicode-simplified
+	
+<https://bitbucket.org/mortiferus/latex-pretty-symbols.el>
+
 # Tips # 
 
 ## Using LaTeX to Split PDF Files ## 

@@ -259,6 +259,33 @@ Jedi <https://github.com/tkf/emacs-jedi>:
 - `p` : watch variable 
 - `w` and `u`, `d`
 
+# Plot #
+ 
+    import pylab
+	x = numpy.linspace(-1, 1, 50)
+	pylab.plot(x, f(x), result, pow3(result), 'ro')
+	pylab.grid(b = 1)
+	pylab.show()
+
+# Use R function in Python #
+
+    easy_install rpy2
+	import rpy2.robjects as robjects
+	r = robjects.r
+	dnorm = r.dnorm
+	
+calling R function returns a R object, need to turn it to `numpy.array`
+
+Also need to create R vectors:
+
+    res = robjects.StrVector(['abc', 'def'])
+    res = robjects.IntVector([1, 2, 3])
+	res = robjects.FloatVector([1.1, 2.2, 3.3])
+	
+then can use
+
+    dnorm(res)
+	
 # Tips #
 
 Do not use `*` to import all. Use `import numpy as np` . 
@@ -461,7 +488,11 @@ Append:
 
 ### fmin ###
 
-### fsolve ###
+### fsolve for finding root or zero of a function###
+
+    from scipy.optimize import fsolve
+	pow3 = lambda x : x**3
+	result = fsolve(pow3, 10) # starting point
 
 ### Spline ###
 
