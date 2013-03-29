@@ -107,6 +107,19 @@ use `exit` to exit loop
 	write(10, *) B 
 	close(10)
 
+# PROGRAM #
+
+    program name
+	declaration
+	statements
+	stop
+	end
+
+# Compile #
+
+    gfortran(f77) test.f -o test.out
+	./test.out
+
 # FUNCTION #
 
 1. function has a type
