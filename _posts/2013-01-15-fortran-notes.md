@@ -73,6 +73,8 @@ tags: [fortran]
 	    statements
 	end do
 	
+use `exit` to exit loop
+	
 # MATH #	
 	
 	**: exponential
