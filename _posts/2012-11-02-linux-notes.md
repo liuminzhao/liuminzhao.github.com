@@ -27,6 +27,12 @@ Compare 2 folders:
 
 [xahlee](http://xahlee.info/UnixResource_dir/unix_shell_text_processing.html)
 
+# Screen #
+
+    c: create
+	C-A n: next
+	p: previous
+	
 # Regex #
 
 ## Syntax ##
