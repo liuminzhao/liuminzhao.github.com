@@ -83,7 +83,7 @@ where `Rpackages` is the folder I make to install R packages. Now you should be 
 
 ** Aquamacs
 
-** Emacs Mac Port
+** Emacs Mac Port:  `sudo port install appname`
 
 ** homebrew
 
