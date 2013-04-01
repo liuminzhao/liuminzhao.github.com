@@ -12,7 +12,7 @@ GGPLOT2 Notes
 
 Two main functions:
 
-- `qplot()` 
+- `qplot()`  : quick plot
 - `ggplot()` 
 
 Usage:
