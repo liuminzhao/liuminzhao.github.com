@@ -11,6 +11,11 @@ tags: [git]
 
 	git merge old new
 	
+or 
+
+    git checkout master
+	git merge branch
+	
 # rebase #
 
 similar to `merge`, but put forward and forma a linear relation
