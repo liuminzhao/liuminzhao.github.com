@@ -57,11 +57,11 @@ tags: [fortran]
 
     if (x .lt. 0) then
 	   statements
-	elseif (logical) then
+	else if (logical) then
 	   statements2
 	else
 	   statements3
-	endif
+	end if
 
 # LOOP #
 
