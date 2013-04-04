@@ -27,6 +27,49 @@ Compare 2 folders:
 
 [xahlee](http://xahlee.info/UnixResource_dir/unix_shell_text_processing.html)
 
+# Crontab #
+
+Schedule a routine background job at a specific time 
+
+    crontab -l : list
+	crontab -e : edit
+
+Format:
+
+    MIN HOUR DOM MON DOW CMD 
+	0-59 0-23 1-31 1-12 0-6 
+	30 08 10 06 * /home/ramesh/full-backup
+	00 11,16 * * * /home/ramesh/bin/incremental-backup : twice a day
+	00 09-18 * * * /home/ramesh/bin/check-db-status : working hour
+	00 09-18 * * 1-5 /home/ramesh/bin/check-db-status : work day working hour
+	* * * * * CMD : every minute
+	
+Others:
+
+1. When you specify */5 in minute field means every 5 minutes.
+2. When you specify 0-10/2 in minute field mean every 2 minutes in the first 10 minute.
+3. Thus the above convention can be used for all the other 4 fields.
+
+    */10 * * * * /home/ramesh/check-disk-space : every 10 min
+
+Email:
+
+Put 
+    
+	MAILTO="email@domain.com"
+	
+on the top
+
+Change default editor:
+
+One time:
+
+    EDITOR=nano crontab -e
+	
+Ever:
+
+    export EDITOR=nano
+
 # Screen #
 
     c: create
