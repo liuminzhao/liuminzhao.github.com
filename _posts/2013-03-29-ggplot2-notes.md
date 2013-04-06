@@ -62,7 +62,7 @@ Usage:
 	+layer(geom="point")
 	+geom_point(color = "blue")
 	+geom_line()
-	
+	+ geom_abline(intercept = a, slope = b)
 	
 	
 # Save #
