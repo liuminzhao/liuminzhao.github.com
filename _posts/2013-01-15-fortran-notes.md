@@ -158,6 +158,33 @@ Subroutine has `RETURN`
 	
 `call mysub`
 
+# Progress Bar #
+
+Revised from <http://thelazycatholic.wordpress.com/2010/08/19/progress-bar-in-fortran/> 
+
+      subroutine progress(j, n)
+ 
+      implicit none
+      integer(kind=4) :: j,k,n
+      character(len=18) :: bar="\r???% |          |"
+ 
+      ! updates the fraction of calculation done
+      write(unit=bar(2:4),fmt="(i3)") 100*j/n
+      do k = 1, j*10/n
+         bar(7+k:7+k)="*"
+      enddo
+ 
+      ! print the progress bar.
+      write(*,'(a)',advance='no') bar
+ 
+      return
+      end
+
+then call from main function:
+
+    call progress(iter, niter)
+
+
 # Reference #
 
 1. <http://www.stanford.edu/class/me200c/tutorial_77/>
