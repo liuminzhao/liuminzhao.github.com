@@ -25,6 +25,16 @@ Compare 2 folders:
 
 	diff -bur folder1/ folder2/
 
+Two column 
+
+	diff -y
+
+or `colordiff`
+
+	colordiff -y f1 f2 | less
+
+`less` for browsing slowly.
+
 [xahlee](http://xahlee.info/UnixResource_dir/unix_shell_text_processing.html)
 
 # Crontab #
@@ -97,3 +107,34 @@ Ever:
 	+: at least one {1,}
 	? : once or none {0,1}
 	{m,n}: m-n times
+
+# Shell #
+
+<http://cloudbbs.org/forum.php?mod=viewthread&tid=13681>
+
+100 Most used :
+
+- `echo "aa" > test.txt` 
+- `du -ah` for size , `du -sh` the sum of size
+- `echo '1+2' | bc -l` : for math
+- `uname -a` : kernel detail
+- `time command`: time for command
+- `ls -lrt`: sort by time 
+- `history -c`: clear history
+- `tree`: show tree
+- `echo $[5*5]` : math
+- `free -m` : show memory
+- `uptime` : how long the computer has run
+- `export`: show all the env variable
+- `echo $PATH`: show single variable
+- `clear`
+- `cmp file1 file2`: compare
+- `cal` : calendar
+- `echo "AaDCbd23" | tr "[A-Z]" "a-z"` : upper case to lower case, 
+- `tr -c b-d =`: replace letters other than b-d by `=`
+- `bc`: go to math
+- `last` : list record for login
+- `paste -sd '|||\n' test` : change every 4 lines to 1 line and use `|` to separate
+- `wget -c` : continiously download
+- `touch test.txt` 
+
