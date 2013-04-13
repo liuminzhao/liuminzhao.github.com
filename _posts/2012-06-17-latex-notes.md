@@ -131,3 +131,34 @@ Suppose your source pdf is source.pdf, you wanna draw the 2nd and 4th page from 
 2. <http://tug.org/PSTricks/main.cgi?file=Examples/Logos/logos>
 3. <http://www.texample.net/tikz/examples/pgf2-titlepage/>
 4. <http://www.ctan.org/tex-archive/info/latex-samples/TitlePages>
+
+# Break Long Equation #
+
+1. <http://stackoverflow.com/questions/1578127/how-do-i-break-a-long-equation-over-lines>
+2. <http://tex.stackexchange.com/questions/22573/how-can-i-tell-auctex-that-breqn-is-a-math-environment>
+
+    \documentclass{article}
+	\usepackage{breqn}
+	\begin{document}
+	\begin{dmath}
+	f(n)-f(0) = A(n)-B(n)-C(n)-D(n)\cdot d-\left(A(0)-B(0)-C(0)-D(0)\cdot d\right)
+          = A(n)-0-X-D(n)\cdot d-\left(0-0-0-0\right)
+          = A(n)-X-D(n)\cdot d
+    \end{dmath}
+	\end{document}
+
+In order to turn on math mode in `dmath` environment:
+
+    (add-hook 'LaTeX-mode-hook 'add-my-latex-environments) 
+	(defun add-my-latex-environments () 
+	(LaTeX-add-environments 
+    '("dmath" LaTeX-env-label))) 
+    ;; Code I added to make syntax highlighting work in Auctex 
+    (custom-set-variables 
+	'(font-latex-math-environments (quote  
+    ("display" "displaymath" "equation" "eqnarray" "gather" "multline"  
+    "align" "alignat" "xalignat" "dmath"))) 
+	'(TeX-insert-braces nil)) ;;Stops putting {} on argumentless commands to "save" whitespace 
+	;; Additionally, reftex code to recognize this environment as an equation 
+	(setq reftex-label-alist 
+	'(("dmath" ?e nil nil t))) 
