@@ -33,3 +33,8 @@ similar to `merge`, but put forward and forma a linear relation
 	git revert HEAD # make a new commit, but record the change back to HEAD
 	
 	
+# Checkout #
+
+Checkout specific file from other branch
+
+    git checkout master -- file
