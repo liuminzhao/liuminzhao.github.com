@@ -10,6 +10,8 @@ tags: [ggplot2]
 GGPLOT2 Notes
 ==========
 
+# Basic #
+
 Two main functions:
 
 - `qplot()`  : quick plot
