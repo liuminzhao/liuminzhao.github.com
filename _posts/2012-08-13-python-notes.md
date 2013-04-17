@@ -200,7 +200,8 @@ protected.
 	"""fsafdaf"""
 	
 # Math #
-	
+
+* divide: `//`
 * expo : `**`
 * mod `%`
 * equal `==`
