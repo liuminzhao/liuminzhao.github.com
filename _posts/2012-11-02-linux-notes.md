@@ -138,3 +138,6 @@ Ever:
 - `wget -c` : continiously download
 - `touch test.txt` 
 
+# Trick #
+
+Yoda: `if ('blue' == col)`

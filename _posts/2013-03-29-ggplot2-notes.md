@@ -69,4 +69,28 @@ Usage:
 	
 # Save #
 
-    ggsave("LIBMFacetsWithTrend.jpg")
+    ggsave("LIBMFacetsWithTrend.jpg", width = 6, height = 4)
+
+# ggplot2 #
+
+<https://speakerdeck.com/karthik/introduction-to-ggplot2>
+
+never use `qplot`
+
+    ggplot(data, aes(x = x, y = y)) + geom_line()
+	
+# aes #
+
+    aes(shape = x)
+
+# density #
+
+    geom_density()
+	geom_line(stat = "density")
+
+## smooth ##
+
+    + geom_smooth(method = "lm")
+
+
+
