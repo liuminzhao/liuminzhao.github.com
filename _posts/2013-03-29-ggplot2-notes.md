@@ -22,16 +22,28 @@ Usage:
 ## Histogram ##
 
     qplot(x,main = "")
+	ggplot(data, aes(x)) + geom_histogram(binwidth = , color = , fill = )
 	
 ## Scatterplot ##
 
     qplot(x, y, log = "xy", color=..)
+	ggplot(data, aes(x = , y = , color = )) + geom_point()
 	
 ## Boxplot ##
 
     qplot(x, y)
 	qplot(x, y, geom = "boxplot")
+	ggplot(data, aes(factor(race), y)) + geom_boxplot()
 	
+## Line ##
+
+    ggplot(data, aes(x, y)) + geom_line()
+
+## Density ##
+
+    ggplot(data, aes(y)) + geom_density(fill = 'blue')
+	 + geom_line(stat = "density")
+
 # Geom #	
 	
 	geom = "bar"
@@ -93,4 +105,7 @@ never use `qplot`
     + geom_smooth(method = "lm")
 
 
+# Arrange #
 
+    library(gridExtra)
+	sidebysideplot <- grid.arrange(plot1, plot2, ncol=2)
