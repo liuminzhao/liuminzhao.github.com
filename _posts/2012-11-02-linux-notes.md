@@ -101,6 +101,35 @@ Ever:
 	\w: [a-zA-Z0-9_]
 	\W : [^a-zA-Z0-9_]
 
+## Example ##
+
+    [Nn]ick
+	[a-c]
+	. = [-.?+%$A-Za-z0-9...]  # [] means pick just one
+
+## Alternation ##
+
+    a|b|c = [a-c]
+
+## Grouping ##
+
+    0abc+0 :
+	0(abc)+0
+
+## back reference ##
+
+    Set(?:Value)?
+
+## Positive and Negative Lookhead  ##
+
+    q(?!u) : negative
+	q(?=u) : positive
+
+## Lookbehind ##
+
+    (?<!a)b : not preceded by a
+	(?<=text)b: 
+
 ## Repeating ##
 
 	*: zero or more {0,}

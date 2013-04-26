@@ -171,6 +171,16 @@ Use `with`,
 
 	sorted[(a, b)]
 
+# Area #
+
+Triangle area:
+
+    def area2(a, b, c):
+    ax, ay = a
+    bx, by = b
+    cx, cy = c
+    return (bx - ax)*(cy - ay) - (cx - ax)*(by - ay)
+
 
 # list #
 
@@ -558,6 +568,29 @@ From stackoverflow: <http://stackoverflow.com/questions/2068372/fastest-way-to-l
             sieve[k*(k-2*(i&1)+4)/3::2*k] = False
     return np.r_[2,3,((3*np.nonzero(sieve)[0][1:]+1)|1)]
 
+# Regular Expression :Regex #
+
+    import re
+	p = re.compile('ab*')
+	m = p.match()
+	m = p.search()
+	findall()
+	finditer()
+
+Methods:
+
+    m.group(): return string
+	m.start():
+	end()
+	span():
+	for match in p.finditer():
+	    print match.start()
+
+Modifying Strings:
+
+    split()
+	sub()
+	re.sub(' +', ' ', str)
 
 
 # Reference #
