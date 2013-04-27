@@ -167,6 +167,10 @@ Ever:
 - `wget -c` : continiously download
 - `touch test.txt` 
 
+# Email #
+
+    mail
+
 # Trick #
 
 Yoda: `if ('blue' == col)`
