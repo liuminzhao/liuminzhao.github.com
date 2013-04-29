@@ -130,6 +130,12 @@ Ever:
     (?<!a)b : not preceded by a
 	(?<=text)b: 
 
+## Greedy ##
+
+`+` and `*` are greedy, use `?` after them to make them not greedy
+
+    x*?
+
 ## Repeating ##
 
 	*: zero or more {0,}
