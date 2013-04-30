@@ -108,3 +108,8 @@ correction:
 
 	M-$ 
 	
+# Detect from Terminal #
+
+    (when (display-graphic-p)
+	    (your)
+		(code))
