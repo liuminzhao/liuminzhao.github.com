@@ -593,6 +593,50 @@ Modifying Strings:
 	re.sub(' +', ' ', str)
 
 
+# Coursera course Notes (Interactive Programming) #
+
+Event driven program:
+
+start - initial -wait(event, handler)
+
+1. Input:
+- button
+- text box
+2. keyboard:
+- key down
+- key up
+3. mouse:
+- click
+- drag
+4. timer
+
+Structure:
+
+1. globals
+2. help functions
+3. classes
+4. define event handlers
+5. create a frame
+6. register event handlers
+7. start frame and timers
+
+## SimpleGui ##
+
+    def div():
+    """ divide store by operand"""
+    global store
+    store = store / operand
+    output()
+
+    def enter(t):
+       """ enter a new operand"""
+       global operand
+       operand = int(t)
+       output()
+    f = simplegui.create_frame("Calculator",300,300)
+	f.add_button("Print", output, 100)
+	f.add_input("Enter", enter, 100)
+
 # Reference #
 
 1. <http://maxburstein.com/blog/python-shortcuts-for-the-python-beginner/>
