@@ -107,3 +107,175 @@ bad:
 - utilization = use
 - with reference / regard to = about 
 - with respect to = about
+
+
+# Word Choice #
+
+1. use precise word:
+
+	- bad:
+	  - several
+	  - frequently
+	  - with
+	- good:
+	  - 12h
+	  - every 12h
+	  - using
+	  
+2. use simple words
+
+dryness : dry
+
+3, misuse:
+
+`since`: temporal. `because`: causality
+
+4. redundancy and jargon
+
+5. `lab` -> `labortory`
+
+6. avoid abbre
+
+# location #
+
+1. stress : end > begin
+
+2. place old familiar short info at the beginning (topic), and place
+new, complex, long info in the end (stress)
+
+3. get to subject quickly, make it short and specific
+
+4. avoid interruption (no which)
+
+# Grammar #
+
+1. first person
+2. active voice
+3. past tense for observations, completed actives
+4. present for generalizations and statements of general validity
+5. short sentence
+6. active verbs
+7. avoid noun clusters
+8. use clear pronouns
+9. clear comparisons
+
+# ESL #
+
+1. proposition
+
+	- different with
+	- compare to , comparison between A and
+
+# Transitions (Page 121 Table) #
+
+To be filled later
+
+| USE        | WORDS           |  PHRASE | SENTENCE|
+| ------------- |:-------------:| -----:|--|
+| col 3 is      | right-aligned | 1600 ||
+| col 2 is      | centered      |   12 ||
+| zebra stripes | are neat      |    1 ||
+
+# Draft (IMRAD) #
+
+1. Introduction
+2. Method
+3. Results
+4. Discussion
+
+Order:
+
+1. know/background
+   - general
+   - specific reported data
+2. unknown and problems
+3. research purpose / questions
+4. experiments
+
+**Organize by Bullet Points**
+
+1. collect notebook, figures, tables, and reference
+2. buy an ugly cheap notebook
+3. make your own rules
+4. write as to explain
+5. one paragraph and one section at a time
+6. set deadline
+
+# Reference and Plagiarism #
+
+1. place head or tail
+2. no citation in abstract and put citation in introduction
+
+# Concise #
+
+1. omit:
+
+describes, noted, was done, reported, noticed, observed, occurred, seen
+
+2. just state the facts
+3. no 'it... that' phrases
+4. avoid writing in the negative
+
+# Acknowledgement #
+
+1. intelligentual contribution
+2. techinical support
+3. discussion
+4. fund, grants
+
+# Introduction #
+
+1. background
+2. unknown problem
+3. questions , purpose
+4. experimental approach
+
+# Method #
+
+passive voice
+
+# Results #
+
+1. interpret
+2. place stat info
+   - purpose
+   - experimental
+   - results
+   - interpretation
+
+# Discussion #
+
+# Abstract #
+
+1. Question
+2. experiments
+3. results
+4. conclusion
+
+# Keywords #
+
+- avoid words in the title
+- avoid general single keys
+
+# Revision #
+
+1. title: 3-4 important keys
+2. abstract:
+   - question, purpose
+   - experiments, approach
+   - results
+   - interpretation and answers
+   - significance
+3. Introduction:
+   - First: background
+   - 2nd: unknown
+   - last: question and purpose (repeat abstract)
+4. Method: chronologically
+5. Results
+6. Discussion: Pyramid
+   1. interpretation, support and defend it
+   2. compare 
+   3. list limitations
+   4. main results, significance and future directions
+
+
