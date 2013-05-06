@@ -188,7 +188,9 @@ Triangle area:
 	range(3, 10, 2)
 	list()
 	x.append(xn)
-	
+	x[-1] : last one
+	x[-2] : second to last
+
 check exist in a list 
 	
 	if x in prime 
@@ -636,6 +638,24 @@ Structure:
     f = simplegui.create_frame("Calculator",300,300)
 	f.add_button("Print", output, 100)
 	f.add_input("Enter", enter, 100)
+
+### Canvas (draw handler) ###
+
+	# define draw handler
+	def draw(canvas):
+    canvas.draw_text("Hello!",[100, 100], 24, "White")
+    canvas.draw_circle([100, 100], 2, 2, "Red")
+
+	# create frame
+	frame = simplegui.create_frame("Text drawing", 300, 200)
+
+	# register draw handler    
+	frame.set_draw_handler(draw)
+
+### Timer ###
+
+	timer1 = simplegui.create_timer(itnerval, handler)
+	timer1.start()
 
 # Reference #
 

@@ -194,6 +194,9 @@ pandoc extension
 
 and can use [Emacs table mode](http://table.sourceforge.net/)
 
+or use **orgtbl-mode** 
+
+
 ## Title block ##
 
 pandoc extension 
@@ -226,6 +229,10 @@ use double dollar sign
 Hello there!
 
 ![center](/images/hello.jpg)
+
+use absolute directory:
+
+	![Bilby Stampede](https://github.com/images/logo.png)
 
 embed html in markdown
 

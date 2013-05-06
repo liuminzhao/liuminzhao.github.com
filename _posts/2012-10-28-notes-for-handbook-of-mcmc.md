@@ -64,3 +64,44 @@ $$
 14. thin
 
 15. when reporting $\theta_{\pi}$, MCSE should be included. 
+
+# Notes from Steven Walker Lecture #
+
+f(y) = \int f(y|x)f(x)dx
+
+f(y|x) = \int f(y|u)f(u|x)du
+
+If f(y) = h(y)g(y), f(y, u) = I(u < h(y))g(y),
+
+f(u|y) = h(y)^-1 I(u< h(y))
+
+f(y|u) \propto g(y)I(u<h(y))
+
+Instead of starting from beginning, M-H/gibbs make use of good samples, find new
+samples around previous one. Gibbs goes to stationary distribution by MC
+
+\pi(mu\_n+1, lambda\_n+1) = \int \int pi(mu\_n+1|lambda\_n+1) pi(lambda\_n+1|mu\_n) pi(
+mu\_n, lambda\_n) dmu\_n dlambda\_n
+
+q(y|x) is the proposal density, if f(y|x) is the transition density
+
+    f(x)f(y|x) = f(y)f(x|y)
+
+then
+
+    f(y) = \int f(y|x)f(x) dx
+
+
+## Methopolis Hasting ##
+
+set the transition density :
+
+    f(y|x) = r(x) [a(y, x)q(y|x) /r(x)] + (1 - r(x)) I(y = x)
+
+simplest choice of $\alpha$ is
+
+    a(y, x) = min{ 1, q(x|y)f(y)/(q(y|x)f(x))}
+
+## slice sampling ##
+
+can be generalized to `f(x)= g(x)h(x)`

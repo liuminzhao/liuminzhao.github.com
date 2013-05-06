@@ -170,11 +170,39 @@ new, complex, long info in the end (stress)
 
 To be filled later
 
-| USE        | WORDS           |  PHRASE | SENTENCE|
-| ------------- |:-------------:| -----:|--|
-| col 3 is      | right-aligned | 1600 ||
-| col 2 is      | centered      |   12 ||
-| zebra stripes | are neat      |    1 ||
+| USE         | WORDS                        | PHRASE                   | SENTENCE                    |
+|-------------|------------------------------|--------------------------|-----------------------------|
+| Addition    | again, also, further,        | In addition to X, we ... | Further experiments         |
+|             | furthermore, in addistion,   | Besides X, ...           | showed that                 |
+|             | moreover                     |                          |                             |
+| Concession  | clearly, evidently,          |                          | Granted that X is ...       |
+|             | obviously, undeniably        |                          |                             |
+| Comparison  | also, likewise, similarly,   | As seen in ...           | When A is compared,         |
+|             | etc.                         | In the same way,         | As reported by              |
+|             |                              |                          | When compared to            |
+| Contrast    | but, however,                | In contrast to A...      | One difference is that..    |
+|             | nevertheless,                | On one hand, on the      | Although X differed...      |
+|             | nonetheless, still, yet      | other hand...            |                             |
+|             |                              | Despite X...             |                             |
+|             |                              | Unlike X, ...            |                             |
+|             |                              | On the contrary          |                             |
+| Example     | for example,                 | To illustrate X...       | An example of X is that...  |
+|             | specifically                 |                          | That is ...                 |
+| Explanation | Here, therefore,             | Because of X...          | One reason is that...       |
+|             | in short                     | In this experiment,...   | Because X is ...            |
+| Purpose     | for this purpose,            | For the purpose of ...   | The purpose of X was to ... |
+|             |                              | To this end...           |                             |
+|             |                              | To determine XYZ,        |                             |
+| Result      | consequently,                | As a result of           | Evidence for XYZ was        |
+|             | generally, hence,            |                          | that                        |
+|             | therefore, thus              |                          | Analysis of A showed ..     |
+| Sequence    | after, finally, first, later | After careful analysis   | After X was completed       |
+| time        | last, meanwhile, next        | of X                     |                             |
+|             | now, second, then            | During                   | When we determined X..      |
+|             | while, subsequently          | centrifugation,          |                             |
+| Summary     | In brief, in conclusion,     | To summarize             | As a summary of             |
+|             | in fact, in short, in        |                          | our results shows           |
+|             | summary                      |                          |                             |
 
 # Draft (IMRAD) #
 
@@ -230,6 +258,30 @@ describes, noted, was done, reported, noticed, observed, occurred, seen
 3. questions , purpose
 4. experimental approach
 
+| Background    | Unknown      |         Purpose | Approach         | Results      | Implication  |
+|---------------|--------------|-----------------|------------------|--------------|--------------|
+| X is          | ..is         | We hypothesized | To test          | We found     | consistent   |
+|               | unknown      |                 |                  |              | with         |
+| X affects     | has not been | To determine    | we               | was  found   | indicating   |
+|               | determined   |                 |                  |              | that         |
+| X is a        | The question | To study        | We analyzed      | we           | make it      |
+| component of  | remains      | To examine      | For the purpose, | determined   | possible to  |
+|               | whether      | To assess       | we               |              |              |
+|               |              | To analyze      |                  |              |              |
+|               |              | In this study   |                  |              |              |
+|               |              | we examined     |                  |              |              |
+| X is observed | is unclear   | Here we         | by/using         | our findings | may be       |
+| when Y        |              | describe        |                  | were         | used to      |
+| happens       |              |                 |                  |              |              |
+| X is          |              | we report       | For this study   | We observed  | is important |
+| considered to |              |                 | ,we              |              |              |
+| X causes Y    | does not     | We examined     | To evaluate      | Based on our | Our analysis |
+|               | exist        | whether X       | To answer        | observation  | implies      |
+|               | is not       | We assessed if  | this question    |              | suggests     |
+|               | known        | We determined   |                  |              | findings     |
+|               |              | We analyzed     |                  |              | indicate     |
+
+
 # Method #
 
 passive voice
@@ -243,7 +295,50 @@ passive voice
    - results
    - interpretation
 
+| PURPOSE            | METHOD             | RESULTS     | INTERPRETATION    |
+|--------------------|--------------------|-------------|-------------------|
+| To determine       | we did             | we found    | indicating        |
+| To establish if    | X was subjected to | We observed | consistent with   |
+| Z was tested       | by/using           | We detect   | which indicates   |
+| FOr the purpose of | was performed      | indicate    | obs indicates     |
+|                    | Showed             |             | A is specific for |
+
 # Discussion #
+
+1. in this study, we have shown/found
+2.  study shows
+3. findings demonstrate that
+4. this paper describes
+5. can be attributed to 
+6. we determined X by
+7. we found
+8. our data shows
+9. has been demonstrated by
+10. in summary
+11. in conclusion
+12. finally
+13. to summarize our results
+14. we conclude
+15. overall,
+16. our findings can /will serve to /can be used
+17. we recommend
+18. indicates
+19. imply that 
+20. we propose
+21. we hypothesize
+
+| COMPARISONS       | CONFLICT           | LIMITATION     | UNEXPECTED   | HYPOTHESIS   |
+|-------------------|--------------------|----------------|--------------|--------------|
+| consistent with   | however, other     | was not        | surprisingly | results      |
+| similar to        | studyies found     | possible       | To our       | lead to      |
+| is observed by    | is controversial   | could not be   | surprise     | conclusion   |
+| been demonstrated | does no            | measured       | was not      | that         |
+|                   | agree with         | was limited by | expected     | From data we |
+|                   | also been reported | Further        |              | hypothesize  |
+|                   |                    | observations   |              | propose new  |
+|                   |                    | was needed     |              | principle    |
+
+see page 305 for more details
 
 # Abstract #
 
