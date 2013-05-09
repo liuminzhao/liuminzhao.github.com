@@ -126,7 +126,7 @@ bad:
 
 dryness : dry
 
-3, misuse:
+3. misuse:
 
 `since`: temporal. `because`: causality
 

@@ -180,3 +180,10 @@ Ever:
 # Trick #
 
 Yoda: `if ('blue' == col)`
+
+
+# Sed #
+
+find and delete all lines with string pattern in all files:
+
+    sed -i.bak '/String/d' *
