@@ -13,3 +13,5 @@ Thumbs.db
 /_layouts/default.html.bk
 /_layouts/post.html.bk
 /css/style.css
+/_posts/2013-03-20-knitr-jags.Rmd
+/_posts/2013-03-20-knitr-jags.html

@@ -171,6 +171,11 @@ Use `with`,
 
 	sorted[(a, b)]
 
+sort by second column <http://xahlee.info/perl-python/sort_list.html> :
+
+    list.sort(lambda x, y: cmp(x[1], y[1]))
+	list.sort(key = lambda x:x[1], reverse = True)
+
 # Area #
 
 Triangle area:
