@@ -113,3 +113,25 @@ correction:
     (when (display-graphic-p)
 	    (your)
 		(code))
+
+# Ispell on mac #
+
+    brew install ispell
+	(setq ispell-program-name "/path/to/ispell")
+
+# searching for program no such file #
+
+Use `homebrew`, then 
+
+    (setq exec-path (append exec-path '("/usr/local/bin")))
+
+# /bin/sh: pdflatex: command not found #
+
+`M-x getenv` for `PATH` did not show `/usr/texbin`,
+
+    (getenv "PATH")
+	(setenv "PATH"
+	(concat
+	"/usr/texbin" ":"
+	
+	(getenv "PATH")))
