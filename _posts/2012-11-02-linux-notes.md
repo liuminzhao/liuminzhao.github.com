@@ -173,6 +173,19 @@ Ever:
 - `wget -c` : continiously download
 - `touch test.txt` 
 
+# zsh #
+
+file rename:
+
+    zmv '(*).txt' '$1.html'
+
+osx
+
+    man-preview
+	quick-look
+	pfd: path finder
+	cdf: cd to finder
+
 # Email #
 
     mail

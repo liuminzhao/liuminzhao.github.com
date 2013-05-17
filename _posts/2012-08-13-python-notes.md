@@ -662,6 +662,14 @@ Structure:
 	timer1 = simplegui.create_timer(itnerval, handler)
 	timer1.start()
 
+## Keyboard ##
+
+    def keydown(key):
+	    current = chr(key)
+		if key == simplegui.KEY_MAP("left") # "right", "down", "up"
+	f.set\_keydown\_handler(keydown)
+	f.set\_keyup\_handler(keyup)
+
 # Reference #
 
 1. <http://maxburstein.com/blog/python-shortcuts-for-the-python-beginner/>
