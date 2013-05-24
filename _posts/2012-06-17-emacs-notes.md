@@ -135,3 +135,24 @@ Use `homebrew`, then
 	"/usr/texbin" ":"
 	
 	(getenv "PATH")))
+
+# Org-mode #
+
+Schedule time: `C-c C-s`,
+
+     3-2-5         ⇒ 2003-02-05
+     2/5/3         ⇒ 2003-02-05
+     14            ⇒ 2006-06-14
+     12            ⇒ 2006-07-12
+     2/5           ⇒ 2007-02-05
+     Fri           ⇒ nearest Friday after the default date
+     sep 15        ⇒ 2006-09-15
+     feb 15        ⇒ 2007-02-15
+     sep 12 9      ⇒ 2009-09-12
+     12:45         ⇒ 2006-06-13 12:45
+     22 sept 0:34  ⇒ 2006-09-22 0:34
+     w4            ⇒ ISO week for of the current year 2006
+     2012 w4 fri   ⇒ Friday of ISO week 4 in 2012
+     2012-w04-5    ⇒ Same as above
+
+
