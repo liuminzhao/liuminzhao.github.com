@@ -41,12 +41,12 @@ or `colordiff`
 
 Schedule a routine background job at a specific time 
 
-    crontab -l : list
+	crontab -l : list
 	crontab -e : edit
 
 Format:
 
-    MIN HOUR DOM MON DOW CMD 
+	MIN HOUR DOM MON DOW CMD 
 	0-59 0-23 1-31 1-12 0-6 
 	30 08 10 06 * /home/ramesh/full-backup
 	00 11,16 * * * /home/ramesh/bin/incremental-backup : twice a day
@@ -60,12 +60,12 @@ Others:
 2. When you specify 0-10/2 in minute field mean every 2 minutes in the first 10 minute.
 3. Thus the above convention can be used for all the other 4 fields.
 
-    */10 * * * * /home/ramesh/check-disk-space : every 10 min
+	*/10 * * * * /home/ramesh/check-disk-space : every 10 min
 
 Email:
 
 Put 
-    
+	
 	MAILTO="email@domain.com"
 	
 on the top
@@ -74,15 +74,15 @@ Change default editor:
 
 One time:
 
-    EDITOR=nano crontab -e
+	EDITOR=nano crontab -e
 	
 Ever:
 
-    export EDITOR=nano
+	export EDITOR=nano
 
 # Screen #
 
-    c: create
+	c: create
 	C-A n: next
 	p: previous
 	
@@ -94,6 +94,7 @@ Ever:
 	^: start 
 	$: end
 	[]: indicate a set of char
+	[^T] : complement set
 	\d == [0-9]
 	\D = [^0-9] ; non digit
 	\s : any whitespace
@@ -103,38 +104,38 @@ Ever:
 
 ## Example ##
 
-    [Nn]ick
+	[Nn]ick
 	[a-c]
 	. = [-.?+%$A-Za-z0-9...]  # [] means pick just one
 
 ## Alternation ##
 
-    a|b|c = [a-c]
+	a|b|c = [a-c]
 
 ## Grouping ##
 
-    0abc+0 :
+	0abc+0 :
 	0(abc)+0
 
 ## back reference ##
 
-    Set(?:Value)?
+	Set(?:Value)?
 
 ## Positive and Negative Lookhead  ##
 
-    q(?!u) : negative
+	q(?!u) : negative
 	q(?=u) : positive
 
 ## Lookbehind ##
 
-    (?<!a)b : not preceded by a
+	(?<!a)b : not preceded by a
 	(?<=text)b: 
 
 ## Greedy ##
 
 `+` and `*` are greedy, use `?` after them to make them not greedy
 
-    x*?
+	x*?
 
 ## Repeating ##
 
@@ -177,18 +178,18 @@ Ever:
 
 file rename:
 
-    zmv '(*).txt' '$1.html'
+	zmv '(*).txt' '$1.html'
 
 osx
 
-    man-preview
+	man-preview
 	quick-look
 	pfd: path finder
 	cdf: cd to finder
 
 # Email #
 
-    mail
+	mail
 
 # Trick #
 
@@ -199,4 +200,4 @@ Yoda: `if ('blue' == col)`
 
 find and delete all lines with string pattern in all files:
 
-    sed -i.bak '/String/d' *
+	sed -i.bak '/String/d' *
