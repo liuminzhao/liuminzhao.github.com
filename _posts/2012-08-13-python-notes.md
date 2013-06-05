@@ -346,7 +346,13 @@ Do not use `*` to import all. Use `import numpy as np` .
 keys:
 
 	dict.keys()
-	
+
+item / value:
+
+	dict.items()
+	for key, value in dict.items():
+
+
 ## Initial ##
 
 	item = [0]*3  # [0, 0, 0]
@@ -560,6 +566,9 @@ Append:
 	random.randint(a, b)
 	import numpy.random
 	npr.random_integers # much faster than random module
+	x = range(5)
+	random.shuffle(x)
+
 
 # Fast Way to Generator Primes #
 
@@ -655,7 +664,7 @@ Structure:
 	frame = simplegui.create_frame("Text drawing", 300, 200)
 
 	# register draw handler    
-	frame.set_draw_handler(draw)
+	frame.set\_draw\_handler(draw)
 
 ### Timer ###
 
@@ -666,9 +675,47 @@ Structure:
 
     def keydown(key):
 	    current = chr(key)
-		if key == simplegui.KEY_MAP("left") # "right", "down", "up"
+		if key == simplegui.KEY_MAP["left"] # "right", "down", "up"
 	f.set\_keydown\_handler(keydown)
 	f.set\_keyup\_handler(keyup)
+
+### Mouse ###
+
+handler:
+
+	def mouseclick\_handler(position):  # position: (x, y)
+
+register:
+
+	frame.set\_mouseclick\_handler(click)
+
+### Image ###
+
+	im = simplegui.load_image(URL)
+	canvas.draw_image(im, center, size
+
+## Class ##
+
+	class Character: # capitalize 
+		def __init__(self, name, init_heal):
+			self.name = name
+			self.health = init_heal
+			self.inventory = []  # no need to return anything
+		def __str__(self):
+			s  = "Name: " + self.name
+			s += " Health: " + str(self.health)
+			return s
+		def grab(self, item):
+			self.inventory.append(item)
+		def get_health(self):
+			return self.health
+
+use:
+
+	me = Character("Bob", 20)
+	print str(me)
+	me.grab("pencil")
+	print str(me)
 
 # Reference #
 

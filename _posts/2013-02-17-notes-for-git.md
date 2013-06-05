@@ -2,7 +2,7 @@
 layout: post
 title: "notes for git"
 description: ""
-category: 
+category:
 tags: [git]
 ---
 {% include JB/setup %}
@@ -10,20 +10,20 @@ tags: [git]
 # Merge #
 
 	git merge old new
-	
-or 
+
+or
 
     git checkout master
 	git merge branch
-	
+
 # rebase #
 
 similar to `merge`, but put forward and forma a linear relation
 
 	git rebase master (move bugFix to master branch)
-	then 
+	then
 	git rebase bugFix (move master head to bugFix)
-	
+
 # Reverse #
 
 1. `reset`
@@ -31,10 +31,18 @@ similar to `merge`, but put forward and forma a linear relation
 
 	git reset HEAD~1 # go back to previous HEAD as never happened, work nice with local
 	git revert HEAD # make a new commit, but record the change back to HEAD
-	
-	
+
+
 # Checkout #
 
 Checkout specific file from other branch
 
     git checkout master -- file
+
+# Troublesome #
+
+X11 error when `git push`:
+
+change `~/.ssh/config`:
+
+	ForwardX11 no
