@@ -2,7 +2,7 @@
 layout: post
 title: "linux notes"
 description: ""
-category: 
+category:
 tags: [linux]
 ---
 {% include JB/setup %}
@@ -13,19 +13,19 @@ tags: [linux]
 
 all file contains 'boss'
 
-	grep -l 'boss' * 
+	grep -l 'boss' *
 
-show line number 
+show line number
 
 	grep -n 'boss' file
-	
+
 # Diff #
 
 Compare 2 folders:
 
 	diff -bur folder1/ folder2/
 
-Two column 
+Two column
 
 	diff -y
 
@@ -39,21 +39,21 @@ or `colordiff`
 
 # Crontab #
 
-Schedule a routine background job at a specific time 
+Schedule a routine background job at a specific time
 
 	crontab -l : list
 	crontab -e : edit
 
 Format:
 
-	MIN HOUR DOM MON DOW CMD 
-	0-59 0-23 1-31 1-12 0-6 
+	MIN HOUR DOM MON DOW CMD
+	0-59 0-23 1-31 1-12 0-6
 	30 08 10 06 * /home/ramesh/full-backup
 	00 11,16 * * * /home/ramesh/bin/incremental-backup : twice a day
 	00 09-18 * * * /home/ramesh/bin/check-db-status : working hour
 	00 09-18 * * 1-5 /home/ramesh/bin/check-db-status : work day working hour
 	* * * * * CMD : every minute
-	
+
 Others:
 
 1. When you specify */5 in minute field means every 5 minutes.
@@ -64,10 +64,10 @@ Others:
 
 Email:
 
-Put 
-	
+Put
+
 	MAILTO="email@domain.com"
-	
+
 on the top
 
 Change default editor:
@@ -75,7 +75,7 @@ Change default editor:
 One time:
 
 	EDITOR=nano crontab -e
-	
+
 Ever:
 
 	export EDITOR=nano
@@ -85,13 +85,13 @@ Ever:
 	c: create
 	C-A n: next
 	p: previous
-	
+
 # Regex #
 
 ## Syntax ##
 
-	. : any 
-	^: start 
+	. : any
+	^: start
 	$: end
 	[]: indicate a set of char
 	[^T] : complement set
@@ -129,7 +129,7 @@ Ever:
 ## Lookbehind ##
 
 	(?<!a)b : not preceded by a
-	(?<=text)b: 
+	(?<=text)b:
 
 ## Greedy ##
 
@@ -150,12 +150,12 @@ Ever:
 
 100 Most used :
 
-- `echo "aa" > test.txt` 
+- `echo "aa" > test.txt`
 - `du -ah` for size , `du -sh` the sum of size
 - `echo '1+2' | bc -l` : for math
 - `uname -a` : kernel detail
 - `time command`: time for command
-- `ls -lrt`: sort by time 
+- `ls -lrt`: sort by time
 - `history -c`: clear history
 - `tree`: show tree
 - `echo $[5*5]` : math
@@ -166,13 +166,13 @@ Ever:
 - `clear`
 - `cmp file1 file2`: compare
 - `cal` : calendar
-- `echo "AaDCbd23" | tr "[A-Z]" "a-z"` : upper case to lower case, 
+- `echo "AaDCbd23" | tr "[A-Z]" "a-z"` : upper case to lower case,
 - `tr -c b-d =`: replace letters other than b-d by `=`
 - `bc`: go to math
 - `last` : list record for login
 - `paste -sd '|||\n' test` : change every 4 lines to 1 line and use `|` to separate
 - `wget -c` : continiously download
-- `touch test.txt` 
+- `touch test.txt`
 
 # zsh #
 
@@ -189,7 +189,8 @@ osx
 
 # Email #
 
-	mail
+	mail -s 'subject' liuminzhao@gmail.com
+	echo "blabla" | mail -s "text" liuminzhao@gmail.com
 
 # Trick #
 
@@ -201,3 +202,9 @@ Yoda: `if ('blue' == col)`
 find and delete all lines with string pattern in all files:
 
 	sed -i.bak '/String/d' *
+
+# Scp #
+
+scp multiple files: must quote
+
+	scp ...:"~/*.R" .

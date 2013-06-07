@@ -2,7 +2,7 @@
 layout: post
 title: "ggplot2 notes"
 description: ""
-category: 
+category:
 tags: [ggplot2]
 ---
 {% include JB/setup %}
@@ -15,7 +15,7 @@ GGPLOT2 Notes
 Two main functions:
 
 - `qplot()`  : quick plot
-- `ggplot()` 
+- `ggplot()`
 
 Usage:
 
@@ -23,18 +23,18 @@ Usage:
 
     qplot(x,main = "")
 	ggplot(data, aes(x)) + geom_histogram(binwidth = , color = , fill = )
-	
+
 ## Scatterplot ##
 
     qplot(x, y, log = "xy", color=..)
 	ggplot(data, aes(x = , y = , color = )) + geom_point()
-	
+
 ## Boxplot ##
 
     qplot(x, y)
 	qplot(x, y, geom = "boxplot")
 	ggplot(data, aes(factor(race), y)) + geom_boxplot()
-	
+
 ## Line ##
 
     ggplot(data, aes(x, y)) + geom_line()
@@ -44,27 +44,27 @@ Usage:
     ggplot(data, aes(y)) + geom_density(fill = 'blue')
 	 + geom_line(stat = "density")
 
-# Geom #	
-	
+# Geom #
+
 	geom = "bar"
 	"histogram", binwidth = 0.1
 	jitter
 	 = c("point", "smooth"), method = "lm"
 	 dotplot
 	 point
-	
-# Alpha #	
-	
+
+# Alpha #
+
 	alpha = I(1/4)
-	
+
 # Shape #
-	
+
 	shape = 1, 2, or '.'
-	
+
 # Size #
-	
+
 # Fill #
-	
+
 # Facet #
 
     qplot(data=myData,x=BM,y=var1,log="xy",color=Tribe,facets = Hab~Tribe)
@@ -77,8 +77,12 @@ Usage:
 	+geom_point(color = "blue")
 	+geom_line()
 	+ geom_abline(intercept = a, slope = b)
-	
-	
+
+# Label #
+
+	ggplot(...) + ylab('mylabel')
+	bp + scale_x_discrete(breaks=c("ctrl", "trt1", "trt2"), labels=c("Control", "Treat 1", "Treat 2"))
+
 # Save #
 
     ggsave("LIBMFacetsWithTrend.jpg", width = 6, height = 4)
@@ -90,7 +94,7 @@ Usage:
 never use `qplot`
 
     ggplot(data, aes(x = x, y = y)) + geom_line()
-	
+
 # aes #
 
     aes(shape = x)

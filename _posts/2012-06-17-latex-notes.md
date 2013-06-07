@@ -2,7 +2,7 @@
 layout: post
 title: "latex notes"
 description: ""
-category: 
+category:
 tags: [latex]
 ---
 {% include JB/setup %}
@@ -11,20 +11,31 @@ LaTeX notes
 ==========
 
 # parallel picture #
-  
+
 	  \begin{tabular}{cc}
  	  \begin{minipage}
  	  fjsdajfl
  	  \end{minipage}
- 	  
+
  	  \begin{minipage}
  	  fasfd
  	  \end{minipage}
 	  \end{tabular}
 
+# Number #
+
+Number a group of equations:
+
+	\begin{equation}
+		\begin{aligned}
+			w^T x_i + b &\geq 1-\xi_i &\text{ if }& y_i=1,  \\
+			w^T x_i + b &\leq -1+\xi_i & \text{ if } &y_i=-1,
+		\end{aligned}
+	\end{equation}
+
 # Citation #
 
-* remove aux and bbl file to refresh 
+* remove aux and bbl file to refresh
 * change bib file encoding with uft-8 by
 
     	C-x RET f utf-8 RET
@@ -34,7 +45,7 @@ LaTeX notes
 	    \usepackage{natbib}
 	    \bibliographystyle{plainnat}
 		\bibliography{\filename}
-	
+
 * do not use the same file name for bib file
 
 # Latexdiff #
@@ -47,15 +58,15 @@ LaTeX notes
 
 <http://www.carlboettiger.info/wordpress/archives/3804>
 
-1. create git-latexdiff.sh in `~/bin/` 
+1. create git-latexdiff.sh in `~/bin/`
 2. update `~/.gitconfig`
-	  
+
 	    [difftool.latex]
         cmd = git-latexdiff "$LOCAL" "$REMOTE"
 		[difftool]
         prompt = false
 		[alias]
-        ldiff = difftool -t latex   
+        ldiff = difftool -t latex
 
 3. usage
 
@@ -71,7 +82,7 @@ doc-view-mode with auto-revert-mode ?
 
 ## Font ##
 
-`C-c C-f` + 
+`C-c C-f` +
 
     C-e : \emph
 	C-b : bold
@@ -85,7 +96,7 @@ doc-view-mode with auto-revert-mode ?
 
     C-c C-q C-s
 	M-q
-	
+
 ## Reftex ##
 
     C-c = : reftex toc
@@ -103,22 +114,22 @@ doc-view-mode with auto-revert-mode ?
 
     Preview -> Customize -> Browse Options -> Preview GS -> options -> del-dSAFER
 
-`C-x C-s` to save and reload. 
+`C-x C-s` to save and reload.
 
 ## Latex-pretty-symbols ##
 
     M-x latex-unicode-simplified
-	
+
 <https://bitbucket.org/mortiferus/latex-pretty-symbols.el>
 
-# Tips # 
+# Tips #
 
-## Using LaTeX to Split PDF Files ## 
+## Using LaTeX to Split PDF Files ##
 
-Suppose your source pdf is source.pdf, you wanna draw the 2nd and 4th page from that, by 
+Suppose your source pdf is source.pdf, you wanna draw the 2nd and 4th page from that, by
 
     \usepackage{pdfpages}
-	\includepdf[page={2,4}]{source}                        
+	\includepdf[page={2,4}]{source}
 
 `pdflatex` -> voila, here you are.
 
@@ -149,16 +160,16 @@ Suppose your source pdf is source.pdf, you wanna draw the 2nd and 4th page from 
 
 In order to turn on math mode in `dmath` environment:
 
-    (add-hook 'LaTeX-mode-hook 'add-my-latex-environments) 
-	(defun add-my-latex-environments () 
-	(LaTeX-add-environments 
-    '("dmath" LaTeX-env-label))) 
-    ;; Code I added to make syntax highlighting work in Auctex 
-    (custom-set-variables 
-	'(font-latex-math-environments (quote  
-    ("display" "displaymath" "equation" "eqnarray" "gather" "multline"  
-    "align" "alignat" "xalignat" "dmath"))) 
-	'(TeX-insert-braces nil)) ;;Stops putting {} on argumentless commands to "save" whitespace 
-	;; Additionally, reftex code to recognize this environment as an equation 
-	(setq reftex-label-alist 
-	'(("dmath" ?e nil nil t))) 
+    (add-hook 'LaTeX-mode-hook 'add-my-latex-environments)
+	(defun add-my-latex-environments ()
+	(LaTeX-add-environments
+    '("dmath" LaTeX-env-label)))
+    ;; Code I added to make syntax highlighting work in Auctex
+    (custom-set-variables
+	'(font-latex-math-environments (quote
+    ("display" "displaymath" "equation" "eqnarray" "gather" "multline"
+    "align" "alignat" "xalignat" "dmath")))
+	'(TeX-insert-braces nil)) ;;Stops putting {} on argumentless commands to "save" whitespace
+	;; Additionally, reftex code to recognize this environment as an equation
+	(setq reftex-label-alist
+	'(("dmath" ?e nil nil t)))
