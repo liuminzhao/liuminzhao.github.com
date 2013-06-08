@@ -46,3 +46,13 @@ X11 error when `git push`:
 change `~/.ssh/config`:
 
 	ForwardX11 no
+
+# Push to multiple repo #
+
+add to `.git/config`:
+
+	[remote "all"]
+    url=ssh://user@server/repos/g0.git
+    url=ssh://user@server/repos/g1.git
+
+then `git push all master`.
