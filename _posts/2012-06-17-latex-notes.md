@@ -48,6 +48,10 @@ Number a group of equations:
 
 * do not use the same file name for bib file
 
+## underline on journals ##
+
+It is because the package `ulem` making `emph` to have underlines.
+
 # Latexdiff #
 
 	latexdiff old.tex new.tex > diff.tex

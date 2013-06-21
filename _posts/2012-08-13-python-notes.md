@@ -2,7 +2,7 @@
 layout: post
 title: "python notes"
 description: ""
-category: 
+category:
 tags: [python]
 ---
 {% include JB/setup %}
@@ -13,12 +13,12 @@ Python Notes
 # variable #
 
 	my_variable=10
-	
+
 Global:
-	
+
 	_a = 1
-	
-three data types 
+
+three data types
 
 * integers
 * floats
@@ -32,13 +32,13 @@ three data types
 	print("%.2f" % total)
 	print "MOnty" + " " + "fsd"
 	print "fdsf \%\s , \%\s" % (str1, str2)
-	
-# Date and Time #	
+
+# Date and Time #
 
 	from datetime import datetime
 	now = datetime.now()
 	now.year, now.month, now.day/hour/minute/second
-	
+
 	today = datetime.date.today()
 	today - datetime.timedelta(days=today.weekday())
 
@@ -50,7 +50,7 @@ three data types
 # Conditions #
 
 	if 8<9 :
-		print 
+		print
 	elif 8>9:
 		print
 	else:
@@ -84,18 +84,18 @@ three data types
 	book="book"
 	\'
 	"MONTY"[4]
-	'='*10 
+	'='*10
 
 	name= [one.strip('"') for one in f.readline().split(",")]
 
-	ord(char) 
+	ord(char)
 
 Reverse:
 
-	string[::-1] 
+	string[::-1]
 	string[begin:end:step]
 
-base 10 to binary 
+base 10 to binary
 
 	x = bin(30)[2:]
 	int(x, 2)
@@ -113,7 +113,7 @@ base 10 to binary
 	parrot.upper()
 	str()
 
-because len() and str() are generic function, lower and upper are only for 
+because len() and str() are generic function, lower and upper are only for
 strings
 
 # Iteration/Permutation/combination #
@@ -128,35 +128,35 @@ strings
 	for x in range(10):
 		tmp=stat
 		break
-	else: 
+	else:
 		bla
 
 	while true:
 		statement
 		break
-		
-	if true : 
+
+	if true :
 		statement
-		
+
 
 # change class #
-	
+
 	int()
 	float()
 
 # file #
 
 	f=open('e11.txt', 'r')
-	f.seek() 
+	f.seek()
 	f.readline()
 	f.read()
 	for line in f:
 		print line
-	else: 
+	else:
 		bla
 	f.close()
 
-Use `with`, 
+Use `with`,
 
     with open('foo') as myfile:
 	    print myfile.closed
@@ -196,26 +196,26 @@ Triangle area:
 	x[-1] : last one
 	x[-2] : second to last
 
-check exist in a list 
-	
-	if x in prime 
-	
-	
+check exist in a list
+
+	if x in prime
+
+
 # Tuple #
 
-protected. 
+protected.
 
 	a = ("a", 'b')
 
 # unique #
-	
+
 	list(set(x))
 
 # Comment #
 
-	# 
+	#
 	"""fsafdaf"""
-	
+
 # Math #
 
 * divide: `//`
@@ -240,7 +240,7 @@ protected.
 
 # List/Matrix #
 
-	x = [[foo for i in range(10)] for j in range(10)] 
+	x = [[foo for i in range(10)] for j in range(10)]
 	prime= [x for x in range(2,200) if not [t for t in range(2,int(math.sqrt(x))+1) if not x%t]]
 	factors = [ x for x in range(2, n) if not n%x]
 
@@ -268,17 +268,17 @@ emacs for python <https://github.com/gabrielelanaro/emacs-for-python/>
 Jedi <https://github.com/tkf/emacs-jedi>:
 
 	M-x list-package
-	
+
 
 # Debug #
 
 - `c` : continue to breakpoint
 - `n` : next
-- `p` : watch variable 
+- `p` : watch variable
 - `w` and `u`, `d`
 
 # Plot #
- 
+
     import pylab
 	x = numpy.linspace(-1, 1, 50)
 	pylab.plot(x, f(x), result, pow3(result), 'ro')
@@ -291,7 +291,7 @@ Jedi <https://github.com/tkf/emacs-jedi>:
 	import rpy2.robjects as robjects
 	r = robjects.r
 	dnorm = r.dnorm
-	
+
 calling R function returns a R object, need to turn it to `numpy.array`
 
 Also need to create R vectors:
@@ -299,14 +299,14 @@ Also need to create R vectors:
     res = robjects.StrVector(['abc', 'def'])
     res = robjects.IntVector([1, 2, 3])
 	res = robjects.FloatVector([1.1, 2.2, 3.3])
-	
+
 then can use
 
     dnorm(res)
-	
+
 # Tips #
 
-Do not use `*` to import all. Use `import numpy as np` . 
+Do not use `*` to import all. Use `import numpy as np` .
 
 ## Change Var ##
 
@@ -340,9 +340,9 @@ Do not use `*` to import all. Use `import numpy as np` .
 	teams = ["Packers", "49ers", "Ravens", "Patriots"]
 	print {key: value for value, key in enumerate(teams)}
 	>>> {'49ers': 1, 'Ravens': 2, 'Patriots': 3, 'Packers': 0}
-	
+
 	teams['49ers']
-	
+
 keys:
 
 	dict.keys()
@@ -356,22 +356,22 @@ item / value:
 ## Initial ##
 
 	item = [0]*3  # [0, 0, 0]
-	
+
 ## Subset in List ##
 
 	x[:3] # first three
 	x[3:] # last three
 	x[::2] # odds item
 	x[1::2] # even item
-	
-## Counter ##	
-	
+
+## Counter ##
+
 	from collections import Counter
 	print Counter("hello")
 	>>> Counter({'l': 2, 'h': 1, 'e': 1, 'o': 1})
-	
+
 ## Itertools ##
-	
+
 	from itertools import combinations
 	teams = ["Packers", "49ers", "Ravens", "Patriots"]
 	for game in combinations(teams, 2):
@@ -382,9 +382,9 @@ item / value:
 	>>> ('49ers', 'Ravens')
 	>>> ('49ers', 'Patriots')
 	>>> ('Ravens', 'Patriots')
-	
+
 ## Other ##
-	
+
 	"fizz"[x%3*4::]
 
 # Python for Scientific Computation #
@@ -400,25 +400,25 @@ Book <http://hyry.dip.jp:8000/pydoc/index.html>
 ## Numpy ##
 
 	import numpy as np
-	
+
 ndarray is much faster than array or list in python.
 
 Create:
 
 	c = np.array([[1, 2, 3, 4],[4, 5, 6, 7], [7, 8, 9, 10]])
-	
+
 Size
 
 	c.shape
-	
+
 Reshape : do not change order,  just change shape
 
 	c.shape = 4, 3
 	c.shape = 2, -1 # auto change col dim
-	d = c.reshape((2, 2)) 
-	
-d and c share the same memory. 
-	
+	d = c.reshape((2, 2))
+
+d and c share the same memory.
+
 `arange`:
 
 	>>> np.arange(0,1,0.1)
@@ -427,7 +427,7 @@ d and c share the same memory.
 `linspace`:
 
 	np.linspace(0, 1, 12)
-	
+
 `logspace` for dengbi:
 
 	np.logspace(0, 2, 20)
@@ -452,7 +452,7 @@ Append:
 ### ufunc ###
 
 	np.sin(x)
-	np.sin(x, x) 
+	np.sin(x, x)
 	np.add
 	subtract
 	multiply
@@ -463,10 +463,10 @@ Append:
 	power
 	remainder/mod
 	np.cumsum
-	
+
 	add.reduce
 	add.accumulate(, axis = )
-	
+
 	np.multiply.outer([1,2,3,4,5],[2,3,4])
 	array([[ 2,  3,  4],
        [ 4,  6,  8],
@@ -663,7 +663,7 @@ Structure:
 	# create frame
 	frame = simplegui.create_frame("Text drawing", 300, 200)
 
-	# register draw handler    
+	# register draw handler
 	frame.set\_draw\_handler(draw)
 
 ### Timer ###
@@ -692,11 +692,19 @@ register:
 ### Image ###
 
 	im = simplegui.load_image(URL)
-	canvas.draw_image(im, center, size
+	canvas.draw_image(im, center, size)
+
+### Sound ###
+
+	music.play()
+	music.pause()
+	music.rewind()
+	music = simplegui.load_sound(url)
+	music.set_volume(num)
 
 ## Class ##
 
-	class Character: # capitalize 
+	class Character: # capitalize
 		def __init__(self, name, init_heal):
 			self.name = name
 			self.health = init_heal
