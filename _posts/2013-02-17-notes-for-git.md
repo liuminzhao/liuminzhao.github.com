@@ -56,3 +56,14 @@ add to `.git/config`:
     url=ssh://user@server/repos/g1.git
 
 then `git push all master`.
+
+# Emacs/Magit #
+
+change magit diff default color
+
+	(eval-after-load 'magit
+	'(progn
+    (set-face-foreground 'magit-diff-add "green3")
+    (set-face-foreground 'magit-diff-del "red3")
+    (when (not window-system)
+    (set-face-background 'magit-item-highlight "black"))))
