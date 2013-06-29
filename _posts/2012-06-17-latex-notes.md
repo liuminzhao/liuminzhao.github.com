@@ -62,7 +62,7 @@ It is because the package `ulem` making `emph` to have underlines.
 
 <http://www.carlboettiger.info/wordpress/archives/3804>
 
-1. create git-latexdiff.sh in `~/bin/`
+1. create git-latexdiff in `~/bin/` and move to `/usr/loca/bin`.
 2. update `~/.gitconfig`
 
 	    [difftool.latex]
@@ -74,9 +74,17 @@ It is because the package `ulem` making `emph` to have underlines.
 
 3. usage
 
-	    git latexdiff HEAD
-		git latexdiff file
-		git latexdiff --cached file
+	    git ldiff HEAD
+		git ldiff file
+		git ldiff --cached file
+
+A python script: <http://www.numbertheory.nl/2012/02/09/scm-latexdiff-a-python-script-to-calculate-diffs-for-tex-files-in-git-or-mercurial-repositories/>
+
+Not work with sub directory:
+
+	scm-latexdiff local:draft/qrmissingpaper.tex 0dfbe:draft/qrmissingpaper.tex
+
+To work with bibtex: move `qr-missing-reference.bib` to root directory
 
 # Emacs #
 
