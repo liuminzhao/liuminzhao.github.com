@@ -123,6 +123,10 @@ Standby vs hibernate (deep sleep):
 
 	sudo pmset -a standbydelay 42000
 
+# Turn off start up sound #
+
+	sudo nvram SystemAudioVolume=%00
+
 # Your .profile #
 
 Make `ls` colorful
