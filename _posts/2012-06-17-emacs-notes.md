@@ -4,6 +4,7 @@ title: "emacs notes"
 description: ""
 category:
 tags: [emacs]
+Time-stamp: "liuminzhao 07/01/2013 14:16:21"
 ---
 {% include JB/setup %}
 
@@ -166,3 +167,18 @@ Schedule time: `C-c C-s`,
 # yasnippet #
 
 	`(my-insert-date)`
+
+# Time-stamp #
+
+work in the first **8** lines of the file
+
+Two formats:
+
+	Time-stamp: <>
+	Time-stamp: " "
+
+Pattern:
+
+	"8/Time-stamp:[ \t]+\\\\?[\"<]+%:y-%02m-%02d %02H:%02M:%02S %u\\\\?[\">]"
+
+reference: <http://emacs-fu.blogspot.com/2008/12/automatic-timestamps.html>
