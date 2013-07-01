@@ -162,3 +162,7 @@ Schedule time: `C-c C-s`,
      w4            ⇒ ISO week for of the current year 2006
      2012 w4 fri   ⇒ Friday of ISO week 4 in 2012
      2012-w04-5    ⇒ Same as above
+
+# yasnippet #
+
+	`(my-insert-date)`

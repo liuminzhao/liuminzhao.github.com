@@ -17,14 +17,14 @@ tags: [fortran]
 2. 6 spaces; max 72 width
 3. `c` for comment
 4. `&` or `*` at 6th space for continue
-5. program and subroutine 
+5. program and subroutine
 
 	    program my_prog
-		
+
 		end
-		
+
 		subroutine my_sub
-		
+
 		end
 
 # Declare #
@@ -32,12 +32,12 @@ tags: [fortran]
 	REAL
 	INTEGER
 	COMPLEX
-	DOUBLE PRECISION: real*8 
+	DOUBLE PRECISION: real*8
 	DOUBLE COMPLEX
 	CHARACTER
-	
+
 	IMPLICIT NONE : add to the beginning of each sub(program)
-	
+
 	w = dble(x) * dble(y)
 
 # CONSTANTS #
@@ -68,17 +68,17 @@ tags: [fortran]
 	Do i=1, 10, 2
 		blabla
 	end do
-	
+
 	Do while
 	    statements
 	end do
-	
+
 use `exit` to exit loop
-	
-# MATH #	
-	
+
+# MATH #
+
 	**: exponential
-	
+
 # COMPARE #
 
 	.GT.
@@ -87,24 +87,24 @@ use `exit` to exit loop
 	.LE.
 	.LT.
 	.NE.
-	
+
 	If (A .LT. 0.0) A = (-1)*A
-	
+
 	If () THEN
 		JJJ
 	ELSE
 	    JJJ
 	END IF
-	
+
 	.AND.
 	.OR.
 	.NOT.
-	
+
 # FILE #
 
 	OPEN (UNIT=10,FILE='MY_DATA.DAT') # other than 5,6
 	READ(10, *) A
-	write(10, *) B 
+	write(10, *) B
 	close(10)
 
 # PROGRAM #
@@ -126,57 +126,56 @@ use `exit` to exit loop
 2. return a value with same name
 3. called by name and parameters
 
-    real function r(m,t)
-      integer m
-      real t
+		real function r(m,t)
+		integer m
+		real t
 
-      r = 0.1*t * (m**2 + 14*m + 46)
-      if (r .LT. 0) r = 0.0
+		r = 0.1*t * (m**2 + 14*m + 46)
+		if (r .LT. 0) r = 0.0
+		return
+		end
 
-      return
-      end
-	  
-	  type function name (list-of-variables)
-      declarations
-      statements
-      return
-      end
+		type function name (list-of-variables)
+		declarations
+		statements
+		return
+		end
 
 # SUBROUTINE #
-	
-1. can return more than 1 value	
-2. no type 
+
+1. can return more than 1 value
+2. no type
 3. should not be declared in the calling program unit
-4. called by `call` 
-	
+4. called by `call`
+
 Subroutine has `RETURN`
 
 	subroutine my_sub(a, b)
-	
+
 	return
 	end
-	
+
 `call mysub`
 
 # Progress Bar #
 
-Revised from <http://thelazycatholic.wordpress.com/2010/08/19/progress-bar-in-fortran/> 
+Revised from <http://thelazycatholic.wordpress.com/2010/08/19/progress-bar-in-fortran/>
 
       subroutine progress(j, n)
- 
+
       implicit none
       integer(kind=4) :: j,k,n
       character(len=18) :: bar="\r???% |          |"
- 
+
       ! updates the fraction of calculation done
       write(unit=bar(2:4),fmt="(i3)") 100*j/n
       do k = 1, j*10/n
          bar(7+k:7+k)="*"
       enddo
- 
+
       ! print the progress bar.
       write(*,'(a)',advance='no') bar
- 
+
       return
       end
 
