@@ -2,8 +2,9 @@
 layout: post
 title: "numerical root finding"
 description: ""
-category: 
-tags: []
+category:
+tags: [fortran]
+Time-stamp: "liuminzhao 07/01/2013 16:59:31"
 ---
 {% include JB/setup %}
 
@@ -18,13 +19,18 @@ Numerical Root Finding Methods
     pick tol
 	x = (a + b)/2
 	if (abs(f(x)) < tol) : stop
-	else: 
+	else:
 	    if (f(x)f(b) < 0) a = x, b = b
 		else a = a, b = x
 
 1. slowest
 2. can only find one
 3. contains singular, then bisection method converges to the singularity
+4. can not fail
+5. tolerance is log\_2(epsilon\_0/epsilon), where $\epsilon$ is the desired ending tolerance
+6. JMAX = 40
+7. be careful when root is near 0
+8. use bracket to get initial interval
 
 # Secant #
 
@@ -35,12 +41,12 @@ whether or not they bracket the function.
 
 # False Position #
 
- false position method retains the most recent estimate and the next recent one which has an opposite sign in the function value. 
-  
-  
+ false position method retains the most recent estimate and the next recent one which has an opposite sign in the function value.
+
+
 # Newton-Raphson #
 
-    x(t+1) = x(t) - f(x(t))/f'(x(t)) 
+    x(t+1) = x(t) - f(x(t))/f'(x(t))
 
 requires the derivative
 
