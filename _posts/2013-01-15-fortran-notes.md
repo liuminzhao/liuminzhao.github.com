@@ -3,7 +3,7 @@ layout: post
 title: "fortran notes"
 description: ""
 tags: [fortran]
-Time-stamp: "liuminzhao 07/01/2013 14:09:13"
+Time-stamp: "liuminzhao 07/02/2013 11:24:19"
 ---
 {% include JB/setup %}
 
@@ -55,6 +55,8 @@ Time-stamp: "liuminzhao 07/01/2013 14:09:13"
 	WRITE(*,*) 'NAME IS ', NAME
 
 # CONDITION #
+
+	if (condition) print *, ' '
 
     if (x .lt. 0) then
 	   statements
