@@ -4,6 +4,7 @@ title: "linux notes"
 description: ""
 category:
 tags: [linux]
+Time-stamp: "liuminzhao 07/06/2013 09:59:51"
 ---
 {% include JB/setup %}
 
@@ -208,3 +209,7 @@ find and delete all lines with string pattern in all files:
 scp multiple files: must quote
 
 	scp ...:"~/*.R" .
+
+# Check login history #
+
+	login
