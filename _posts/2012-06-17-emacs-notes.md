@@ -4,7 +4,7 @@ title: "emacs notes"
 description: ""
 category:
 tags: [emacs]
-Time-stamp: "liuminzhao 07/01/2013 14:16:21"
+Time-stamp: "liuminzhao 07/09/2013 14:24:04"
 ---
 {% include JB/setup %}
 
@@ -182,3 +182,7 @@ Pattern:
 	"8/Time-stamp:[ \t]+\\\\?[\"<]+%:y-%02m-%02d %02H:%02M:%02S %u\\\\?[\">]"
 
 reference: <http://emacs-fu.blogspot.com/2008/12/automatic-timestamps.html>
+
+# Multi-cursor #
+
+insert increasing number: `C-1 M-x mc/insert-numbers`
