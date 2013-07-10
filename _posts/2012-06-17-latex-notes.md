@@ -185,3 +185,24 @@ In order to turn on math mode in `dmath` environment:
 	;; Additionally, reftex code to recognize this environment as an equation
 	(setq reftex-label-alist
 	'(("dmath" ?e nil nil t)))
+
+# Subfiles #
+
+<http://tex.stackexchange.com/questions/11311/how-to-include-a-document-into-another-document/11318#11318>
+
+Try `standalone`, or `subfiles` packages.
+
+For `standalone`:
+
+	% main.tex
+	\documentclass{article}
+	\usepackage{standalone}
+	\begin{document}
+	\include{B}
+	\end{document}
+
+	% B.tex
+	\documentclass{article}
+	\begin{document}
+	...
+	\end{document}
