@@ -4,7 +4,7 @@ title: "emacs notes"
 description: ""
 category:
 tags: [emacs]
-Time-stamp: "liuminzhao 07/09/2013 14:24:04"
+Time-stamp: "liuminzhao 07/10/2013 16:06:49"
 ---
 {% include JB/setup %}
 
@@ -186,3 +186,30 @@ reference: <http://emacs-fu.blogspot.com/2008/12/automatic-timestamps.html>
 # Multi-cursor #
 
 insert increasing number: `C-1 M-x mc/insert-numbers`
+
+# Outline-Minor-Mode #
+
+<http://www.emacswiki.org/emacs/OutlineMinorMode>
+
+	; Outline-minor-mode key map
+	(define-prefix-command 'cm-map nil "Outline-")
+	; HIDE
+	(define-key cm-map "q" 'hide-sublevels)    ; Hide everything but the top-level headings
+	(define-key cm-map "t" 'hide-body)         ; Hide everything but headings (all body lines)
+	(define-key cm-map "o" 'hide-other)        ; Hide other branches
+	(define-key cm-map "c" 'hide-entry)        ; Hide this entry's body
+	(define-key cm-map "l" 'hide-leaves)       ; Hide body lines in this entry and sub-entries
+	(define-key cm-map "d" 'hide-subtree)      ; Hide everything in this entry and sub-entries
+	; SHOW
+	(define-key cm-map "a" 'show-all)          ; Show (expand) everything
+	(define-key cm-map "e" 'show-entry)        ; Show this heading's body
+	(define-key cm-map "i" 'show-children)     ; Show this heading's immediate child sub-headings
+	(define-key cm-map "k" 'show-branches)     ; Show all sub-headings under this heading
+	(define-key cm-map "s" 'show-subtree)      ; Show (expand) everything in this heading & below
+	; MOVE
+	(define-key cm-map "u" 'outline-up-heading)                ; Up
+	(define-key cm-map "n" 'outline-next-visible-heading)      ; Next
+	(define-key cm-map "p" 'outline-previous-visible-heading)  ; Previous
+	(define-key cm-map "f" 'outline-forward-same-level)        ; Forward - same level
+	(define-key cm-map "b" 'outline-backward-same-level)       ; Backward - same level
+	(global-set-key "\M-o" cm-map)
