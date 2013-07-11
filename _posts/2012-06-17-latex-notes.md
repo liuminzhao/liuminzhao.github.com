@@ -206,3 +206,9 @@ For `standalone`:
 	\begin{document}
 	...
 	\end{document}
+
+# Table #
+
+## Scale Table to fit on one page ##
+
+Put `\tabcolsep = 0.11cm` before `\begin{tabular}`.
