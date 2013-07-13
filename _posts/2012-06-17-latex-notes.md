@@ -212,3 +212,46 @@ For `standalone`:
 ## Scale Table to fit on one page ##
 
 Put `\tabcolsep = 0.11cm` before `\begin{tabular}`.
+
+# Subfiles #
+
+	% Main.tex
+	% Preamble
+	\usepackage{subfiles}
+	% More preamble
+	\begin{document}
+	\subfile{Methods}
+	\subfile{AnotherSection}
+	\subfile{OtherStuff}
+	\end{document}
+
+	% Methods.tex
+	\documentclass[Main.tex]{subfiles}
+	\begin{document}
+	\section{Methods}
+	\end{document}
+
+For bibtex, one solution from ![here](http://www.latex-community.org/forum/viewtopic.php?f=50&t=10320)
+
+	\documentclass[...]{...}
+	\usepackage{natbib}
+	\usepackage{subfiles}
+	...
+	\def\biblio{\bibliographystyle{plainnat}\bibliography{bibliography}}
+	\begin{document}
+	\def\biblio{}
+	...
+	\subfile{chapter\_1}
+	\subfile{chapter\_2}
+	...
+	\bibliographystyle{plainnat}
+	\bibliography{bibliography}
+	\end{document}
+
+In chapter tex file:
+
+	\documentclass[main]{subfiles}
+	\begin{document}
+	...
+	\biblio
+	\end{document}
