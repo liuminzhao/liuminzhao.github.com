@@ -4,6 +4,7 @@ title: "latex notes"
 description: ""
 category:
 tags: [latex]
+Time-stamp: "liuminzhao 07/14/2013 14:57:32"
 ---
 {% include JB/setup %}
 
@@ -38,12 +39,12 @@ Number a group of equations:
 * remove aux and bbl file to refresh
 * change bib file encoding with uft-8 by
 
-    	C-x RET f utf-8 RET
+		C-x RET f utf-8 RET
 
 * Code:
 
-	    \usepackage{natbib}
-	    \bibliographystyle{plainnat}
+		\usepackage{natbib}
+		\bibliographystyle{plainnat}
 		\bibliography{\filename}
 
 * do not use the same file name for bib file
@@ -65,16 +66,16 @@ It is because the package `ulem` making `emph` to have underlines.
 1. create git-latexdiff in `~/bin/` and move to `/usr/loca/bin`.
 2. update `~/.gitconfig`
 
-	    [difftool.latex]
-        cmd = git-latexdiff "$LOCAL" "$REMOTE"
+		[difftool.latex]
+		cmd = git-latexdiff "$LOCAL" "$REMOTE"
 		[difftool]
-        prompt = false
+		prompt = false
 		[alias]
-        ldiff = difftool -t latex
+		ldiff = difftool -t latex
 
 3. usage
 
-	    git ldiff HEAD
+		git ldiff HEAD
 		git ldiff file
 		git ldiff --cached file
 
@@ -96,7 +97,7 @@ doc-view-mode with auto-revert-mode ?
 
 `C-c C-f` +
 
-    C-e : \emph
+	C-e : \emph
 	C-b : bold
 	C-c : textsc
 	C-i : textit
@@ -106,31 +107,31 @@ doc-view-mode with auto-revert-mode ?
 
 ## format ##
 
-    C-c C-q C-s
+	C-c C-q C-s
 	M-q
 
 ## Reftex ##
 
-    C-c = : reftex toc
+	C-c = : reftex toc
 	C-c [ : insert citation
 	C-c ( : label
 	C-c ) : add reference  = refe
 
 ## Environments ##
 
-    C-c ] : close current environment
+	C-c ] : close current environment
 
 ## Preview under Mac ##
 
 <http://tex.stackexchange.com/questions/28458/preview-latex-in-emacs-auctex-empty-boxes>
 
-    Preview -> Customize -> Browse Options -> Preview GS -> options -> del-dSAFER
+	Preview -> Customize -> Browse Options -> Preview GS -> options -> del-dSAFER
 
 `C-x C-s` to save and reload.
 
 ## Latex-pretty-symbols ##
 
-    M-x latex-unicode-simplified
+	M-x latex-unicode-simplified
 
 <https://bitbucket.org/mortiferus/latex-pretty-symbols.el>
 
@@ -140,7 +141,7 @@ doc-view-mode with auto-revert-mode ?
 
 Suppose your source pdf is source.pdf, you wanna draw the 2nd and 4th page from that, by
 
-    \usepackage{pdfpages}
+	\usepackage{pdfpages}
 	\includepdf[page={2,4}]{source}
 
 `pdflatex` -> voila, here you are.
@@ -160,27 +161,27 @@ Suppose your source pdf is source.pdf, you wanna draw the 2nd and 4th page from 
 1. <http://stackoverflow.com/questions/1578127/how-do-i-break-a-long-equation-over-lines>
 2. <http://tex.stackexchange.com/questions/22573/how-can-i-tell-auctex-that-breqn-is-a-math-environment>
 
-    \documentclass{article}
+	\documentclass{article}
 	\usepackage{breqn}
 	\begin{document}
 	\begin{dmath}
 	f(n)-f(0) = A(n)-B(n)-C(n)-D(n)\cdot d-\left(A(0)-B(0)-C(0)-D(0)\cdot d\right)
-          = A(n)-0-X-D(n)\cdot d-\left(0-0-0-0\right)
-          = A(n)-X-D(n)\cdot d
-    \end{dmath}
+		  = A(n)-0-X-D(n)\cdot d-\left(0-0-0-0\right)
+		  = A(n)-X-D(n)\cdot d
+	\end{dmath}
 	\end{document}
 
 In order to turn on math mode in `dmath` environment:
 
-    (add-hook 'LaTeX-mode-hook 'add-my-latex-environments)
+	(add-hook 'LaTeX-mode-hook 'add-my-latex-environments)
 	(defun add-my-latex-environments ()
 	(LaTeX-add-environments
-    '("dmath" LaTeX-env-label)))
-    ;; Code I added to make syntax highlighting work in Auctex
-    (custom-set-variables
+	'("dmath" LaTeX-env-label)))
+	;; Code I added to make syntax highlighting work in Auctex
+	(custom-set-variables
 	'(font-latex-math-environments (quote
-    ("display" "displaymath" "equation" "eqnarray" "gather" "multline"
-    "align" "alignat" "xalignat" "dmath")))
+	("display" "displaymath" "equation" "eqnarray" "gather" "multline"
+	"align" "alignat" "xalignat" "dmath")))
 	'(TeX-insert-braces nil)) ;;Stops putting {} on argumentless commands to "save" whitespace
 	;; Additionally, reftex code to recognize this environment as an equation
 	(setq reftex-label-alist
@@ -231,7 +232,7 @@ Put `\tabcolsep = 0.11cm` before `\begin{tabular}`.
 	\section{Methods}
 	\end{document}
 
-For bibtex, one solution from ![here](http://www.latex-community.org/forum/viewtopic.php?f=50&t=10320)
+For bibtex, one solution from [here](http://www.latex-community.org/forum/viewtopic.php?f=50&t=10320)
 
 	\documentclass[...]{...}
 	\usepackage{natbib}
