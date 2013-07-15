@@ -4,7 +4,7 @@ title: "linux notes"
 description: ""
 category:
 tags: [linux]
-Time-stamp: "liuminzhao 07/06/2013 09:59:51"
+Time-stamp: "liuminzhao 07/15/2013 11:56:15"
 ---
 {% include JB/setup %}
 
@@ -213,3 +213,50 @@ scp multiple files: must quote
 # Check login history #
 
 	login
+
+# At(to schedule task once) #
+
+Reference:
+
+1. <http://superuser.com/questions/43678/mac-os-x-at-command-not-working>
+2. <http://www.ibm.com/developerworks/library/l-job-scheduling/index.html>
+3. <http://www.simplehelp.net/2009/05/04/how-to-schedule-tasks-on-linux-using-the-at-command/>
+
+`crontab` to schedule task repeatedly, `at` is used to schedule task once.
+
+Note `at` or `atrun` is disabled on mac by default. So first
+
+	sudo launchctl load -w /System/Library/LaunchDaemons/com.apple.atrun.plist
+
+To use `at`:
+
+to see if `atd` is running at daemon:
+
+	ps -ef | grep atd
+
+schedule from a file script at a specific time:
+
+	at -f shellscript.sh -v 18:30
+
+Time can also be :
+
+	10am tomorrow
+	now
+	tuesday
+	2:40
+	next week
+	now+2
+
+To check queue;
+
+	at -l
+	atq
+
+To remove tasks:
+
+	at -r
+	atrm
+
+Check task content
+
+	at -c #
