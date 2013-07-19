@@ -100,6 +100,12 @@ base 10 to binary
 	x = bin(30)[2:]
 	int(x, 2)
 
+## Special character ##
+
+`\` is `\\`. Check out using `print string`. Also  define string including `\` using raw definition:
+
+	a = r'\documentclass{article}'
+
 ## Join List to String ##
 
 	teams = ["Packers", "49ers", "Ravens", "Patriots"]
@@ -724,6 +730,32 @@ use:
 	print str(me)
 	me.grab("pencil")
 	print str(me)
+
+# os #
+
+`os` module can use shell or other system command. `subprocess` is the new updated and more powerful tool.
+However, `os` is much easier for one time use and for newbie like me.
+
+## change working director ##
+
+	owd = os.getcwd()
+	os.chdir(testDir)
+	os.chdir(owd)
+
+# Command use #
+
+	import os
+	if __name__ == "__main__":
+		...
+
+	python yourfile.py
+
+or use:
+
+	#!/usr/bin/python
+	#!/usr/bin/env python
+
+`sys.argv` is the list of command line arguments. The first element is the name of the program.
 
 # Reference #
 
