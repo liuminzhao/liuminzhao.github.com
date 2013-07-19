@@ -4,7 +4,7 @@ title: "latex notes"
 description: ""
 category:
 tags: [latex]
-Time-stamp: "liuminzhao 07/14/2013 14:57:32"
+Time-stamp: "liuminzhao 07/17/2013 20:43:39"
 ---
 {% include JB/setup %}
 
@@ -63,7 +63,7 @@ It is because the package `ulem` making `emph` to have underlines.
 
 <http://www.carlboettiger.info/wordpress/archives/3804>
 
-1. create git-latexdiff in `~/bin/` and move to `/usr/loca/bin`.
+1. create git-latexdiff in `~/bin/` and move to `/usr/local/bin`.
 2. update `~/.gitconfig`
 
 		[difftool.latex]
