@@ -74,3 +74,7 @@ Sometimes it does not show remote branch on status bar, it means you do not have
 
 	[branch "master"]
 		remote = origin
+
+## Reference ##
+
+<http://daemianmack.com/magit-cheatsheet.html#sec-8>
