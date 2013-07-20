@@ -757,6 +757,13 @@ or use:
 
 `sys.argv` is the list of command line arguments. The first element is the name of the program.
 
+## Sys ##
+
+Print out error and exit
+
+	sys.exit('error message!')
+
+
 # Reference #
 
 1. <http://maxburstein.com/blog/python-shortcuts-for-the-python-beginner/>
