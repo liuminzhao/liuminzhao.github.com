@@ -4,7 +4,7 @@ title: "emacs notes"
 description: ""
 category:
 tags: [emacs]
-Time-stamp: "liuminzhao 07/13/2013 11:18:41"
+Time-stamp: "liuminzhao 07/20/2013 23:34:46"
 ---
 {% include JB/setup %}
 
@@ -213,3 +213,8 @@ insert increasing number: `C-1 M-x mc/insert-numbers`
 	(define-key cm-map "f" 'outline-forward-same-level)        ; Forward - same level
 	(define-key cm-map "b" 'outline-backward-same-level)       ; Backward - same level
 	(global-set-key "\M-o" cm-map)
+
+# Dired #
+
+	v: view file, view mode
+	q: quit window
