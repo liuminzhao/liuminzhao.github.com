@@ -4,13 +4,19 @@ title: "linux notes"
 description: ""
 category:
 tags: [linux]
-Time-stamp: "liuminzhao 07/15/2013 11:56:15"
+Time-stamp: "liuminzhao 07/21/2013 13:27:24"
 ---
 {% include JB/setup %}
 
 # grep #
 
 [reference](http://bbs.chinaunix.net/thread-692640-1-1.html)
+
+<http://cloudbbs.org/forum.php?mod=viewthread&tid=16867>
+
+basic usage:
+
+	grep [options] pattern [file]
 
 all file contains 'boss'
 
@@ -19,6 +25,29 @@ all file contains 'boss'
 show line number
 
 	grep -n 'boss' file
+
+## Options ##
+
+`-n`: show +- n lines
+
+	grep -2 pattern file
+
+`-c`: print line number
+
+`-i`: inore case sensitive
+
+`-l`: show file list
+
+`-w`: word regrexp
+
+## Examples ##
+
+	ls -l | grep '^a' 通过管道过滤ls -l输出的内容，只显示以a开头的行。
+	grep 'test' d* 显示所有以d开头的文件中包含test的行。
+	grep -w pattern files ：只匹配整个单词，而不是字符串的一部分(如匹配‘magic’，而不是‘magical’)，
+	grep -C number pattern files ：匹配的上下文分别显示[number]行，
+	grep pattern1 | pattern2 files ：显示匹配 pattern1 或 pattern2 的行，
+	grep pattern1 files | grep pattern2 ：显示既匹配 pattern1 又匹配 pattern2 的行。
 
 # Diff #
 
@@ -92,8 +121,8 @@ Ever:
 ## Syntax ##
 
 	. : any
-	^: start
-	$: end
+	^: start of the line
+	$: end of the line
 	[]: indicate a set of char
 	[^T] : complement set
 	\d == [0-9]
@@ -144,6 +173,10 @@ Ever:
 	+: at least one {1,}
 	? : once or none {0,1}
 	{m,n}: m-n times
+
+## Work Lock ##
+
+	\bgrep\b : 'grep' only with space before and after
 
 # Shell #
 
@@ -260,3 +293,60 @@ To remove tasks:
 Check task content
 
 	at -c #
+
+# find #
+
+<http://cloudbbs.org/forum.php?mod=viewthread&tid=16867>
+
+basic usage:
+
+	find [path] [expression]
+	find [path] -options [-print -exec -ok ...]
+	find [path] test
+		options
+		criteria
+		action
+
+`ok` is similar to `exec`, but it will ask you first.
+
+## options ##
+
+`-name`
+
+`-user`
+
+`-mtime -n +n`: modified time, `-n` : within n days, `+n` : before n days
+
+	find / -mtime -5 -print
+
+`-newer file1 ! file2`: modified after file1 and older than file2
+
+`-type`:
+
+	d: directory
+	f: normal file
+	l: link file
+
+`-size n`
+
+## xargs ##
+
+	find . -type f -print | xargs file
+	find / -name "core" -print | xargs echo "" >/tmp/core.log
+	find . -type f -print | xargs grep "hostname"
+	find ./ -mtime +3 -print|xargs rm -f –r
+	find ./ -size 0 | xargs rm -f &
+
+## command ##
+
+	find ./ -size 0 -exec rm { } \;  # remove files with size 0
+	find . -type f -exec ls -l { } \;
+	find ./ -size 0 | xargs rm -f &
+
+## Examples ##
+
+	find ./ -size 0 -exec rm { } \;  # remove files with size 0
+	rm -i 'find ./ -size 0'
+	find ./ -size 0 | xargs rm -f &
+	find . -type f -exec ls -l { } \;
+	find /log -type f -mtime +5 -exec rm { } \;
