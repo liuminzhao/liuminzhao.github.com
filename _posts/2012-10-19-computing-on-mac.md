@@ -19,7 +19,7 @@ Mac for Computing
 - Install [xquartz](http://xquartz.macosforge.org/) on both local and remote machine. (I have set up configuration and installed software on Mike's machine)
 - Edit `/etc/ssh_config` in your local mac, change the following
 
-	    ForwardX11 yes
+		ForwardX11 yes
 
 then use `ssh -Y` to connect.
 
@@ -107,7 +107,7 @@ where `Rpackages` is the folder I make to install R packages. Now you should be 
 
 * pip
 
-        sudo easy_install pip
+		sudo easy_install pip
 
 # Tips #
 
