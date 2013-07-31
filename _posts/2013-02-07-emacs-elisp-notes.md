@@ -11,7 +11,7 @@ tags: [emacs, elisp]
 
 - <http://ergoemacs.org/emacs/elisp_basics.html>
 - <http://ergoemacs.org/emacs/elisp.html>
-
+- <http://bzg.fr/learn-emacs-lisp-in-15-minutes.html>
 
 
 # Printing #
@@ -69,15 +69,35 @@ Block expression:
 
 	(interactive) ; can be called by M - x
 
+	(defun greeting (from-name)
+	(let ((your-name (read-from-minibuffer "Enter your name: ")))
+    (insert (format "Hello!\n\nI am %s and you are %s."
+    from-name ; the argument of the function
+    your-name ; the let-bound var, entered at prompt
+    ))))
+
+	(defun hello () (insert "Hello, I am " my-name))
+	(defun hello (name) (insert "Hello " name))
+
+Evaluate:
+
+	(hello)
+	(hello "you")
+	(switch-to-buffer-other-window "\*test\*")
+
 # Eval #
 
 	(eval command)
+	C-j
+	C-x C-e : displays in minibuffer
+
 
 # Vectors #
 
 	(setq v (vector 3 4 5))
 	(setq v [3 4 5])
 	(length (vector 3 4 5))
+	(setq my-name "Bastien")
 
 # list #
 
@@ -111,8 +131,45 @@ Block expression:
 		)
 	)
 
+	(let ((local-name "you"))
+	(switch-to-buffer-other-window "*test*")
+	(erase-buffer)
+	(hello local-name)
+	(other-window 1))
+
+
 # Tips #
 
 	(member 3 '(1 2 3))
 	(string-to-number "3")
 	(number-to-string 3)
+
+# Command #
+
+`insert` : where the cursor is
+
+	(insert "Hello!")
+	(insert "Hello" " world!")
+	(insert "Hello, I am " my-name)
+
+**combine** with `progn`
+
+	(progn
+	(switch-to-buffer-other-window "*test*")
+	(hello "you"))
+
+	(erase-buffer) : erase
+	(other-window 1) :go back to the other window
+
+`format`:
+
+	(format "Hello %s!\n" "visitor")
+
+`let` bind a value to a local variable with `let':
+
+	(defun greeting (name)
+	(let ((your-name "Bastien"))
+    (insert (format "Hello %s!\n\nI am %s."
+    name       ; the argument of the function
+    your-name  ; the let-bound variable "Bastien"
+    ))))
