@@ -4,7 +4,7 @@ title: "emacs notes"
 description: ""
 category:
 tags: [emacs]
-Time-stamp: "liuminzhao 07/20/2013 23:34:46"
+Time-stamp: "liuminzhao 08/01/2013 12:54:18"
 ---
 {% include JB/setup %}
 
@@ -218,3 +218,17 @@ insert increasing number: `C-1 M-x mc/insert-numbers`
 
 	v: view file, view mode
 	q: quit window
+	C: sopy
+	R: rename
+	D: delete
+	+: create new dir
+	m: mark
+	u: unmark
+	U: unmark all
+	%m: mark by pattern
+	%m \.html$
+
+navigation:
+
+	g:refresh
+	^: go to parent
