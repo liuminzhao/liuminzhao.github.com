@@ -4,7 +4,7 @@ title: "latex notes"
 description: ""
 category:
 tags: [latex]
-Time-stamp: "liuminzhao 07/17/2013 20:43:39"
+Time-stamp: "liuminzhao 08/01/2013 21:01:08"
 ---
 {% include JB/setup %}
 
@@ -256,3 +256,11 @@ In chapter tex file:
 	...
 	\biblio
 	\end{document}
+
+# Bibtex #
+
+Where to get correct bibtex:
+
+go to <http://www.ams.org/mathscinet/index.html>,
+
+then clipboard, then export to bibtex together.
