@@ -4,7 +4,7 @@ title: "emacs notes"
 description: ""
 category:
 tags: [emacs]
-Time-stamp: "liuminzhao 08/01/2013 12:54:18"
+Time-stamp: "liuminzhao 08/01/2013 21:40:40"
 ---
 {% include JB/setup %}
 
@@ -232,3 +232,14 @@ navigation:
 
 	g:refresh
 	^: go to parent
+
+# Navigation #
+
+paranthesis:
+
+	C-M-n     forward-list  Move forward over a parenthetical group
+	C-M-p     backward-list  Move backward over a parenthetical group
+	C-M-f     forward-sexp Move forward over a balanced expression
+	C-M-b     backward-sexp  Move backward over a balanced expression
+	C-M-k     kill-sexp  Kill balanced expression forward
+	C-M-SPC   mark-sexp  Put the mark at the end of the sexp.
