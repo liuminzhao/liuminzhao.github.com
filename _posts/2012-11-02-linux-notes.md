@@ -4,7 +4,7 @@ title: "linux notes"
 description: ""
 category:
 tags: [linux]
-Time-stamp: "liuminzhao 07/21/2013 13:27:24"
+Time-stamp: "liuminzhao 08/06/2013 13:24:44"
 ---
 {% include JB/setup %}
 
@@ -115,6 +115,13 @@ Ever:
 	c: create
 	C-A n: next
 	p: previous
+
+in `~/.screenrc` put:
+
+	escape ^||
+	caption always "%{= kw}%-w%{= BW}%n %t%{-}%+w %-= @%H - %LD %d %LM - %c"
+
+to avoid conflict with `emacs`.
 
 # Regex #
 
