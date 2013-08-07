@@ -4,7 +4,7 @@ title: "linux notes"
 description: ""
 category:
 tags: [linux]
-Time-stamp: "liuminzhao 08/06/2013 13:24:44"
+Time-stamp: "liuminzhao 08/06/2013 21:07:09"
 ---
 {% include JB/setup %}
 
@@ -115,6 +115,12 @@ Ever:
 	c: create
 	C-A n: next
 	p: previous
+	A: rename
+	S: split horizontal
+	| or V: vertical
+	tab: jump
+	X: remove current
+	Q: remain current
 
 in `~/.screenrc` put:
 
