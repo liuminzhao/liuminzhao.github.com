@@ -68,6 +68,8 @@ change magit diff default color
     (when (not window-system)
     (set-face-background 'magit-item-highlight "black"))))
 
+	k: reverts file; drop them
+
 ## show remote in status ##
 
 Sometimes it does not show remote branch on status bar, it means you do not have the default remote for current branch. Just add the following:

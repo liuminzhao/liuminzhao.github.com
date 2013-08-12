@@ -4,7 +4,7 @@ title: "linux notes"
 description: ""
 category:
 tags: [linux]
-Time-stamp: "liuminzhao 08/06/2013 21:07:09"
+Time-stamp: "liuminzhao 08/12/2013 12:09:06"
 ---
 {% include JB/setup %}
 
@@ -363,3 +363,15 @@ basic usage:
 	find ./ -size 0 | xargs rm -f &
 	find . -type f -exec ls -l { } \;
 	find /log -type f -mtime +5 -exec rm { } \;
+
+# chown #
+
+change ownership:
+
+	chown server:server folder
+
+# ps #
+
+can show status of current process:
+
+	ps -A | grep -i ssh
