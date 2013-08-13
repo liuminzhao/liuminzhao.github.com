@@ -4,7 +4,7 @@ title: "latex notes"
 description: ""
 category:
 tags: [latex]
-Time-stamp: "liuminzhao 08/01/2013 21:01:08"
+Time-stamp: "liuminzhao 08/13/2013 15:44:40"
 ---
 {% include JB/setup %}
 
@@ -13,15 +13,15 @@ LaTeX notes
 
 # parallel picture #
 
-	  \begin{tabular}{cc}
- 	  \begin{minipage}
- 	  fjsdajfl
- 	  \end{minipage}
+	\begin{tabular}{cc}
+	\begin{minipage}
+ 		fjsdajfl
+ 	\end{minipage}
 
- 	  \begin{minipage}
- 	  fasfd
- 	  \end{minipage}
-	  \end{tabular}
+ 	\begin{minipage}
+ 		fasfd
+ 	\end{minipage}
+	\end{tabular}
 
 # Number #
 
@@ -264,3 +264,34 @@ Where to get correct bibtex:
 go to <http://www.ams.org/mathscinet/index.html>,
 
 then clipboard, then export to bibtex together.
+
+# landscape #
+
+## Whole paper ##
+
+	\usepackage[landscape]{geometry}
+
+## single page ##
+
+	\usepackage{lscape}
+	\begin{landscape}
+	\end{landscape}
+
+## single page with pdf viewer support ##
+
+	\usepackage{pdflscape}
+	\begin{landscape}
+	\end{landscape}
+
+# size #
+
+	\tiny
+	\scriptsize
+	\footnotesize
+	\small
+	\normalsize
+	\large
+	\Large
+	\LARGE
+	\huge
+	\Huge
