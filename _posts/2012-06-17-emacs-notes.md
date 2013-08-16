@@ -4,7 +4,7 @@ title: "emacs notes"
 description: ""
 category:
 tags: [emacs]
-Time-stamp: "liuminzhao 08/01/2013 21:40:40"
+Time-stamp: "liuminzhao 08/16/2013 12:36:25"
 ---
 {% include JB/setup %}
 
@@ -243,3 +243,6 @@ paranthesis:
 	C-M-b     backward-sexp  Move backward over a balanced expression
 	C-M-k     kill-sexp  Kill balanced expression forward
 	C-M-SPC   mark-sexp  Put the mark at the end of the sexp.
+
+	M-g M-g : go to line
+	M-g-g: go to line
