@@ -3,7 +3,7 @@ layout: post
 title: "fortran notes"
 description: ""
 tags: [fortran]
-Time-stamp: "liuminzhao 07/02/2013 11:24:19"
+Time-stamp: "liuminzhao 08/16/2013 16:23:08"
 ---
 {% include JB/setup %}
 
@@ -186,6 +186,9 @@ then call from main function:
 
     call progress(iter, niter)
 
+# Matrix #
+
+	A(1, :) for 1st row
 
 # Reference #
 
