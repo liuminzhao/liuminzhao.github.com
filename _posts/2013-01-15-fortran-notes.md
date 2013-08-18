@@ -3,7 +3,7 @@ layout: post
 title: "fortran notes"
 description: ""
 tags: [fortran]
-Time-stamp: "liuminzhao 08/16/2013 16:23:08"
+Time-stamp: "liuminzhao 08/18/2013 14:33:48"
 ---
 {% include JB/setup %}
 
@@ -81,6 +81,8 @@ use `exit` to exit loop
 # MATH #
 
 	**: exponential
+	DOT_PRODUCT(vecA, vecB)
+	MATMUL(matA, matB)
 
 # COMPARE #
 
@@ -189,6 +191,11 @@ then call from main function:
 # Matrix #
 
 	A(1, :) for 1st row
+
+# stop #
+
+	stop 0 : to stop and return message
+	call exit(1)
 
 # Reference #
 
