@@ -3,7 +3,7 @@ layout: post
 title: "fortran notes"
 description: ""
 tags: [fortran]
-Time-stamp: "liuminzhao 08/18/2013 14:33:48"
+Time-stamp: "liuminzhao 08/19/2013 23:58:32"
 ---
 {% include JB/setup %}
 
@@ -130,6 +130,11 @@ use `exit` to exit loop
 1. function has a type
 2. return a value with same name
 3. called by name and parameters
+4. can use `return` like a `go to` statement,
+   and there can be more than one `return`
+5. `end` at the end
+6. call by value
+7. can be after the `write` statement
 
 		real function r(m,t)
 		integer m
@@ -152,6 +157,8 @@ use `exit` to exit loop
 2. no type
 3. should not be declared in the calling program unit
 4. called by `call`
+5. call by reference
+6. must be a stand alone statement
 
 Subroutine has `RETURN`
 
