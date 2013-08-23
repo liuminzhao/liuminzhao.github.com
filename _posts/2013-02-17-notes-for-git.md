@@ -16,12 +16,23 @@ or
     git checkout master
 	git merge branch
 
+usually just fast forward the [HEAD](http://www.slideshare.net/littlebtc/git-5528339).
+
 # rebase #
 
-similar to `merge`, but put forward and forma a linear relation
+similar to `merge`, but put forward and form a linear relation
 
 	git rebase master (move bugFix to master branch)
-	then
+
+then
+
+	git checkout master
+	git merge bugFix
+
+because after rebase, we can fast-forward merge.
+
+or
+
 	git rebase bugFix (move master head to bugFix)
 
 # Reverse #
@@ -80,3 +91,8 @@ Sometimes it does not show remote branch on status bar, it means you do not have
 ## Reference ##
 
 <http://daemianmack.com/magit-cheatsheet.html#sec-8>
+
+
+# Pull #
+
+Pull = fetch + merge
