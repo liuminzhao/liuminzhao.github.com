@@ -3,7 +3,7 @@ layout: post
 title: "fortran notes"
 description: ""
 tags: [fortran]
-Time-stamp: "liuminzhao 08/19/2013 23:58:32"
+Time-stamp: "liuminzhao 08/22/2013 16:33:37"
 ---
 {% include JB/setup %}
 
@@ -203,6 +203,10 @@ then call from main function:
 
 	stop 0 : to stop and return message
 	call exit(1)
+
+# Troublesome #
+
+1. need to declare sub function in function or subroutine
 
 # Reference #
 
