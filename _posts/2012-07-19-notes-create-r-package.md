@@ -4,6 +4,7 @@ title: "notes for create R package "
 description: ""
 category:
 tags: [R]
+Time-stamp: "liuminzhao 08/24/2013 14:44:56"
 ---
 {% include JB/setup %}
 

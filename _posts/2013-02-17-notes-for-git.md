@@ -4,6 +4,7 @@ title: "notes for git"
 description: ""
 category:
 tags: [git]
+Time-stamp: "liuminzhao 08/24/2013 14:45:07"
 ---
 {% include JB/setup %}
 
