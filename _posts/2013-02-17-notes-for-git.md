@@ -4,7 +4,7 @@ title: "notes for git"
 description: ""
 category:
 tags: [git]
-Time-stamp: "liuminzhao 08/24/2013 14:45:07"
+Time-stamp: "liuminzhao 08/27/2013 10:26:11"
 ---
 {% include JB/setup %}
 
@@ -97,3 +97,9 @@ Sometimes it does not show remote branch on status bar, it means you do not have
 # Pull #
 
 Pull = fetch + merge
+
+# branch #
+
+A new branch with new history:
+
+	git checkout --orphan NEW_BRANCH_NAME_HERE
