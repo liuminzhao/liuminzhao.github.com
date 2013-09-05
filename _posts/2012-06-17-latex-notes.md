@@ -4,7 +4,7 @@ title: "latex notes"
 description: ""
 category:
 tags: [latex]
-Time-stamp: "liuminzhao 08/13/2013 15:44:40"
+Time-stamp: "liuminzhao 09/04/2013 22:18:18"
 ---
 {% include JB/setup %}
 
@@ -295,3 +295,24 @@ then clipboard, then export to bibtex together.
 	\LARGE
 	\huge
 	\Huge
+
+# double spacing #
+
+	\linespread{1.6}
+
+or
+
+	\usepackage[doublespacing]{setspace}
+
+in preamble
+
+# bst, cls, sty #
+
+* bst: reference style
+* cls: document class
+* sty: generic functions, package
+
+# Others #
+
+	\text -> \mbox
+	\bm -> \bmath
