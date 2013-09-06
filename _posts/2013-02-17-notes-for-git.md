@@ -4,7 +4,7 @@ title: "notes for git"
 description: ""
 category:
 tags: [git]
-Time-stamp: "liuminzhao 08/27/2013 10:26:11"
+Time-stamp: "liuminzhao 09/06/2013 15:30:17"
 ---
 {% include JB/setup %}
 
@@ -103,3 +103,16 @@ Pull = fetch + merge
 A new branch with new history:
 
 	git checkout --orphan NEW_BRANCH_NAME_HERE
+
+# Mercurial #
+
+## Convert Mercurial project to Git ##
+
+<http://stackoverflow.com/questions/16037787/convert-mercurial-project-to-git>
+
+	cd ~
+	git clone git://repo.or.cz/fast-export.git
+	git init git_repo
+	cd git_repo
+	~/fast-export/hg-fast-export.sh -r /path/to/old/mercurial_repo
+	git checkout HEAD
