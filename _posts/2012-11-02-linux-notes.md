@@ -4,7 +4,7 @@ title: "linux notes"
 description: ""
 category:
 tags: [linux]
-Time-stamp: "liuminzhao 08/12/2013 12:09:06"
+Time-stamp: "liuminzhao 09/06/2013 22:21:10"
 ---
 {% include JB/setup %}
 
@@ -210,7 +210,7 @@ to avoid conflict with `emacs`.
 - `uptime` : how long the computer has run
 - `export`: show all the env variable
 - `echo $PATH`: show single variable
-- `clear`
+- `clear` : `C-l`
 - `cmp file1 file2`: compare
 - `cal` : calendar
 - `echo "AaDCbd23" | tr "[A-Z]" "a-z"` : upper case to lower case,

@@ -736,7 +736,7 @@ use:
 `os` module can use shell or other system command. `subprocess` is the new updated and more powerful tool.
 However, `os` is much easier for one time use and for newbie like me.
 
-## change working director ##
+## change working directory ##
 
 	owd = os.getcwd()
 	os.chdir(testDir)
