@@ -4,7 +4,7 @@ title: "notes slidify"
 description: ""
 category:
 tags: [slidify]
-Time-stamp: "liuminzhao 09/08/2013 14:12:32"
+Time-stamp: "liuminzhao 09/09/2013 15:23:48"
 ---
 {% include JB/setup %}
 
@@ -76,10 +76,10 @@ use `---` to separate frames
 
 Two column
 
-	--- %twocol
-	*** =left
+	--- &twocol
+	*** left
 	xxx
-	*** =right
+	*** right
 	yyy
 
 ## Bootstrap ##
@@ -124,3 +124,10 @@ Two column
 
 	--- #blockquote
 	> **
+
+# Deck.js #
+
+	framework: deckjs
+	deckjs:
+		theme: web-2.0
+	highlighter: highlight.js
