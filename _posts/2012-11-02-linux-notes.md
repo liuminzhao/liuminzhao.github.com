@@ -4,7 +4,7 @@ title: "linux notes"
 description: ""
 category:
 tags: [linux]
-Time-stamp: "liuminzhao 09/06/2013 22:21:10"
+Time-stamp: "liuminzhao 09/24/2013 11:56:09"
 ---
 {% include JB/setup %}
 
@@ -249,6 +249,8 @@ Yoda: `if ('blue' == col)`
 find and delete all lines with string pattern in all files:
 
 	sed -i.bak '/String/d' *
+
+	ls file | xargs sed -i '' 's/oldpattern/newpattern/g'
 
 # Scp #
 
