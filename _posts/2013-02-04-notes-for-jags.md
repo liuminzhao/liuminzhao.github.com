@@ -2,7 +2,7 @@
 layout: post
 title: "notes for jags"
 description: ""
-category: 
+category:
 tags: [jags]
 ---
 {% include JB/setup %}
@@ -31,7 +31,7 @@ tags: [jags]
 	    mu[k] ~ dnorm(basemu, basetau)
 	    tauinv[k] ~ dgamma(3, b)
 	}
-	basemu ~ dnorm(0, .01)	
+	basemu ~ dnorm(0, .01)
 	basetau <- pow(sigmaF0, -2)
 	sigmaF0 ~ dunif(0, 10)
 	b ~ dgamma(0.03, 0.03)
@@ -52,9 +52,9 @@ saved in `example.bug`
 		'N' = N),
 		n.chains = 4,
 		n.adapt = 100)
- 
+
 	update(jags, 1000)
- 
+
 	jags.samples(jags,
              c('mu', 'tau'),
              1000)
@@ -67,3 +67,39 @@ saved in `example.bug`
 ## Convergence ##
 
 	codamenu()
+
+
+# Stochastic vs. Deterministic Nodes
+
+- Observed data must correspond to stochastic nodes
+- All constants like N must be known at compile-time
+- Deterministic nodes are nothing more than shorthand
+  A deterministic node can always be optimized out!
+- Stochastic nodes are the essence of the program
+
+# Syntax #
+
+## Truncated and censored ##
+
+	T(,): a priori restriction
+	I(,): a posteriori restriction
+
+## Others ##
+
+- BUGS uses precision rather than variance
+- power: `pow(x, 2)`
+
+## Mixture Normal ##
+
+	Y[i] ~ dnormmix(mu[], tau[], p[])
+
+# Reference #
+
+1. <https://github.com/johnmyleswhite/JAGSIntro/blob/master/slides.md>
+2. <http://w3.jouy.inra.fr/unites/miaj/public/nosdoc/rap2012-5.pdf>
+3. <http://ftp.iinet.net.au/pub/FreeBSD/distfiles/mcmc-jags/jags_user_manual.pdf>
+4. <http://bendixcarstensen.com/Bayes/Cph-2012/pracs.pdf>
+5. <http://sousalobo.com/aom2011pdw/JAGS_tutorial_Lobo.pdf>
+6. <http://jackman.stanford.edu/classes/BASS/ch8.pdf>
+7. <http://www.math.helsinki.fi/openbugs/IceBUGS/Presentations/PlummerIceBUGS.pdf>
+8. <http://www.mrc-bsu.cam.ac.uk/bugs/faqs/contents.shtml>
