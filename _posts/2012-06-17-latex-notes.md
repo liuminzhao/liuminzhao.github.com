@@ -4,7 +4,7 @@ title: "latex notes"
 description: ""
 category:
 tags: [latex]
-Time-stamp: "liuminzhao 09/04/2013 22:18:18"
+Time-stamp: "liuminzhao 09/09/2013 15:54:40"
 ---
 {% include JB/setup %}
 
@@ -316,3 +316,16 @@ in preamble
 
 	\text -> \mbox
 	\bm -> \bmath
+
+# Mathjax #
+
+	\iint
+
+## Fonts ##
+
+	\mathbb
+	\mathbf
+	\mathtt
+	\mathrm
+	\mathcal
+	\mathscr
