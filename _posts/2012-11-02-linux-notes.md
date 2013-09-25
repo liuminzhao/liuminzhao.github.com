@@ -4,7 +4,7 @@ title: "linux notes"
 description: ""
 category:
 tags: [linux]
-Time-stamp: "liuminzhao 09/24/2013 11:56:09"
+Time-stamp: "liuminzhao 09/24/2013 18:09:15"
 ---
 {% include JB/setup %}
 
@@ -251,6 +251,70 @@ find and delete all lines with string pattern in all files:
 	sed -i.bak '/String/d' *
 
 	ls file | xargs sed -i '' 's/oldpattern/newpattern/g'
+
+	sed '/pattern/d' infile > outfile
+
+in-place edit
+
+	sed -i '/pattern/d' file
+
+some required an extension to be provided
+
+	sed -i.backup '/pattern/d' file
+
+some reported `sed` is slower than `grep` combined with `mv`.
+
+## Format:
+
+	sed [-nefri] 'command' infile
+
+`-n` : silent mode, only the matched line will be printed
+
+## command
+
+- `a`: append ; follow by content in the new line
+- `c`: replace: followed by content in the new line
+- `d`: del,
+- `i`: insert
+- `p`: print, usually comes with `sed -n`
+- `s`: replace, `s/old/new/g`
+
+## example
+
+`d`:
+
+	sed '1d' file # delete first line
+	sed '$d' file # delete last line
+	sed '1,2d' file # delete 1 - 2 line;
+	sed '2,$d' file
+
+`p`:
+
+	sed -n '1p' file # print first line
+
+find and print:
+
+	sed -n '/ruby/p' file
+
+`a`:
+
+	sed '1a drink tea' file # append 'drink tea' after first line
+	sed '1,3a drink tea' file # append for each line between 1, 3
+
+`c`:
+
+	sed '1c Hi' file # replace 1st line with Hi
+
+replace certain string
+
+	sed 's/old/new/g' file
+	sed 's/old//g' # delete old
+
+insert :
+
+	sed -i '$a bye' file # insert byb at the last line
+
+reference: <http://www.zhukun.net/archives/6029>
 
 # Scp #
 
