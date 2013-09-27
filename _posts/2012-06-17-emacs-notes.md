@@ -4,7 +4,7 @@ title: "emacs notes"
 description: ""
 category:
 tags: [emacs]
-Time-stamp: "liuminzhao 08/16/2013 12:36:25"
+Time-stamp: "liuminzhao 09/26/2013 20:48:52"
 ---
 {% include JB/setup %}
 
@@ -246,3 +246,12 @@ paranthesis:
 
 	M-g M-g : go to line
 	M-g-g: go to line
+
+# change keybinding/Define keys #
+
+	(global-set-key (kbd "M-a") 'function-name)
+
+Describe key:
+
+	C-M-F8
+	kbd "<C-M-f8>"
