@@ -4,7 +4,7 @@ title: "notes slidify"
 description: ""
 category:
 tags: [slidify]
-Time-stamp: "liuminzhao 09/09/2013 15:23:48"
+Time-stamp: "liuminzhao 09/30/2013 15:38:34"
 ---
 {% include JB/setup %}
 
@@ -131,3 +131,15 @@ Two column
 	deckjs:
 		theme: web-2.0
 	highlighter: highlight.js
+
+# Citation #
+
+	library(knitcitations)
+	bib <- read.bibtex('reference.bib')
+	`r citet(bib[['yu2001']])` for inline
+
+Print all :
+
+	```{r results = "asis", echo = FALSE}
+	bibliography()
+	```
