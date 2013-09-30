@@ -2,7 +2,7 @@
 layout: post
 title: "Notes for Mutt"
 description: ""
-category: 
+category:
 tags: [Mutt, Emacs]
 ---
 {% include JB/setup %}
@@ -16,13 +16,18 @@ Notes for Mutt
 * <http://www.adamjiang.com/archives/858>
 * <http://pbrisbin.com/posts/mutt_gmail_offlineimap>
 * <http://www.imtxc.com/blog/2012/04/22/use-gmail-plus-mutt-plus-msmtp-plus-offlineimap/>
+* <http://stevelosh.com/blog/2012/10/the-homely-mutt/#configuring-offlineimap>
 
 # General #
 
-mutt + offlineimap + imapfilter + msmtp 
+mutt + offlineimap + imapfilter + msmtp
+
+install with side_bar patch
+
+	brew install mutt --with-sidebar-patch
 
 # offlineimap #
-	
+
 	[general]
     # NOTE: cronjob calls the quiet UI with -u
 	ui = ttyui
@@ -51,12 +56,9 @@ mutt + offlineimap + imapfilter + msmtp
 
 	[Repository stat-remote]
 	type = IMAP
-	maxconnections = 2
-	remotehost = eelpout.stat.ufl.edu
+	remotehost = imap.ufl.edu
 	remoteuser = liuminzhao
 	remotepass = secret
-	remoteport = 993
-	ssl = yes
 
     # Translate remote names to local names:
     # This one does:
@@ -68,7 +70,7 @@ mutt + offlineimap + imapfilter + msmtp
     # localfolders = ~/Mail/GMail
 
     # [Repository Gmail-Remote]
-    # type = Gmail 
+    # type = Gmail
     # remoteuser = liuminzhao@gmail.com
     # remotepass = secret
     # realdelete = no
@@ -99,18 +101,18 @@ mutt + offlineimap + imapfilter + msmtp
 	exit 0
 
 	chmod +x /usr/local/bin/syncmail.sh
-	
+
 # auto complete , contacts, google#
 
 	sudo apt-get install googlecl
-	
+
 <http://chsc.wordpress.com/2011/06/07/mutt-query-googlec/>
 
 worked way:
 
 <http://pypi.python.org/pypi/goobook/1.4alpha4>
 
-put in muttrc : 
+put in muttrc :
 
 	set query_command="goobook query '\%\s'"
 
@@ -127,14 +129,14 @@ put in muttrc :
 <http://emacs-fu.blogspot.com/2009/01/e-mail-with-emacs-using-mutt.html>
 
 	(server-start)
-	
-in muttrc 
 
-	set editor="emacsclient +8 \%\s -a emacs" 
+in muttrc
+
+	set editor="emacsclient +8 \%\s -a emacs"
 
 ## post mode ##
 
-	C-c C-c to send mail 
+	C-c C-c to send mail
 
 ## el ##
 
@@ -154,16 +156,22 @@ in muttrc
 	image/*; feh \%\s
 
 in muttrc
-	
+
 	auto_view text/html
-	
+
 # Search #
 
 * <http://www.calmar.ws/mutt/>
 * <http://www.mutt.org/doc/devel/manual.html#patterns>
 
-* `~b word ~d <2w`      |body word, in 2     
-* `~f link ~b math`     |from, body          
+* `~b word ~d <2w`      |body word, in 2
+* `~f link ~b math`     |from, body
 * `~F ~f link ~b word`  |F tagged, from, body
-* `~f link =b math`     |=exact              
-* `~f gart ! ~f css`    |not from css        
+* `~f link =b math`     |=exact
+* `~f gart ! ~f css`    |not from css
+
+# Troublesome #
+
+If saying `lock the account`:
+
+	rm -r ~/.offlineimap
