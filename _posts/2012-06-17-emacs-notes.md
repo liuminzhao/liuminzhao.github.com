@@ -4,7 +4,7 @@ title: "emacs notes"
 description: ""
 category:
 tags: [emacs]
-Time-stamp: "liuminzhao 09/26/2013 20:48:52"
+Time-stamp: "liuminzhao 10/01/2013 17:44:00"
 ---
 {% include JB/setup %}
 
@@ -255,3 +255,16 @@ Describe key:
 
 	C-M-F8
 	kbd "<C-M-f8>"
+
+# Regexp
+
+Pattern:
+
+	\(mypattern\)
+	M-x replace-regexp <RET> regexp <RET> newstring <RET>
+
+	\&: entire match
+	\d: d-th group
+	\#: count of replacement
+
+Advanced use: <http://www.emacswiki.org/emacs/ReplaceRegexp>
