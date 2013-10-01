@@ -4,7 +4,7 @@ title: "notes slidify"
 description: ""
 category:
 tags: [slidify]
-Time-stamp: "liuminzhao 09/30/2013 15:38:34"
+Time-stamp: "liuminzhao 10/01/2013 14:06:07"
 ---
 {% include JB/setup %}
 
@@ -57,6 +57,14 @@ use `---` to separate frames
 	---------|---------
 	Row 1    |  Row 1
 	Row 2    |  Row 2
+
+Make table in  org-mode then copy to Rmd file:
+
+	(defun markdown-regexp-right (beg end)
+	(interactive "r")
+	(replace-regexp "-\|[^-]" "-:|\n" nil beg end)
+	(replace-regexp "-\\+-" "-|-" nil beg end)
+	)
 
 ## Background ##
 
