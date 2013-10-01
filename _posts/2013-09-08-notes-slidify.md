@@ -4,7 +4,7 @@ title: "notes slidify"
 description: ""
 category:
 tags: [slidify]
-Time-stamp: "liuminzhao 10/01/2013 14:06:07"
+Time-stamp: "liuminzhao 10/01/2013 14:59:10"
 ---
 {% include JB/setup %}
 
@@ -29,6 +29,10 @@ Time-stamp: "liuminzhao 10/01/2013 14:06:07"
 png put under `assets/img/aa.png`
 
 use `---` to separate frames
+
+	publish('dir', host = 'dropbox')
+	publish(user = '', repo = '', host = 'github')
+
 
 # IO2012 #
 
