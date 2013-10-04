@@ -4,7 +4,7 @@ title: "latex notes"
 description: ""
 category:
 tags: [latex]
-Time-stamp: "liuminzhao 09/09/2013 15:54:40"
+Time-stamp: "liuminzhao 10/04/2013 16:15:38"
 ---
 {% include JB/setup %}
 
@@ -329,3 +329,14 @@ in preamble
 	\mathrm
 	\mathcal
 	\mathscr
+
+# Multiple files  #
+
+Put the following at the end of master file:
+
+	%%% Local Variables:
+	%%% mode: latex
+	%%% TeX-master: "dissertation"
+	%%% End:
+
+or `C-c _`, then `ref` will automatically scan other sub files.
