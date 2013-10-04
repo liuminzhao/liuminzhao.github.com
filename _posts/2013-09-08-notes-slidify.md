@@ -4,7 +4,7 @@ title: "notes slidify"
 description: ""
 category:
 tags: [slidify]
-Time-stamp: "liuminzhao 10/01/2013 14:59:10"
+Time-stamp: "liuminzhao 10/02/2013 13:40:30"
 ---
 {% include JB/setup %}
 
@@ -69,6 +69,9 @@ Make table in  org-mode then copy to Rmd file:
 	(replace-regexp "-\|[^-]" "-:|\n" nil beg end)
 	(replace-regexp "-\\+-" "-|-" nil beg end)
 	)
+
+	|twocolumn||
+	|1st | 2nd |
 
 ## Background ##
 
