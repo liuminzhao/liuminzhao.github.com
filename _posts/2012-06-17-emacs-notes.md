@@ -4,7 +4,7 @@ title: "emacs notes"
 description: ""
 category:
 tags: [emacs]
-Time-stamp: "liuminzhao 10/01/2013 17:44:00"
+Time-stamp: "liuminzhao 10/02/2013 11:36:57"
 ---
 {% include JB/setup %}
 
@@ -268,3 +268,12 @@ Pattern:
 	\#: count of replacement
 
 Advanced use: <http://www.emacswiki.org/emacs/ReplaceRegexp>
+
+In lisp, they have special rules <http://ergoemacs.org/emacs/emacs_regex.html>
+
+- For regex that has a backslash, it needs to be double backslash, except {\n, \t, …}.
+- Any double straight ASCII quote " needs to have a backslash in front, i.e. \"
+
+	(defun replace-cite ()
+	(interactive)
+	(replace-regexp "\\\\\\(cite[tp]?\\){\\(\\w+\\)}" "`r \\1(bib2[['\\2']])`" nil (point-min) (point-max)))
