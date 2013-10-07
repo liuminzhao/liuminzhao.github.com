@@ -4,7 +4,7 @@ title: "latex notes"
 description: ""
 category:
 tags: [latex]
-Time-stamp: "liuminzhao 10/04/2013 16:15:38"
+Time-stamp: "liuminzhao 10/05/2013 13:11:21"
 ---
 {% include JB/setup %}
 
@@ -340,3 +340,7 @@ Put the following at the end of master file:
 	%%% End:
 
 or `C-c _`, then `ref` will automatically scan other sub files.
+
+# Figure position #
+
+Prefer `[!htbp]`
