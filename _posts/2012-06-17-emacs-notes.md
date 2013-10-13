@@ -4,7 +4,7 @@ title: "emacs notes"
 description: ""
 category:
 tags: [emacs]
-Time-stamp: "liuminzhao 10/02/2013 11:36:57"
+Time-stamp: "liuminzhao 10/08/2013 22:51:44"
 ---
 {% include JB/setup %}
 
@@ -167,6 +167,8 @@ Schedule time: `C-c C-s`,
 # yasnippet #
 
 	`(my-insert-date)`
+
+escape special `$` and back-quote by `\`
 
 # Time-stamp #
 
