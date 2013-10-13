@@ -4,7 +4,7 @@ title: "notes slidify"
 description: ""
 category:
 tags: [slidify]
-Time-stamp: "liuminzhao 10/02/2013 13:40:30"
+Time-stamp: "liuminzhao 10/09/2013 10:07:03"
 ---
 {% include JB/setup %}
 
@@ -130,6 +130,9 @@ Two column
 
 	--- .cover #FitToHeight
 	--- .cover .w #FitToWidth
+
+	<img style="float:middle" src="assets/img/polya.jpg" />
+	<img align="middle" src="assets/img/polya.jpg" />
 
 ## shout ##
 
