@@ -4,7 +4,7 @@ title: "linux notes"
 description: ""
 category:
 tags: [linux]
-Time-stamp: "liuminzhao 09/24/2013 18:09:15"
+Time-stamp: "liuminzhao 10/16/2013 21:21:00"
 ---
 {% include JB/setup %}
 
@@ -441,3 +441,9 @@ change ownership:
 can show status of current process:
 
 	ps -A | grep -i ssh
+
+# ssh #
+
+ssh without password
+
+	cat .ssh/id_rsa.pub | ssh b@B 'cat >> .ssh/authorized_keys'
