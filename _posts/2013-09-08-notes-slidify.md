@@ -4,7 +4,7 @@ title: "notes slidify"
 description: ""
 category:
 tags: [slidify]
-Time-stamp: "liuminzhao 10/09/2013 10:07:03"
+Time-stamp: "liuminzhao 10/21/2013 21:17:01"
 ---
 {% include JB/setup %}
 
@@ -161,3 +161,8 @@ Print all :
 	```{r results = "asis", echo = FALSE}
 	bibliography()
 	```
+
+# Customize #
+
+change `assets/css` file and `assets/layouts/slide.html`, can also
+customize own class, id, and key (like `.definition` and `.example`)
