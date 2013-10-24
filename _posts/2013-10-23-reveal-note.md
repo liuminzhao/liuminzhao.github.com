@@ -4,7 +4,7 @@ title: "reveal note"
 description: ""
 category:
 tags: [org-mode, emacs, html5]
-Time-stamp: "liuminzhao 10/23/2013 20:35:56"
+Time-stamp: "liuminzhao 10/23/2013 22:29:00"
 ---
 {% include JB/setup %}
 
@@ -99,3 +99,9 @@ Also use
 # Internal links
 
 Use custom id property
+
+# Pandoc  #
+
+Converting from markdown file
+
+	pandoc -s -S index.md -o index.org --from markdown-yaml_metadata_block
