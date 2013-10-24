@@ -4,7 +4,7 @@ title: "notes slidify"
 description: ""
 category:
 tags: [slidify]
-Time-stamp: "liuminzhao 10/21/2013 21:17:01"
+Time-stamp: "liuminzhao 10/21/2013 22:27:06"
 ---
 {% include JB/setup %}
 
@@ -166,3 +166,21 @@ Print all :
 
 change `assets/css` file and `assets/layouts/slide.html`, can also
 customize own class, id, and key (like `.definition` and `.example`)
+
+For example, create `mytwocol.html` under `assets/layouts/slide.html`:
+
+	<slide class="{{ class }}" id="{{ id }}">
+	<hgroup>
+		{{{ header }}}
+		</hgroup>
+	<article>
+    <hr noshade size=4 color='red'>
+    {{{ content }}}
+    <div class='left' style='float:left;width:{{{ w1 }}}'>
+     {{{ left }}}
+    </div>
+    <div class='right' style='float:right;width:{{{ w2 }}}'>
+     {{{ right }}}
+    </div>
+	</article>
+	</slide>
