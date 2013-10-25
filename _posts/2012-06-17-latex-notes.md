@@ -4,7 +4,7 @@ title: "latex notes"
 description: ""
 category:
 tags: [latex]
-Time-stamp: "liuminzhao 10/25/2013 10:44:42"
+Time-stamp: "liuminzhao 10/25/2013 12:10:28"
 ---
 {% include JB/setup %}
 
@@ -354,3 +354,9 @@ in preamble
 # Figure position #
 
 Prefer `[!htbp]`
+
+# Comment #
+
+	% \newcommand{\comment}[1]{}  %comment not showed
+	\newcommand{\comment}[1]
+	{\par {\bfseries \color{blue} #1 \par}} %comment showed
