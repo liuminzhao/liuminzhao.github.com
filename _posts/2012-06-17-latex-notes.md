@@ -4,7 +4,7 @@ title: "latex notes"
 description: ""
 category:
 tags: [latex]
-Time-stamp: "liuminzhao 10/05/2013 13:11:21"
+Time-stamp: "liuminzhao 10/25/2013 10:44:42"
 ---
 {% include JB/setup %}
 
@@ -208,6 +208,26 @@ For `standalone`:
 	...
 	\end{document}
 
+## include  and input ##
+
+Input just copy and paste.
+
+## include break page ##
+
+Use `newclude` package and use `\include*{section}`.
+
+## Multiple files ##
+
+Put the following at the end of master file:
+
+	%%% Local Variables:
+	%%% mode: latex
+	%%% TeX-master: "dissertation"
+	%%% End:
+
+or `C-c _`, then `ref` will automatically scan other sub files.
+
+
 # Table #
 
 ## Scale Table to fit on one page ##
@@ -330,16 +350,6 @@ in preamble
 	\mathcal
 	\mathscr
 
-# Multiple files  #
-
-Put the following at the end of master file:
-
-	%%% Local Variables:
-	%%% mode: latex
-	%%% TeX-master: "dissertation"
-	%%% End:
-
-or `C-c _`, then `ref` will automatically scan other sub files.
 
 # Figure position #
 
