@@ -4,7 +4,7 @@ title: "emacs notes"
 description: ""
 category:
 tags: [emacs]
-Time-stamp: "liuminzhao 10/08/2013 22:51:44"
+Time-stamp: "liuminzhao 10/29/2013 16:26:18"
 ---
 {% include JB/setup %}
 
@@ -279,3 +279,8 @@ In lisp, they have special rules <http://ergoemacs.org/emacs/emacs_regex.html>
 	(defun replace-cite ()
 	(interactive)
 	(replace-regexp "\\\\\\(cite[tp]?\\){\\(\\w+\\)}" "`r \\1(bib2[['\\2']])`" nil (point-min) (point-max)))
+
+
+# Edit #
+
+	M-^ : join line
