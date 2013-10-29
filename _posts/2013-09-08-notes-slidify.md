@@ -4,12 +4,13 @@ title: "notes slidify"
 description: ""
 category:
 tags: [slidify]
-Time-stamp: "liuminzhao 10/21/2013 22:27:06"
+Time-stamp: "liuminzhao 10/27/2013 15:51:35"
 ---
 {% include JB/setup %}
 
 1. <http://ramnathv.github.io/slidifyExamples/>
 2. <https://github.com/ramnathv/slidifyExamples/tree/gh-pages/examples>
+3. <https://io-2012-slides.googlecode.com/git/template.html?presentme=true>
 
 # General #
 
