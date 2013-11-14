@@ -4,7 +4,7 @@ title: "reveal note"
 description: ""
 category:
 tags: [org-mode, emacs, html5]
-Time-stamp: "liuminzhao 10/23/2013 22:29:00"
+Time-stamp: "liuminzhao 11/11/2013 20:56:31"
 ---
 {% include JB/setup %}
 
@@ -105,3 +105,44 @@ Use custom id property
 Converting from markdown file
 
 	pandoc -s -S index.md -o index.org --from markdown-yaml_metadata_block
+
+# Example #
+
+	#+Title: Presenting with Emacs
+	#+Author: Minzhao Liu
+	#+Email: liuminzhao@gmail.com
+
+	#+OPTIONS: toc:t reveal_mathjax:t num:nil
+	#+REVEAL_TRANS: zoom
+	#+REVEAL_THEME: serif
+	#+REVEAL_ROOT: file:///Users/liuminzhao/dev/reveal.js
+	#+STARTUP: latexpreview
+
+	* Heading 1
+
+	$$\lambda$$
+
+	* Heading 2
+
+	** Sub-Heading 2.1
+
+	   测试下 中文字体 在 emacs 下
+
+	#+BEGIN_SRC R
+	  a <- rnorm(100)
+	  x <- y^2
+	#+END_SRC
+
+	** Sub-Heading 2.2
+
+	* Heading 3
+
+	* A very interesting slide
+	  :PROPERTIES:
+	  :reveal_data_state: soothe
+	  :END:
+
+	This slide is interesting because I am a geek :)
+
+	- bullet points can be added in moderation
+	- dont get too carried away with them
