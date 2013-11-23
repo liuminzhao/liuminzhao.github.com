@@ -35,7 +35,7 @@
       {% if page.Time-stamp %}
       <h4>Modified</h4>
       <div class="date">
-	<span>{{page.Time-stamp}}</span>
+	<span>{{page.Time-stamp | date: "%-d %B %Y"}}</span>
       </div>
       {% endif %}
     </section>
