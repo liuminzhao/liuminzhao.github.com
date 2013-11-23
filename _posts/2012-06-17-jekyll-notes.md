@@ -4,7 +4,7 @@ title: "jekyll notes"
 description: ""
 category:
 tags: [jekyll]
-Time-stamp: "liuminzhao 07/01/2013 14:24:22"
+Time-stamp: "liuminzhao 11/23/2013 00:44:50"
 ---
 {% include JB/setup %}
 
@@ -81,7 +81,7 @@ or downlaod zip into `./_theme_packages` and
 
 # Preview #
 
-	rake preview
+	jekyll serve
 
 [localhost](http://localhost:4000/)
 
@@ -160,6 +160,12 @@ then in `_includes/themes/hooligan/post.html`, update
 	</div>
 	{% endif %}
 
+With pretty date format:
+
+	{{ page.Time-stamp | date: "%-d %B %Y" }}
+
+for `9 September 2013`.
+
 # change auto puts when creating new post and page #
 
 modify the `Rakefile` under root directory
@@ -167,3 +173,22 @@ modify the `Rakefile` under root directory
 	post.puts 'Time-stamp: " "'
 
 for task:post
+
+# Put page in navigation #
+
+	layout: page
+	group: naivgation
+
+# Show Latest Posts #
+
+	{% for post in site.posts limit:1 %}
+	... Show the post ...
+	{% endfor %}
+	<h1>Recent Posts</h1>
+	{% for post in site.posts offset:1 limit:2 %}
+	... Show the next to posts ...
+	{% endfor %}
+
+use `limit` and `offset`.
+
+Second method: <https://gist.github.com/nimbupani/1421828>
