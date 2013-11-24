@@ -4,7 +4,8 @@ title: Minzhao Liu
 ---
 {% include JB/setup %}
 
-I blogged my notes here in case I forget about them. I am so forgetful and always broke my laptops.
+
+# Recent Notes
 
 <ul class="posts">
 {% for post in site.posts limit:5 %}
