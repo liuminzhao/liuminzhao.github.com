@@ -4,7 +4,7 @@ title: "notes for create R package "
 description: ""
 category:
 tags: [R]
-Time-stamp: "liuminzhao 08/25/2013 00:22:26"
+Time-stamp: "liuminzhao 01/01/2014 18:11:09"
 ---
 {% include JB/setup %}
 
@@ -277,3 +277,30 @@ in `inst/doc/*.Rnw`. Now may support `*.Rmd` file (after R 3.0.0)?
 
 	R CMD check myfirstpkg
 	R CMD build myfirstpkg
+
+# Notes from Jeff Leak
+
+<https://github.com/jtleek/rpackages>
+
+## R functions
+
+1. class: `classname-class.R`, `leek-class.R`
+2. method: `newclass-methodname-method.R`, `leek-plot-method.R`
+
+## Vignettes
+
+files should be in `packagename/vignettes`, during package building, the
+y are moved to `packagename/inst/doc`. For HTML, the file should be `vignette.Rmd`,
+for PDF, `vignette.Rnw`
+
+## Unit Tests
+
+Use `testthat` package. File name : `test-area-packagename.R` in the
+`inst/tests`. Then make a `run-all.R` in a separate directory called `tests`, in
+which:
+
+	library(testthat)
+	library(mypackage)
+	test_package("mypackage")
+
+Then when running `R CMD check`, there will be errors if any tests fail. See <https://github.com/jtleek/rpackages> for examples.
