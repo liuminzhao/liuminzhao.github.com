@@ -941,6 +941,11 @@ Log scale:
 
 	axes[3].fill_between(x, x**2, x**3, color="green", alpha=0.5);
 
+## Gallery
+
+1. <http://nbviewer.ipython.org/github/cs109/content/blob/master/lec_03_statistical_graphs_mpl_default.ipynb>
+2. <http://nbviewer.ipython.org/github/cs109/content/blob/master/lec_03_statistical_graphs.ipynb>
+
 # Reference #
 
 1. <http://maxburstein.com/blog/python-shortcuts-for-the-python-beginner/>
