@@ -764,6 +764,183 @@ Print out error and exit
 	sys.exit('error message!')
 
 
+# Matplot
+
+<http://nbviewer.ipython.org/github/jrjohansson/scientific-python-lectures/blob/master/Lecture-4-Matplotlib.ipynb>
+
+	from pylab import *
+
+or
+
+	import matplotlib.pyplot as plt
+
+## Matlab-like API Example:
+
+	x = linspace(0, 5, 10)
+	y = x ** 2
+	figure()
+	plot(x, y, 'r')
+	xlabel('x')
+	ylabel('y')
+	title('title')
+	show()
+
+## Subplot:
+
+	subplot(1, 2, 1)
+	plot(x, y, 'r--') # red , dashed
+	subplot(1, 2, 2)
+	plot(y, x, 'g*-');
+
+layout managers in matplotlib
+
+	fig, axes = plt.subplots()
+
+	axes.plot(x, y, 'r')
+	axes.set_xlabel('x')
+	axes.set_ylabel('y')
+	axes.set_title('title');
+
+subplot:
+
+	fig, axes = plt.subplots(nrows=1, ncols=2)
+
+	for ax in axes:
+		ax.plot(x, y, 'r')
+		ax.set_xlabel('x')
+		ax.set_ylabel('y')
+		ax.set_title('title')
+
+	fig.tight_layout()
+
+## OO API
+
+	fig = plt.figure()
+	axes = fig.add_axes([0, 0, 1, 1]) # left, bottom, width, height (range 0 to 1)
+	axes.plot(x, y, 'r')
+	axes.set_xlabel('x')
+	axes.set_ylabel('y')
+	axes.set_title('title')
+
+Picture in picture:
+
+	fig = plt.figure()
+
+	axes1 = fig.add_axes([0.1, 0.1, 0.8, 0.8]) # main axes
+	axes2 = fig.add_axes([0.2, 0.5, 0.4, 0.3]) # inset axes
+
+	# main figure
+	axes1.plot(x, y, 'r')
+	axes1.set_xlabel('x')
+	axes1.set_ylabel('y')
+	axes1.set_title('title')
+
+	# insert
+	axes2.plot(y, x, 'g')
+	axes2.set_xlabel('y')
+	axes2.set_ylabel('x')
+	axes2.set_title('insert title');
+
+## Figure size and DPI
+
+an 800x400 pixel, 100 dots-per-inch figure,
+
+	fig = plt.figure(figsize=(8,4), dpi=100)
+
+
+## Save
+
+	fig.savefig("filename.png", dpi=200)
+
+## Legends
+
+	ax.legend(["curve1", "curve2"])
+
+Better way:
+
+	ax.plot(x, x**2, label = "curve1")
+	ax.plot(x, x**2, label = "curve2")
+	ax.legend()
+
+Loc
+
+	ax.legend(loc = 0) # auto
+	ax.legend(loc = 1) # upper right, 2 = upper left , 3 = lower left , 4 = lower right
+
+## Latex support
+
+	label=r"$y = \alpha^2$"
+	ax.set_ylabel(r'$y$', fontsize=18)
+
+## Font
+
+	matplotlib.rcParams.update({'font.size': 18, 'font.family': 'serif'})
+
+## Color, lw, lt
+
+	# MATLAB style line color and style
+	ax.plot(x, x**2, 'b.-') # blue line with dots
+	ax.plot(x, x**3, 'g--') # green dashed line
+	ax.plot(x, x+1, color="red", alpha=0.5) # half-transparant red
+	ax.plot(x, x+2, color="#1155dd")        # RGB hex code for a bluish color
+	ax.plot(x, x+3, color="#15cc55")        # RGB hex code for a greenish color
+
+lw, linestyle
+
+	# possible linestype options ‘-‘, ‘–’, ‘-.’, ‘:’, ‘steps’
+	ax.plot(x, x+5, color="red", lw=2, linestyle='-')
+	ax.plot(x, x+6, color="red", lw=2, ls='-.')
+	ax.plot(x, x+7, color="red", lw=2, ls=':')
+
+Marker:
+
+	# possible marker symbols: marker = '+', 'o', '*', 's', ',', '.', '1', '2', '3', '4', ...
+	ax.plot(x, x+ 9, color="green", lw=2, ls='*', marker='+')
+	ax.plot(x, x+10, color="green", lw=2, ls='*', marker='o')
+	ax.plot(x, x+11, color="green", lw=2, ls='*', marker='s')
+	ax.plot(x, x+12, color="green", lw=2, ls='*', marker='1')
+
+	# marker size and color
+	ax.plot(x, x+13, color="purple", lw=1, ls='-', marker='o', markersize=2)
+	ax.plot(x, x+14, color="purple", lw=1, ls='-', marker='o', markersize=4)
+	ax.plot(x, x+15, color="purple", lw=1, ls='-', marker='o', markersize=8, markerfacecolor="red")
+	ax.plot(x, x+16, color="purple", lw=1, ls='-', marker='s', markersize=8,
+
+## Plot range
+
+	axe.set_ylim([0, 50])
+
+or
+
+	axis('tight')
+
+Log scale:
+
+	axe.set_yscale("log")
+
+## Grid
+
+	axe.grid(True)
+	axes[1].grid(color='b', alpha=0.5, linestyle='dashed', linewidth=0.5)
+
+## Other method
+
+### scatter
+
+	axes[0].scatter(xx, xx + 0.25*randn(len(xx)))
+
+### Step
+
+	axes[1].step(n, n**2, lw=2)
+
+### bar
+
+	axes[2].bar(n, n**2, align="center", width=0.5, alpha=0.5)
+
+### fill
+
+	axes[3].fill_between(x, x**2, x**3, color="green", alpha=0.5);
+
 # Reference #
 
 1. <http://maxburstein.com/blog/python-shortcuts-for-the-python-beginner/>
