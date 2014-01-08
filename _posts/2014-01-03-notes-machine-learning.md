@@ -4,7 +4,7 @@ title: "notes machine learning"
 description: ""
 category:
 tags: []
-Time-stamp: "liuminzhao 01/03/2014 10:52:53"
+Time-stamp: "liuminzhao 01/07/2014 17:57:28"
 ---
 {% include JB/setup %}
 
@@ -30,3 +30,22 @@ Reference: Kevin Murphy, Machine Learning A Probability Perspective
   - parametric model vs non-parametric model
   - k nearest neighbor
   - curse of dimensionality
+
+# Methods
+
+<http://blagrants.blogspot.com/2014/01/machine-learning-with-r-book-review.html>
+
+1. Nearest Neighbor
+2. naive Bayes
+3. Decision Trees
+4. Classification Rule Learners
+5. Linear Regression
+6. Regression Trees
+7. Model Trees
+8. Neural Networks
+9. SVM
+10. Association Rules
+11. K-means Clustering
+12. Random Forest
+
+Check book **Machine Learning with R** by *Brett Lantz*
