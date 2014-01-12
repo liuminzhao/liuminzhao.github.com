@@ -4,7 +4,7 @@ title: "android notes"
 description: ""
 category:
 tags: [android]
-Time-stamp: "liuminzhao 12/20/2013 20:59:41"
+Time-stamp: "liuminzhao 01/12/2014 13:43:58"
 ---
 {% include JB/setup %}
 
@@ -135,3 +135,61 @@ Make new folder as `publish`
 
 	cmd + a
 	cmd + shift + f
+
+# MediaPlayer
+
+- Resources put in the folder `res/raw`
+
+- Modify `Main...java`:
+
+	onCreate:
+	MediaPlayer mp = MediaPlayer.create(this, R.raw.ex...);
+	mp.start();
+
+## Life Cycle
+
+	OnCreate()
+	OnResume()
+	OnPause()
+
+Also need to define `MediaPlayer mp` under `MainActivity` before `OnPause`.
+
+# Button
+
+- add (drag)
+- change property: on click (yourmethod)
+- edit java file, under (yourmethod)
+
+# Debug
+
+	Log.e("pickle", "onCreate")
+	Import Log;
+
+set `Breakpoint`. `Debug as`.
+
+# Diagram
+
+`onPause` -> `mp.stop();`, `mp.release()`
+
+# Manifest
+
+Under `Manifest`:
+
+	config changes = "orientation|screenSize|uimode"
+
+or
+
+	screenOrientation = "portrait"
+
+to avoid start background music again
+
+# Style
+
+under `values/styles.xml`.
+
+	<style name = "mystyle" parent = "@android:style/TextAppearanceLarge"
+	<item> ...
+
+## Usage
+
+	style = "@style/mystyle"
