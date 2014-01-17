@@ -4,7 +4,7 @@ title: "linux notes"
 description: ""
 category:
 tags: [linux]
-Time-stamp: "liuminzhao 10/16/2013 21:21:00"
+Time-stamp: "liuminzhao 01/17/2014 14:29:36"
 ---
 {% include JB/setup %}
 
@@ -64,6 +64,10 @@ or `colordiff`
 	colordiff -y f1 f2 | less
 
 `less` for browsing slowly.
+
+To ignore spaces and end of lines:
+
+	--ignore-all-space
 
 [xahlee](http://xahlee.info/UnixResource_dir/unix_shell_text_processing.html)
 
