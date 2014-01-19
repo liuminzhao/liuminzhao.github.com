@@ -4,7 +4,7 @@ title: "android notes"
 description: ""
 category:
 tags: [android]
-Time-stamp: "liuminzhao 01/12/2014 13:43:58"
+Time-stamp: "liuminzhao 01/19/2014 14:20:39"
 ---
 {% include JB/setup %}
 
@@ -158,7 +158,18 @@ Also need to define `MediaPlayer mp` under `MainActivity` before `OnPause`.
 
 - add (drag)
 - change property: on click (yourmethod)
+
+		android:onClick="wiki"
+
 - edit java file, under (yourmethod)
+
+		public void wiki(View v){
+		String url = "http://en.wikipedia.org/wiki/Jabberwocky";
+		Intent i = new Intent(Intent.ACTION_VIEW);
+		i.setData(Uri.parse(url));
+		startActivity(i);
+		}
+
 
 # Debug
 
@@ -179,7 +190,7 @@ Under `Manifest`:
 
 or
 
-	screenOrientation = "portrait"
+	android:screenOrientation = "portrait"
 
 to avoid start background music again
 
@@ -193,3 +204,59 @@ under `values/styles.xml`.
 ## Usage
 
 	style = "@style/mystyle"
+
+# Enable external android device to debug
+
+`about phone` -> `build number` 7 times -> `usb debug enable`
+
+# Webview
+
+drag a `WebView` under `Composite`. Copy `html` file etc under `asset` folder
+
+	android:id="@+id/webView1"
+	android:layout_width="match_parent"
+	android:layout_height="match_parent"/>
+
+Modify your onCreate method to include the following two lines:
+
+	WebView myWebView = (WebView) findViewById(R.id.webView1);
+	myWebView.loadUrl("file:///android_asset/index.html");
+
+Enable `zoom` controls
+
+	myWebView.getSettings().setBuiltInZoomControls(true);
+	myWebView.getSettings().setJavaScriptEnabled(true);
+	mywebview.getSettings().setDomStorageEnabled(true);
+
+Add new activity that is accessible from the Launcher, create a 3rd activity :
+
+	Intent intent = new Intent();
+	intent.setClass(this, YourFirstActivity.class);
+	if (Math.random() > 0.5) {
+	// Open the Java Book instead!
+	intent.setClass(this, YourSecondActivity.class);
+	}
+	startActivity(intent);
+	finish();
+
+## Permission
+
+`AndroidManifest.xml` -> `Permission` -> `uses internet`
+
+# New activity
+
+`file`, `new`, `others`, `android activity`.
+
+Remember title and check laucher.
+
+	 <activity
+            android:name="com.vivigator.webviewapp.NasaActivity"
+            android:label="@string/title_activity_nasa" >
+                        <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+
+Can just delete the layout file and use previous one.
