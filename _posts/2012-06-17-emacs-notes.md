@@ -4,7 +4,7 @@ title: "emacs notes"
 description: ""
 category:
 tags: [emacs]
-Time-stamp: "liuminzhao 01/17/2014 16:36:25"
+Time-stamp: "liuminzhao 01/22/2014 22:53:23"
 ---
 {% include JB/setup %}
 
@@ -293,4 +293,4 @@ In lisp, they have special rules <http://ergoemacs.org/emacs/emacs_regex.html>
 	n, p: next, previous diff point
 
 - can also compare directories.
-- can use git
+- can use git: `ediff-revision`
