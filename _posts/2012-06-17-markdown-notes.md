@@ -2,133 +2,137 @@
 layout: post
 title: "markdown notes"
 description: ""
-category: 
+category:
 tags: [markdown]
 ---
 {% include JB/setup %}
+
+# Cheatsheet
+
+<https://github.com/adam-p/markdown-here/wiki/Markdown-Cheatsheet#wiki-tables>
 
 # Markdown Notes #
 
 - help
 
 	    C-c C-h
-  
-- header 
-	  
+
+- header
+
 	    C-c C-t
 
 ## Anchors : C-c C-a ##
 
-- link: 
+- link:
 
-	    C-c C-a l 	
-	
+	    C-c C-a l
+
 - wiki link:
 
 	    C-c C-a w
-	
+
 ## Commands: C-c C-c  ##
 
 - run markdown
 
 	    C-c C-c m
-	
+
 - preview
 
      	C-c C-c p
-	
+
 - save, current, preview
 
 	    C-c C-c e
-	
-- view 
+
+- view
 
 	    C-c C-c v
-	
+
 ## iamge: C-c C-i ##
 
 - image
 
 	    C-c C-i i
-	
+
 ## Physical styles: C-c C-p ##
 
 - bold
 
 	    C-c C-p b
-	
-- fixed width 
+
+- fixed width
 
 	    C-c C-p f
-	
+
 - italic
-	
+
 	    C-c C-p i
-	
+
 ## logical styles: C-c C-s ##
 
 - quote
 
 	    C-c C-s b
-	
+
 - Code:
-	
+
 	    C-c C-s c
-	
-- emphasis 
+
+- emphasis
 
 	    C-c C-s e
-	
+
 - strong
-	  
+
 	    C-c C-s s
-	
+
 ## Header: C-c C-t n ##
 
-- title: 
+- title:
 
 	    C-c C-t t
-	
-- section 
+
+- section
 
 	    C-c C-t s
-	
+
 ## other: ##
 
-- horizontal rule: 
+- horizontal rule:
 
 	    C-c -
-	
-## Navigation ##	
+
+## Navigation ##
 
 	C-M-n , C-M-p
 
 ## second level ##
 
-indent by four spaces 
+indent by four spaces
 
 ------------------------
 
 # [Pandoc User's Guide](http://johnmacfarlane.net/pandoc/README.html) #
 
     pandoc -o output.html input.txt
-	pandoc -f markdown -t latex hello.txt 
+	pandoc -f markdown -t latex hello.txt
 
 * -f = from
-* -t = to 
+* -t = to
 * -o = output
 
 ## PDF ##
 
-	pandoc test.txt -o test.pdf 
+	pandoc test.txt -o test.pdf
 
 * markdown2pdf
 
 ## writer options ##
 
 * -s : appropriate header and footer
-* --template=FILE : 
-* --toc 
+* --template=FILE :
+* --toc
 
 ## Math ##
 
@@ -145,26 +149,26 @@ indent by four spaces
 2 kinds
 
 * ===
-* ## 
+* ##
 
 ## Verbatim ##
 
-four spaces indented 
+four spaces indented
 
 ## Code ##
 
 * ~~~~~~~~~ or `
-* no indent needed 
+* no indent needed
 
         ~~~~{r}
-		x <- 3 
+		x <- 3
 		~~~~~~~~~~~~
 
 ## List ##
 
-four spaces rule 
+four spaces rule
 
-* cut off list : insert comment 
+* cut off list : insert comment
 
 ## Tables  ##
 
@@ -180,7 +184,7 @@ pandoc extension
 
 ### Grid Tables works ###
 
-: sample grid table 
+: sample grid table
 
 	+---------------+---------------+--------------------+
 	| Fruit         | Price         | Advantages         |
@@ -192,18 +196,29 @@ pandoc extension
 	|               |               | - tasty            |
 	+---------------+---------------+--------------------+
 
+	| Trend                     | N                  | A    | M    |
+	|---------------------------|--------------------|------|------|
+	| N                         | N,N                | N,A  | N,M  |
+	| A(additive)               | A,N                | A,A  | A,M  |
+	| Ad(additive damped)       | Ad,N               | Ad,A | Ad,M |
+	| M(multiplicative)         | M,N                | M,A  | M,M  |
+	| Md(multiplicative damped) | Md,N               | Md,A | Md,M |
+
 and can use [Emacs table mode](http://table.sourceforge.net/)
 
-or use **orgtbl-mode** 
+or use **orgtbl-mode**
+
+and use markdown table generator: <http://www.tablesgenerator.com/markdown_tables>
+
 
 
 ## Title block ##
 
-pandoc extension 
+pandoc extension
 
     % title
 	% author(s) (separated by semicolons)
-	% date 
+	% date
 
 ## Superscripts and subscripts ##
 
@@ -215,13 +230,13 @@ pandoc extension
 
 pandoc extension
 
-use double dollar sign 
+use double dollar sign
 
     $$\alpha$$
 
 # Slides with Pandoc #
 
-    -i : make slides show incremental 
+    -i : make slides show incremental
      pandoc -s --mathml -i -t dzslides input.md -o output.html
 
 ## Image size , center ##
@@ -242,7 +257,7 @@ embed html in markdown
 
 	```
 	Hi!
-	
+
 	[alt=center] {
 	display: block;
 	margin: auto;
