@@ -4,7 +4,7 @@ title: "jekyll notes"
 description: ""
 category:
 tags: [jekyll]
-Time-stamp: "liuminzhao 11/23/2013 00:44:50"
+Time-stamp: "liuminzhao 01/29/2014 12:29:23"
 ---
 {% include JB/setup %}
 
@@ -140,6 +140,10 @@ or
 	$$
 
 supported : <http://docs.mathjax.org/en/latest/tex.html>
+
+Update:
+
+seems need one more `\` to make it work
 
 # Update modified date #
 
