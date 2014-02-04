@@ -4,7 +4,7 @@ title: "android notes"
 description: ""
 category:
 tags: [android]
-Time-stamp: "liuminzhao 01/19/2014 14:20:39"
+Time-stamp: "liuminzhao 02/02/2014 14:39:18"
 ---
 {% include JB/setup %}
 
@@ -260,3 +260,153 @@ Remember title and check laucher.
         </activity>
 
 Can just delete the layout file and use previous one.
+
+# Linear Layout
+
+	<LinearLayout
+		android:orientation = "vertical">
+
+`vertical` or `horizontal`
+
+# EditText
+
+	<EditText
+		android:hint = "full name">
+		<requestFocus />
+	</EditText>
+
+request focus
+
+	android:minLines = "3"
+
+
+## `inputType`
+
+	<EditText
+		android:inputType = "textPersonName">
+		textEmailAddress
+		phone
+		textMultiLine
+
+# ImageButton
+
+	<ImageButton
+		android:onClick = "processForm" />
+
+and add to `MainActivity.java`:
+
+	public void processForm(View duck) {
+		duck.setVisibility(View.INVISIBLE); // GONE ; make it disaapear
+		Toast.makeText(this.getApplicationContext(), R.string.app_name, Toast.LENGTH_LONG).show;
+		String email = mEmail.getText().toString();
+			// .toLowerCase().contains("duck"); // contains gives T or F
+		Toast.makeText(this.getApplicationContext(), email, Toast.LENGTH_LONG).show();
+	}
+
+`Toast` : print message
+
+can set `android:layout_gravity = 'right'`;
+
+and also
+
+	android:layout_weight = "10"
+	android:adjustViewBounds = "true" // to fill bounds
+
+# view name
+
+In java code:
+
+	private EditText mName;
+
+then in `onCreate`:
+
+	mName = (EditText) findViewByID(R.id.name);
+	mEmail = (EditText) findViewByID(R.id.email);
+
+for general view
+
+	private View mName;
+
+then in `onCreate`:
+
+	mName = findViewByID(R.id.name);
+
+and it should be after `setContentView`
+
+# Play with String
+
+	int position email.indexOF("@");
+	if (position == -1){
+		Toast....
+		mEmail.requestFocus();  // request focus
+		return;
+	}
+
+	String username = email.substring(0, position);
+	String thankyou = "Thankyou " + username;
+
+	if ( ! email.contains("@")){
+	}
+
+	int len = comments.length();
+
+	int value = Integer.parseInt(phone);
+
+	name.equals("Fere")
+
+# `try`
+
+	int value = -1;
+	boolean valueOK = false;
+	try {
+		value = ...;
+		valueOK = true;
+	} catch(Exception e){
+		Log.d("fdsf", "fdjsfj");
+	}
+
+# animation
+
+	Animation anim = AnimationUtils.makeOutAnimation(this, true)
+	duck.startAnimation(anim);
+
+# Share
+
+## SEND
+
+In `public void processForm` method:
+
+	Intent i = new Intent(Intent.ACTION_SEND);
+	i.setType("text/plain");
+	i.putExtra(Intent.EXTRA_TEXT, "Whata");
+	startActivity(i);
+
+### SMS message
+
+	Intent i = new Intent(Intent.ACTION_VIEW);
+	i.setData(Uri.parse("sms:" + phone));
+	i.putExtra("sms_body", coments);
+	startActivity(i);
+
+### Email
+
+	Intent i = new Intent(Intent.ACTION_SENDTO, Uri.fromParts("mailto", "someone@somewhere", null));
+	i.putExtra(Intent.EXTRA_SUBJECT, "important");
+	i.putExtra(Intent.EXTRA_TEXT, message);
+	startActivity(i);
+
+	try{
+	startActivity(i);
+	} catch(Exception e) {
+		Toast...
+	}
+
+	if (i.resolveActivity(getPackageManager()) = null) {
+		Toast...
+	} else {
+	startActivity( Intent.createChooser(i, "choose email"));
+	}
+
+# ScrollView
+
+Use `scrollview` to wrap linearlayout
