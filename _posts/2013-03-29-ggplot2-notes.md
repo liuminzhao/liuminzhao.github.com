@@ -39,6 +39,10 @@ Usage:
 
     ggplot(data, aes(x, y)) + geom_line()
 
+Line by group
+
+	ggplot(dat, aes(x = date, y = target, color = factor(account_id), group = account_id)) + geom_point() + geom_line()
+
 ## Density ##
 
     ggplot(data, aes(y)) + geom_density(fill = 'blue')
