@@ -4,7 +4,7 @@ title: "jekyll notes"
 description: ""
 category:
 tags: [jekyll]
-Time-stamp: "liuminzhao 01/29/2014 12:29:23"
+Time-stamp: "liuminzhao 02/06/2014 11:46:49"
 ---
 {% include JB/setup %}
 
@@ -82,6 +82,7 @@ or downlaod zip into `./_theme_packages` and
 # Preview #
 
 	jekyll serve
+	jekyll serve --watch : to rebuild after every save
 
 [localhost](http://localhost:4000/)
 
