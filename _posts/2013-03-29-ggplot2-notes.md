@@ -43,6 +43,23 @@ Line by group
 
 	ggplot(dat, aes(x = date, y = target, color = factor(account_id), group = account_id)) + geom_point() + geom_line()
 
+Plot two variables as lines: <http://stackoverflow.com/questions/3777174/plotting-two-variables-as-lines-using-ggplot2>
+
+	ggplot(test_data, aes(date)) +
+	geom_line(aes(y = var0, colour = "var0")) +
+	geom_line(aes(y = var1, colour = "var1"))
+
+or
+
+	require("reshape")
+	require("ggplot2")
+
+	test_data_long <- melt(test_data, id="date")  # convert to long format
+
+	ggplot(data=test_data_long,
+       aes(x=date, y=value, colour=variable)) +
+    geom_line()
+
 ## Density ##
 
     ggplot(data, aes(y)) + geom_density(fill = 'blue')
