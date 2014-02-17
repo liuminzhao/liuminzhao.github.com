@@ -4,7 +4,7 @@ title: "linux notes"
 description: ""
 category:
 tags: [linux]
-Time-stamp: "liuminzhao 01/17/2014 14:29:36"
+Time-stamp: "liuminzhao 02/17/2014 17:19:59"
 ---
 {% include JB/setup %}
 
@@ -451,3 +451,7 @@ can show status of current process:
 ssh without password
 
 	cat .ssh/id_rsa.pub | ssh b@B 'cat >> .ssh/authorized_keys'
+
+# spell check
+
+	ispell -t filename.tex
