@@ -3,7 +3,7 @@ layout: page
 title: About
 header: About
 group: navigation
-Time-stamp: "liuminzhao 11/24/2013 16:43:46"
+Time-stamp: "liuminzhao 02/19/2014 14:30:17"
 ---
 {% include JB/setup %}
 
@@ -14,10 +14,10 @@ Time-stamp: "liuminzhao 11/24/2013 16:43:46"
 <div style="float:left"><img src="http://i.imgur.com/NSyDqih.jpg"
 style="float:left;margin:0 10px 10px 0" width="15%"></div>
 
-Currently I am a Ph.D. candidate in
+Currently I am a Ph.D. candidate (2014 Summer expected) in
 [Statistics](http://www.stat.ufl.edu/) at
-[University of Florida](http://www.ufl.edu/).  I am also working as a
-research assistant for my advisor
+[University of Florida](http://www.ufl.edu/).
+I am also working as a research assistant for my advisor
 [Dr. Mike Daniels](http://www.sbs.utexas.edu/mjdaniels/) at
 [University of Texas at Austin](http://www.utexas.edu).  My research
 topic includes quantile regression in frequentist and Bayesian
@@ -37,8 +37,8 @@ This project is done during my internship in [ETS] during 2011 summer
 with Dr. Yi-Hsuan Lee and Dr. Alina von Davier. It was presented in
 International Meeting of the Psychometric Society
 [IMPS](http://www.psychometrika.org/) 2012 conference in Lincoln,
-Nebraska and will appear as a chapter in the book, New Developments in
-Quantitative Psychology.
+Nebraska and will appear as a chapter in the book, [New Developments in
+Quantitative Psychology](http://www.springer.com/statistics/social+sciences+%26+law/book/978-1-4614-9347-1).
 
 The project is to fit a mixed effects model based on a training
 dataset, find the relationship between test-takers' scores and
@@ -60,6 +60,15 @@ found here. [R package](https://github.com/liuminzhao/bqrpt.git)
 This paper develops new approach to fit quantile regression for
 longitudinal data with monotone missingness and how to do sensitivity
 analysis. [R package](https://github.com/liuminzhao/qrmissing.git)
+
+## Publication
+
+- **Liu, M.**; Daniels, MJ & Perri, M. (submitted) Quantile Regression in the Presence of Monotone Missingness with Sensitivity Analysis
+- Waters, T.;Daniels, MJ; Bazzoli, GJ.; Perencevich, E.; Dunton, N.; Staggs, VS.; Potter, C.; Fareed, N.; **Liu, M.**; Shorr, RI. (submitted) Impact of Medicare’s Nonpayment for Hospital Acquired Conditions: Lessons for Future Policy
+- Lee, Y.-H.; **Liu, M.** & Davier, A. (2013) Detection of Unusual Test Administrations Using a Linear Mixed Effects Model. In: New Developments in Quantitative Psychology, Springer New York, 2013, 66, 133-149. The authors contributed equally.
+- Shorr, R. I.; Chandler, A. M.; Mion, L. C.; Waters, T. M.; **Liu, M.**; Daniels, M. J.; Kessler, L. A. & Miller, S. T. (2012) Effects of an Intervention to Increase Bed Alarm Use to Prevent Falls in Hospitalized Patients. A Cluster Randomized Trial. Annals of internal medicine, Am Coll Physicians, 2012, 157, 692-699
+- Bouldin, E. L.; Andresen, E. M.; Dunton, N. E.; Simon, M.; Waters, T. M.; **Liu, M.**; Daniels, M. J.; Mion, L. C. & Shorr, R. I. Falls among adult patients hospitalized in the United States: Prevalence and trends. Journal of patient safety, LWW, 2013, 9, 13-17
+
 
 ## My Interest
 
