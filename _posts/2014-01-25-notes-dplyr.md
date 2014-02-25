@@ -4,7 +4,7 @@ title: "notes dplyr"
 description: ""
 category:
 tags: [R]
-Time-stamp: "liuminzhao 01/25/2014 16:36:06"
+Time-stamp: "liuminzhao 02/25/2014 16:15:01"
 ---
 {% include JB/setup %}
 
@@ -34,6 +34,15 @@ select columns
 	select(dat, col1, col2)
 	select(dat, col1:col5)
 	select(dat, -(col1:col5))
+
+new feature for ddply 0.1.2:
+
+	select(df, starts_with("xyz_"))
+	select(df, contains("xyz_"))
+	select(df, ends_with("xyz_"))
+	select(df, matches("xyz.*"))
+	select(df, num_range(x1:xN)
+
 
 ## `mutate()`
 
