@@ -46,6 +46,11 @@ China.
 - Shorr, R. I.; Chandler, A. M.; Mion, L. C.; Waters, T. M.; **Liu, M.**; Daniels, M. J.; Kessler, L. A. & Miller, S. T. (2012) Effects of an Intervention to Increase Bed Alarm Use to Prevent Falls in Hospitalized Patients. A Cluster Randomized Trial. Annals of internal medicine, Am Coll Physicians, 2012, 157, 692-699
 - Bouldin, E. L.; Andresen, E. M.; Dunton, N. E.; Simon, M.; Waters, T. M.; **Liu, M.**; Daniels, M. J.; Mion, L. C. & Shorr, R. I. Falls among adult patients hospitalized in the United States: Prevalence and trends. Journal of patient safety, LWW, 2013, 9, 13-17
 
+# Recent Presentation
+
+- ENAR, Baltimore, MD, 2014/03/19, [slides](http://liuminzhao.github.io/enar2014/)
+- IMPS, Lincoln, NB, 2012/07/12, [ppt](pages/Minzhao-slides.ppt)
+- ENAR, Washington, DC, 2012/04/04, [pdf](pages/enar-minzhao-slides.pdf)
 
 # Recent Notes
 
