@@ -4,7 +4,7 @@ title: "reveal note"
 description: ""
 category:
 tags: [org-mode, emacs, html5]
-Time-stamp: "liuminzhao 11/11/2013 20:56:31"
+Time-stamp: "liuminzhao 03/03/2014 22:47:19"
 ---
 {% include JB/setup %}
 
@@ -52,10 +52,16 @@ A new slide begins after `#+REVEAL` keyword
 
 # frag #
 
+fragment
+
 	#+ATTR_REVEAL: :frag highlight-blue {roll-in, grow, shrink, fade-out,
 	highlight-red, highlight-blue}
 
+must follow directly
+
 # Data State #
+
+under slides, change slide property.
 
    :PROPERTIES:
    :reveal_data_state: alert {alert, blackout, soothe}
@@ -105,6 +111,21 @@ Use custom id property
 Converting from markdown file
 
 	pandoc -s -S index.md -o index.org --from markdown-yaml_metadata_block
+
+# Theme:
+
+## single color background:
+
+	:PROPERTIES:
+	:reveal_background: #123456
+	:END:
+
+## single image background
+
+	:PROPERTIES:
+    :reveal_background: ./images/whale.jpg
+    :reveal_background_trans: slide
+    :END:
 
 # Example #
 
