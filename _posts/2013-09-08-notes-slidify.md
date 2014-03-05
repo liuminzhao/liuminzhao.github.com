@@ -4,7 +4,7 @@ title: "notes slidify"
 description: ""
 category:
 tags: [slidify]
-Time-stamp: "liuminzhao 10/27/2013 15:51:35"
+Time-stamp: "liuminzhao 03/04/2014 14:32:47"
 ---
 {% include JB/setup %}
 
@@ -34,6 +34,7 @@ use `---` to separate frames
 	publish('dir', host = 'dropbox')
 	publish(user = '', repo = '', host = 'github')
 
+for `github`, the repo should be `gh-pages`.
 
 # IO2012 #
 
