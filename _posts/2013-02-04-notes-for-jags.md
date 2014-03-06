@@ -7,6 +7,14 @@ tags: [jags]
 ---
 {% include JB/setup %}
 
+# Procedure
+
+1. Model
+2. Compilation
+3. Initial
+4. Adapt and burn in
+5. monitoring
+
 # Syntax #
 
 ## Model ##
@@ -64,9 +72,54 @@ saved in `example.bug`
 	print(summary(output))
 	plot(output)
 
+## Data and init
+
+	data <- list(x = x, y = y)
+	init <- list(beta = 0, tau = 1)
+	jags <- jags.model(..., inits = init, data = data,
+		n.chain = 3, n.adapt = 100)
+
+## Monitor
+
+	par = c('alpha', 'beta')
+	samp = coda.sample(jags, par, n.iter = 20000)
+	plot(samp)
+	summary(samp)
+
+### window
+
+	burn.in = 1000
+	summary(window(samp, start = burn.in))
+
 ## Convergence ##
 
 	codamenu()
+
+	gelman.diag(samp)
+	gelman.plot(samp)
+
+
+## prediction
+
+	round(summary(window(samps[, paste("y[", 1:25, "]",
+	sep = "")], start = burn.in))$quantiles[, c(3, 1, 5)], 2)
+
+## Useful functions
+
+### Categorical
+
+	y ~ dcat(p[]) # 1 ~ n
+
+### multinomial
+
+	y[i, 1:3] ~ dmulti(q[], n[i]) # (1,2,n-3)
+	n[i] = sum(y[i,])
+
+### Dirichlet
+
+	q[1:3] ~ ddirch(alpha[])
+	for (k in 1:3){alpha[k] <- 1}
+
 
 
 # Stochastic vs. Deterministic Nodes
@@ -103,3 +156,9 @@ saved in `example.bug`
 6. <http://jackman.stanford.edu/classes/BASS/ch8.pdf>
 7. <http://www.math.helsinki.fi/openbugs/IceBUGS/Presentations/PlummerIceBUGS.pdf>
 8. <http://www.mrc-bsu.cam.ac.uk/bugs/faqs/contents.shtml>
+9. <http://blue.for.msu.edu/CSTAT_13/exercises/exercise-1/ex-1.pdf>
+10. <http://polisci2.ucsd.edu/cfariss/HumanRightsScores/Code.html>
+11. <http://www.columbia.edu/~cjd11/charles_dimaggio/DIRE/styled-4/styled-11/code-8/>
+12. <http://darrenjw.wordpress.com/tag/tutorial/>
+13. <http://cddesjardins.files.wordpress.com/2010/04/8290_mcmc2.pdf>
+14. [winbugs manual](http://www.mrc-bsu.cam.ac.uk/bugs/winbugs/manual14.pdf)
