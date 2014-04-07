@@ -4,7 +4,7 @@ title: "linux notes"
 description: ""
 category:
 tags: [linux]
-Time-stamp: "liuminzhao 02/17/2014 17:19:59"
+Time-stamp: "liuminzhao 03/21/2014 12:05:32"
 ---
 {% include JB/setup %}
 
@@ -88,6 +88,10 @@ Format:
 	00 09-18 * * 1-5 /home/ramesh/bin/check-db-status : work day working hour
 	* * * * * CMD : every minute
 
+Every one hour:
+
+      0 */1 * * * 
+
 Others:
 
 1. When you specify */5 in minute field means every 5 minutes.
@@ -113,6 +117,8 @@ One time:
 Ever:
 
 	export EDITOR=nano
+
+Put `#!/usr/bin/` and `chmod +x` for the script
 
 # Screen #
 
@@ -268,6 +274,10 @@ some required an extension to be provided
 
 some reported `sed` is slower than `grep` combined with `mv`.
 
+## output
+
+	sed 's/Victorious Gaming/VictoriousGaming/g' twitchrecord.txt > new.txt
+
 ## Format:
 
 	sed [-nefri] 'command' infile
@@ -314,11 +324,27 @@ replace certain string
 	sed 's/old/new/g' file
 	sed 's/old//g' # delete old
 
+<http://www.thegeekstuff.com/2009/09/unix-sed-tutorial-replace-text-inside-a-file-using-substitute-command/>
+
+If no flag, only first matching is replaced
+
+	sed 's/Linux/Linux-Unix/' thegeekstuff.txt
+
+use `g` to specify global substitution
+
+	sed 's/Linux/Linux-Unix/g' thegeekstuff.txt
+
+replace 2nd occurrence
+
+	sed 's/Linux/Linux-Unix/2' thegeekstuff.txt
+
 insert :
 
 	sed -i '$a bye' file # insert byb at the last line
 
 reference: <http://www.zhukun.net/archives/6029>
+
+
 
 # Scp #
 
