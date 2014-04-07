@@ -10,6 +10,10 @@ tags: [python]
 Python Notes
 ==========
 
+# Reference #
+
+1. <http://maxburstein.com/blog/python-shortcuts-for-the-python-beginner/>
+
 # variable #
 
 	my_variable=10
@@ -167,6 +171,11 @@ Use `with`,
     with open('foo') as myfile:
 	    print myfile.closed
 
+## write
+
+	file = open(yourfile, 'a')
+	file.write(string)
+	file.close()
 
 # sort #
 
@@ -260,6 +269,7 @@ protected.
 * ropemacs
 * ipython
 * pymacs
+* elpy
 
 	    C-c C-c
 		C-c | # region
@@ -946,6 +956,40 @@ Log scale:
 1. <http://nbviewer.ipython.org/github/cs109/content/blob/master/lec_03_statistical_graphs_mpl_default.ipynb>
 2. <http://nbviewer.ipython.org/github/cs109/content/blob/master/lec_03_statistical_graphs.ipynb>
 
-# Reference #
+# Email
 
-1. <http://maxburstein.com/blog/python-shortcuts-for-the-python-beginner/>
+<http://rosettacode.org/wiki/Send_an_email#Python>
+
+	import smtplib
+
+	def sendemail(from_addr, to_addr_list, cc_addr_list,
+              subject, message,
+              login, password,
+              smtpserver='smtp.gmail.com:587'):
+    header  = 'From: %s\n' % from_addr
+    header += 'To: %s\n' % ','.join(to_addr_list)
+    header += 'Cc: %s\n' % ','.join(cc_addr_list)
+    header += 'Subject: %s\n\n' % subject
+    message = header + message
+
+    server = smtplib.SMTP(smtpserver)
+    server.starttls()
+    server.login(login,password)
+    problems = server.sendmail(from_addr, to_addr_list, message)
+    server.quit()
+    return problems
+
+
+Example:
+
+	sendemail(from_addr    = 'python@RC.net',
+          to_addr_list = ['RC@gmail.com'],
+          cc_addr_list = ['RC@xx.co.uk'],
+          subject      = 'Howdy',
+          message      = 'Howdy from a python function',
+          login        = 'pythonuser',
+          password     = 'XXXXX')
+
+# Unicode
+
+	print a.encode('utf-8')
