@@ -4,7 +4,7 @@ title: "notes for git"
 description: ""
 category:
 tags: [git]
-Time-stamp: "liuminzhao 09/06/2013 15:30:17"
+Time-stamp: "liuminzhao 03/30/2014 10:37:37"
 ---
 {% include JB/setup %}
 
@@ -59,7 +59,13 @@ change `~/.ssh/config`:
 
 	ForwardX11 no
 
-# Push to multiple repo #
+# Push
+
+## Push branch to remote
+
+	git push -u origin mynewfeature
+
+## Push to multiple repo #
 
 add to `.git/config`:
 
@@ -97,6 +103,11 @@ Sometimes it does not show remote branch on status bar, it means you do not have
 # Pull #
 
 Pull = fetch + merge
+
+## pull remote branch
+
+	git fetch origin
+	git checkout --track origin/daves_branch
 
 # branch #
 
