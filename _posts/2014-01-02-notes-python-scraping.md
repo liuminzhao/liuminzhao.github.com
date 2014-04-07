@@ -4,7 +4,7 @@ title: "notes python scraping"
 description: ""
 category:
 tags: []
-Time-stamp: "liuminzhao 01/02/2014 09:46:56"
+Time-stamp: "liuminzhao 03/08/2014 13:38:50"
 ---
 {% include JB/setup %}
 
@@ -20,7 +20,22 @@ Time-stamp: "liuminzhao 01/02/2014 09:46:56"
 	r = requests.get(url)
 	print r.url
 
-# Using bs4
+
+## with header (twitch)
+
+	headers = {'Accept': 'application/vnd.twitchtv.v2+json'}
+	hs_url = 'https://api.twitch.tv/kraken/streams?game=Hearthstone%3A%20Heroes%20of%20Warcraft'
+	r = requests.get(hs_url, headers = headers)
+
+
+# get soup
+
+	from urllib2 import urlopen
+	html = urlopen(url).read()
+	soup = BeautifulSoup(html)
+
+
+# Using bs4 (method)
 
 	bs = BeautifulSoup(r.text)
 	for movie in bs.findAll('td', 'title'):
@@ -30,3 +45,29 @@ Time-stamp: "liuminzhao 01/02/2014 09:46:56"
 		runtime = movie.find('span', 'runtime').contents[0]
 		rating = movie.find('span', 'value').contents[0]
 		print title, genres, runtime, rating
+
+
+## `soup.find_all`
+
+can find tag name, attribute, text, and string
+
+	soup.find_all('b')
+	find_all(re.compile("^b"))
+	find_all("title")
+	find_all("p", "title")
+	find_all(id = "jlj")
+
+## find all url
+
+	for link in soup.find_all('a'):
+		print(link.get('href'))
+
+## All text
+
+	print(soup.get_text())
+
+# json
+
+	import json
+	r = requests.get(hs_url, headers = headers)
+	rjson = r.json()['streams']
