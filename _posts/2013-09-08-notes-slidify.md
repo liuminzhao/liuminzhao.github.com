@@ -4,7 +4,7 @@ title: "notes slidify"
 description: ""
 category:
 tags: [slidify]
-Time-stamp: "liuminzhao 03/04/2014 14:32:47"
+Time-stamp: "liuminzhao 03/15/2014 18:47:23"
 ---
 {% include JB/setup %}
 
@@ -135,6 +135,36 @@ Two column
 
 	<img style="float:middle" src="assets/img/polya.jpg" />
 	<img align="middle" src="assets/img/polya.jpg" />
+
+### center
+
+<http://stackoverflow.com/questions/16904054/slidify-how-to-position-an-image>
+
+manually:
+
+	<div style='text-align: center;'>
+    <img height='560' src='x.png' />
+	</div>
+
+auto:
+
+	<!-- Limit image width and height -->
+	<style type='text/css'>
+	img {
+    max-height: 560px;
+    max-width: 964px;
+	}
+	</style>
+
+	<!-- Center image on slide -->
+	<script src="http://ajax.aspnetcdn.com/ajax/jQuery/jquery-1.7.min.js"></script>
+	<script type='text/javascript'>
+	$(function() {
+    $("p:has(img)").addClass('centered');
+	});
+	</script>
+
+put them right below the description
 
 ## shout ##
 
