@@ -4,7 +4,7 @@ title: "emacs notes"
 description: ""
 category:
 tags: [emacs]
-Time-stamp: "liuminzhao 01/22/2014 22:53:23"
+Time-stamp: "liuminzhao 04/06/2014 22:22:08"
 ---
 {% include JB/setup %}
 
@@ -284,6 +284,14 @@ In lisp, they have special rules <http://ergoemacs.org/emacs/emacs_regex.html>
 # Edit #
 
 	M-^ : join line
+
+## find and replace for multiple file
+
+	M-x find-name-dired
+	t: for all
+	m: for selected
+	Q: query-replace
+	C-x s !: to save all
 
 # Ediff #
 
