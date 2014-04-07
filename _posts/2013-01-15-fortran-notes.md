@@ -3,7 +3,7 @@ layout: post
 title: "fortran notes"
 description: ""
 tags: [fortran]
-Time-stamp: "liuminzhao 08/22/2013 16:33:37"
+Time-stamp: "liuminzhao 04/01/2014 10:04:28"
 ---
 {% include JB/setup %}
 
@@ -151,9 +151,24 @@ use `exit` to exit loop
 		return
 		end
 
+8. can also return array value [reference](http://stackoverflow.com/questions/3828094/function-returning-an-array-in-fortran)
+
+		function polynomialMult(npts,x,y)
+		integer npts
+		double precision x(npts), results(npts + 1), y(npts,npts)
+
+		! Change the next line to whatever you want
+		double precision, dimension(npts) :: polynomialMult
+
+		polynomialMult =  x(1:npts) + 1
+
+		end function
+
+9. Passing the sizes of arrays into subroutines is very FORTRAN77 and almost always unnecessary now.
+
 # SUBROUTINE #
 
-1. can return more than 1 value
+1. can return more than 1 value (array)
 2. no type
 3. should not be declared in the calling program unit
 4. called by `call`
@@ -167,7 +182,7 @@ Subroutine has `RETURN`
 	return
 	end
 
-`call mysub`
+	call mysub
 
 # Progress Bar #
 
