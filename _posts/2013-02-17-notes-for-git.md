@@ -4,7 +4,7 @@ title: "notes for git"
 description: ""
 category:
 tags: [git]
-Time-stamp: "liuminzhao 03/30/2014 10:37:37"
+Time-stamp: "liuminzhao 04/13/2014 17:51:36"
 ---
 {% include JB/setup %}
 
@@ -107,7 +107,13 @@ Pull = fetch + merge
 ## pull remote branch
 
 	git fetch origin
-	git checkout --track origin/daves_branch
+	git branch -a
+
+If you want to work on that branch, you'll need to create a local tracking branch:
+
+	$ git checkout -b experimental origin/experimental
+
+[refer](http://stackoverflow.com/questions/67699/how-do-i-clone-all-remote-branches-with-git)
 
 # branch #
 
