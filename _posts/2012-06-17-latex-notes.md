@@ -4,14 +4,14 @@ title: "latex notes"
 description: ""
 category:
 tags: [latex]
-Time-stamp: "liuminzhao 10/25/2013 12:10:28"
+Time-stamp: "liuminzhao 04/14/2014 10:08:12"
 ---
 {% include JB/setup %}
 
 LaTeX notes
 ==========
 
-# parallel picture #
+# side by side figures #
 
 	\begin{tabular}{cc}
 	\begin{minipage}
@@ -22,6 +22,53 @@ LaTeX notes
  		fasfd
  	\end{minipage}
 	\end{tabular}
+
+## Use `subcaption`
+
+	\begin{figure}[ht]
+	\centering
+	\begin{subfigure}{.5\textwidth}
+    \includegraphics[width=1\linewidth]{diffquantiley1.png}
+	\caption{Scatter plot of $Y_1$ and fitted quantile lines}
+	\end{subfigure}%
+	\begin{subfigure}{.5\textwidth}
+    \includegraphics[width = 1\linewidth]{diffquantiley2.png}
+	\caption{Scatter plot of marginal $Y_2$ and fitted quantile lines}
+	\end{subfigure}
+	\end{figure}
+
+The `%` after `subfigure` is important to have side by side figures.
+
+## `subfigure` package
+
+	\begin{figure}
+	\hfill
+	\subfigure[Title A]{\includegraphics[width=5cm]{img1}}
+	\hfill
+	\subfigure[Title B]{\includegraphics[width=5cm]{img2}}
+	\hfill
+	\caption{Title for both}
+	\end{figure}
+
+## `minipage`
+
+	\begin{figure}
+	\centering
+	\begin{minipage}{.5\textwidth}
+	\centering
+	\includegraphics[width=.4\linewidth]{image1}
+	\captionof{figure}{A figure}
+	\label{fig:test1}
+	\end{minipage}%
+	\begin{minipage}{.5\textwidth}
+	\centering
+	\includegraphics[width=.4\linewidth]{image1}
+	\captionof{figure}{Another figure}
+	\label{fig:test2}
+	\end{minipage}
+	\end{figure}
+
+[refer](http://tex.stackexchange.com/questions/37581/latex-figures-side-by-side)
 
 # Number #
 
