@@ -4,7 +4,7 @@ title: "notes for git"
 description: ""
 category:
 tags: [git]
-Time-stamp: "liuminzhao 04/13/2014 17:51:36"
+Time-stamp: "liuminzhao 04/17/2014 19:32:20"
 ---
 {% include JB/setup %}
 
@@ -120,6 +120,11 @@ If you want to work on that branch, you'll need to create a local tracking branc
 A new branch with new history:
 
 	git checkout --orphan NEW_BRANCH_NAME_HERE
+
+## change local branch name
+
+	git branch -m <oldname> <newname>
+	git branch -m <newname>
 
 # Mercurial #
 
