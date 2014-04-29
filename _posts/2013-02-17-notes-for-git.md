@@ -4,7 +4,7 @@ title: "notes for git"
 description: ""
 category:
 tags: [git]
-Time-stamp: "liuminzhao 04/17/2014 19:32:20"
+Time-stamp: "liuminzhao 04/29/2014 16:39:25"
 ---
 {% include JB/setup %}
 
@@ -18,6 +18,13 @@ or
 	git merge branch
 
 usually just fast forward the [HEAD](http://www.slideshare.net/littlebtc/git-5528339).
+
+## merge commit to multiple branches
+
+if fix a bug, want to merge to other branches:
+
+	git checkout others
+	git cherry-pick A
 
 # rebase #
 
