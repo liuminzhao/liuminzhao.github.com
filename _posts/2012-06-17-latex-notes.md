@@ -4,7 +4,7 @@ title: "latex notes"
 description: ""
 category:
 tags: [latex]
-Time-stamp: "liuminzhao 04/14/2014 10:08:12"
+Time-stamp: "liuminzhao 05/05/2014 14:31:52"
 ---
 {% include JB/setup %}
 
@@ -401,6 +401,12 @@ in preamble
 # Figure position #
 
 Prefer `[!htbp]`
+
+# PDF figure
+
+	\includegraphics[page=..,trim=...,clip]{foo}
+
+for parts of the page
 
 # Comment #
 
