@@ -173,3 +173,26 @@ Evaluate:
     name       ; the argument of the function
     your-name  ; the let-bound variable "Bastien"
     ))))
+
+# application
+
+## round all number in region
+
+<http://stackoverflow.com/questions/23636226/how-to-round-all-the-numbers-in-a-region>
+
+	(defun my-round-nb (start end)
+	"round the nb of the region."
+	(interactive "r")
+	(save-restriction
+    (narrow-to-region start end)
+    (goto-char 1)
+    (let ((case-fold-search nil))
+    (while (search-forward-regexp "\\([0-9]+\\.[0-9]+\\)" nil t)
+	(replace-match (format "%0.1f" (string-to-number (match-string 1)))
+	)))))
+
+or
+
+	C-M-%[0-9]+\.[0-9]+RET\,(format "%0.2f" \#&)RET
+
+The `\,(...)` in the replacement text means to interpolate the result of calling the parenthesized Lisp expression, and `\#&` means "whatever the entire pattern matched, converted to a number."
