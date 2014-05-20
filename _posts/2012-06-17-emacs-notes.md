@@ -4,7 +4,7 @@ title: "emacs notes"
 description: ""
 category:
 tags: [emacs]
-Time-stamp: "liuminzhao 04/06/2014 22:22:08"
+Time-stamp: "liuminzhao 05/18/2014 23:08:29"
 ---
 {% include JB/setup %}
 
@@ -280,6 +280,10 @@ In lisp, they have special rules <http://ergoemacs.org/emacs/emacs_regex.html>
 	(interactive)
 	(replace-regexp "\\\\\\(cite[tp]?\\){\\(\\w+\\)}" "`r \\1(bib2[['\\2']])`" nil (point-min) (point-max)))
 
+
+## example
+
+	C-M-% \\textit{\(\w+\)} RET \1
 
 # Edit #
 
