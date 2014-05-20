@@ -4,7 +4,7 @@ title: "notes slidify"
 description: ""
 category:
 tags: [slidify]
-Time-stamp: "liuminzhao 03/15/2014 18:47:23"
+Time-stamp: "liuminzhao 05/19/2014 21:59:19"
 ---
 {% include JB/setup %}
 
@@ -216,3 +216,9 @@ For example, create `mytwocol.html` under `assets/layouts/slide.html`:
     </div>
 	</article>
 	</slide>
+
+# presenter note
+
+	*** =pnotes
+	- fdsa
+	- dsaf
