@@ -4,7 +4,7 @@ title: "emacs notes"
 description: ""
 category:
 tags: [emacs]
-Time-stamp: "liuminzhao 05/18/2014 23:08:29"
+Time-stamp: "liuminzhao 06/05/2014 07:38:16"
 ---
 {% include JB/setup %}
 
@@ -288,6 +288,7 @@ In lisp, they have special rules <http://ergoemacs.org/emacs/emacs_regex.html>
 # Edit #
 
 	M-^ : join line
+	M-u : upcase word
 
 ## find and replace for multiple file
 
