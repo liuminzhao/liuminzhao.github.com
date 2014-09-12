@@ -20,6 +20,8 @@ Multiple Cursor:
 	option + drag
 	cmd + click
 	cmd + shift + f : change keybinding needed
+	
+select blocks and then `C+S+l` to add all cursors to the blocks.
 
 Project switch:
 
