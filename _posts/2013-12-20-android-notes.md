@@ -250,7 +250,7 @@ Add new activity that is accessible from the Launcher, create a 3rd activity :
 Remember title and check laucher.
 
 	 <activity
-            android:name="com.vivigator.webviewapp.NasaActivity"
+            android:name="com.****.webviewapp.NasaActivity"
             android:label="@string/title_activity_nasa" >
                         <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
