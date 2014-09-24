@@ -274,3 +274,11 @@ embed html in markdown
 `code `
 
 or just begin with four spaces
+
+# Knitr
+
+For latex, insert 
+
+	<script type="text/javascript" src="http://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML"></script>
+
+For figure caption: use `fig.cap`. Other options can refer [reference](http://kbroman.org/knitr_knutshell/pages/Rmarkdown.html)
