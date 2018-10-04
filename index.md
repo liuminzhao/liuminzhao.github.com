@@ -9,7 +9,7 @@ title: Minzhao Liu
 <div style="float:left"><img src="http://i.imgur.com/NSyDqih.jpg"
 style="float:left;margin:0 10px 10px 0" width="15%"></div>
 
-Currently I am a Ph.D. candidate (2014 Summer expected) in
+Currently I am a Senior Biostatistician II at PPD, Austin TX. I finished my Ph.D. (2014 Aug) in
 [Statistics](http://www.stat.ufl.edu/) at
 [University of Florida](http://www.ufl.edu/).
 I am also working as a research assistant for my advisor
