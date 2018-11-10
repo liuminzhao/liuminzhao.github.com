@@ -48,6 +48,8 @@ China.
 
 # Recent Presentation
 
+- BLRM [slides](pages/Minzhao_BLRM_Simulation.pptx)
+- Event Projection [slides](pages/Training_Event_Projection_Minzhao_2018.pptx)
 - ENAR, Baltimore, MD, 2014/03/19, [slides](http://liuminzhao.github.io/enar2014/)
 - IMPS, Lincoln, NB, 2012/07/12, [ppt](pages/Minzhao-slides.ppt)
 - ENAR, Washington, DC, 2012/04/04, [pdf](pages/enar-minzhao-slides.pdf)
