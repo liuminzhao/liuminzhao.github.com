@@ -179,12 +179,12 @@ anim_save("animation_2019w.mp4", animation = for_mp4 )
 Results
 ---------------
 
-![](../assets/figures/gganim_2019e.gif)
+![](assets/figures/gganim_2019e.gif)
 
 
 <figure class="video_container">
-  <video controls="true" allowfullscreen="true" poster="../assets/figures/animation_2019w.mp4">
-    <source src="../assets/figures/animation_2019w.mp4" type="video/mp4">
+  <video controls="true" allowfullscreen="true" poster="assets/figures/animation_2019w.mp4">
+    <source src="assets/figures/animation_2019w.mp4" type="video/mp4">
   </video>
 </figure>
 
