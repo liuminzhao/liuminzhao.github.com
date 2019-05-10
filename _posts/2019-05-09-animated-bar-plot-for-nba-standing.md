@@ -179,12 +179,9 @@ anim_save("animation_2019w.mp4", animation = for_mp4 )
 Results
 ---------------
 
-![](assets/figures/gganim_2019e.gif)
+<blockquote class="imgur-embed-pub" lang="en" data-id="Iaztd8b"><a href="//imgur.com/Iaztd8b">View post on imgur.com</a></blockquote><script async src="//s.imgur.com/min/embed.js" charset="utf-8"></script>
 
 
 <figure class="video_container">
-  <video controls="true" allowfullscreen="true" poster="assets/figures/animation_2019w.mp4">
-    <source src="assets/figures/animation_2019w.mp4" type="video/mp4">
-  </video>
+  <iframe src="https://www.youtube.com/embed/r41AWlKdNy0" frameborder="0" allowfullscreen="true"> </iframe>
 </figure>
-
