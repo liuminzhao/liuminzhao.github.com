@@ -1,11 +1,8 @@
 _site/*
 _theme_packages/*
-
 Thumbs.db
 .DS_Store
-
 !.gitkeep
-
 .rbenv-version
 .rvmrc
 /_backup/categories.html
@@ -17,3 +14,5 @@ Thumbs.db
 /_posts/2013-03-20-knitr-jags.html
 /_posts/.Rhistory
 /screenshot.png
+.Rproj.user
+.Rhistory

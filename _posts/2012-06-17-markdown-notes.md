@@ -1,9 +1,9 @@
 ---
-layout: post
 title: "markdown notes"
-description: ""
-category:
-tags: [markdown]
+description: ''
+layout: post
+tags: markdown
+category: null
 ---
 {% include JB/setup %}
 
@@ -241,10 +241,6 @@ use double dollar sign
 
 ## Image size , center ##
 
-Hello there!
-
-![center](/images/hello.jpg)
-
 use absolute directory:
 
 	![Bilby Stampede](https://github.com/images/logo.png)
@@ -282,3 +278,48 @@ For latex, insert
 	<script type="text/javascript" src="http://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML"></script>
 
 For figure caption: use `fig.cap`. Other options can refer [reference](http://kbroman.org/knitr_knutshell/pages/Rmarkdown.html)
+
+# Video
+
+[reference](https://about.gitlab.com/handbook/product/technical-writing/markdown-guide/#images)
+
+## Display videos from YouTube
+
+This method works for YouTube videos and any other embed video within an `<iframe>` tag.
+
+1. Copy the code below and paste it into your markdown file. Leave a blank line above and below it. Do NOT edit the code block (e.g., remove spaces - the video iframe may not render properly)
+2. Go the video URL you want to display
+3. Click on "Share", then "Embed"
+4. Copy the `<iframe>` source (src) URL only, and paste it replacing the src below:
+
+```
+<!-- blank line -->
+<figure class="video_container">
+  <iframe src="https://www.youtube.com/embed/enMumwvLAug" frameborder="0" allowfullscreen="true"> </iframe>
+</figure>
+<!-- blank line -->
+```
+
+## Display local videos (HTML5)
+
+This method works for any video uploaded to somewhere retrievable from the internet from a URL, or from a relative path like path/to/video.mp4.
+
+1. Read through the w3schools HTML5 video guide, or the MDN `<video>` guide.
+2. Record or export the video in these three formats to achieve cross-browser and cross-device compatibility: .mp4, .ogg and .webm.
+3. Get the URL for your video
+4. Choose an image to use as a poster
+5. Copy the code below and paste it to your file
+6. Replace the src URLs for your video URLs
+
+```
+<!-- blank line -->
+<figure class="video_container">
+  <video controls="true" allowfullscreen="true" poster="path/to/poster_image.png">
+    <source src="path/to/video.mp4" type="video/mp4">
+    <source src="path/to/video.ogg" type="video/ogg">
+    <source src="path/to/video.webm" type="video/webm">
+  </video>
+</figure>
+<!-- blank line -->
+```
+

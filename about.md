@@ -130,9 +130,6 @@ information about myself.
 <a href="https://github.com/{{ site.author.github }}" class="zocial github icon" target="_blank">
 <span class="hidden-desktop">Github</span>
 </a>
-<a href="https://plus.google.com/{{ site.author.googleplus }}" class="zocial googleplus icon" target="_blank">
-<span class="hidden-desktop">Google+</span>
-</a>
 <a href="http://www.linkedin.com/in/{{ site.author.linkedin }}" class="zocial linkedin icon" target="_blank">
 <span class="hidden-desktop">LinkedIn</span>
 </a>
