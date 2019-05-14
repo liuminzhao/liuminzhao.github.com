@@ -4,6 +4,14 @@ title: Minzhao Liu
 ---
 {% include JB/setup %}
 
+# Latest Notes
+
+<ul class="posts">
+{% for post in site.posts limit:5 %}
+<li><span>{{ post.date | date_to_string }}</span> &raquo; <a href="{{ BASE_PATH }}{{ post.url }}">{{ post.title }}</a></li>
+{% endfor %}
+</ul>
+
 # [About Me](about.html)
 
 <div style="float:left"><img src="http://i.imgur.com/NSyDqih.jpg"
@@ -54,10 +62,4 @@ China.
 - IMPS, Lincoln, NB, 2012/07/12, [ppt](pages/Minzhao-slides.ppt)
 - ENAR, Washington, DC, 2012/04/04, [pdf](pages/enar-minzhao-slides.pdf)
 
-# Recent Notes
 
-<ul class="posts">
-{% for post in site.posts limit:5 %}
-<li><span>{{ post.date | date_to_string }}</span> &raquo; <a href="{{ BASE_PATH }}{{ post.url }}">{{ post.title }}</a></li>
-{% endfor %}
-</ul>
