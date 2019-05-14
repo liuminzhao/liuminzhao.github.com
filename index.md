@@ -4,14 +4,6 @@ title: Minzhao Liu
 ---
 {% include JB/setup %}
 
-# Latest Notes
-
-<ul class="posts">
-{% for post in site.posts limit:5 %}
-<li><span>{{ post.date | date_to_string }}</span> &raquo; <a href="{{ BASE_PATH }}{{ post.url }}">{{ post.title }}</a></li>
-{% endfor %}
-</ul>
-
 # [About Me](about.html)
 
 <div style="float:left"><img src="http://i.imgur.com/NSyDqih.jpg"
@@ -31,6 +23,15 @@ under Dr. Yi-Hsuan Lee and Dr. Alina von Davier. Before coming to US,
 I had a B.S. in Mathematics at
 [Fudan University](http://www.fudan.edu.cn/englishnew/), Shanghai,
 China.
+
+# Latest Notes
+
+<ul class="posts">
+{% for post in site.posts limit:5 %}
+<li><span>{{ post.date | date_to_string }}</span> &raquo; <a href="{{ BASE_PATH }}{{ post.url }}">{{ post.title }}</a></li>
+{% endfor %}
+</ul>
+
 
 # [Project](pages/project.html)
 

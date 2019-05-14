@@ -14,13 +14,13 @@ This is inspired by this [post](https://kieranhealy.org/blog/archives/2019/05/13
 
 ## Girls
 
-<blockquote class="imgur-embed-pub" lang="en" data-id="a/YxGdlbL"><a href="//imgur.com/YxGdlbL"></a></blockquote><script async src="//s.imgur.com/min/embed.js" charset="utf-8"></script>
+<blockquote class="imgur-embed-pub" lang="en" data-id="pLMpmwe"><a href="//imgur.com/pLMpmwe">View post on imgur.com</a></blockquote><script async src="//s.imgur.com/min/embed.js" charset="utf-8"></script>
 
 When you pause the gif at around 2000 - 2017, you can clear see the change of initial `A` comparing with that in 1800s. 
 
 ## Boys
 
-<blockquote class="imgur-embed-pub" lang="en" data-id="a/Es5fsVr"><a href="//imgur.com/Es5fsVr"></a></blockquote><script async src="//s.imgur.com/min/embed.js" charset="utf-8"></script>
+<blockquote class="imgur-embed-pub" lang="en" data-id="PxvdVR1"><a href="//imgur.com/PxvdVR1">View post on imgur.com</a></blockquote><script async src="//s.imgur.com/min/embed.js" charset="utf-8"></script>
 
 For boys, it's more interesting to see the peek used to be `J`, `R` and `W`, then by 2000s, `A, B` rises while `H, R` and `W` declines.
 
