@@ -44,12 +44,12 @@ urls = dbReadTable(con, "urls") #Read the URL
 
 domain = url_parse(urls$url)$domain # parse the url to get the main domain
 
-domaint = tibble(domain) # 
+domaint = tibble(domain, weights = urls$visit_count) # REMEMBER TO GET WEIGHTS
 
 # get count
 
 domain_count = domaint %>% 
-  count(domain) %>% 
+  count(domain, wt=weights) %>% 
   arrange(desc(n)) 
 
 # get top n=10
