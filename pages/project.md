@@ -6,6 +6,10 @@ group: navigation
 ---
 {% include JB/setup %}
 
+# Patient Data Dashboard via R Shiny Project
+
+I played around *R Shiny* and made a patient data dashboard web interface, which can be easily extended to **ADaM** and efficacy data demostration as well. The website can be accessed from [here](https://liuminzhao.shinyapps.io/rshiny)
+
 # Research Assistant Projects
 
 - Falls Prevention Project

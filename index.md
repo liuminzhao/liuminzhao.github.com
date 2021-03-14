@@ -9,7 +9,7 @@ title: Minzhao Liu
 <div style="float:left"><img src="http://i.imgur.com/NSyDqih.jpg"
 style="float:left;margin:0 10px 10px 0" width="15%"></div>
 
-Currently I am a Senior Biostatistician II at PPD, Austin TX. I finished my Ph.D. (2014 Aug) in
+Currently I am a Principal Biostatistician at PPD, Austin TX. I finished my Ph.D. (2014 Aug) in
 [Statistics](http://www.stat.ufl.edu/) at
 [University of Florida](http://www.ufl.edu/).
 I am also working as a research assistant for my advisor
@@ -35,6 +35,7 @@ China.
 
 # [Project](pages/project.html)
 
+- [Patient Data Dashboard](https://liuminzhao.shinyapps.io/rshiny)
 - Falls Prevention Project
 - [Effects of an Intervention to Increase Bed Alarm Use for Falls Prevention](http://annals.org/article.aspx?articleid=1392191)
 - Detection of Unusual Test Administrations Using a Linear Mixed Effects Model

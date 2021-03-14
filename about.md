@@ -14,7 +14,7 @@ Time-stamp: "liuminzhao 02/19/2014 14:30:17"
 <div style="float:left"><img src="http://i.imgur.com/NSyDqih.jpg"
 style="float:left;margin:0 10px 10px 0" width="15%"></div>
 
-Currently I am Senior Statistician II at PPD, Austin TX. I finished my Ph.D. (2014 Aug) in
+Currently I am a Principal Statistician at PPD, Austin TX. I finished my Ph.D. (2014 Aug) in
 [Statistics](http://www.stat.ufl.edu/) at
 [University of Florida](http://www.ufl.edu/).
 I am also working as a research assistant for my advisor
@@ -30,6 +30,11 @@ I had a B.S. in Mathematics at
 China.
 
 ## Projects
+
+### Patient Data Dashboard via R Shiny
+
+[link](https://liuminzhao.shinyapps.io/rshiny)
+
 
 ### Detection of Unusual Test Administrations Using a Linear Mixed Effects Model
 
