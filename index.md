@@ -35,6 +35,7 @@ China.
 
 # [Project](pages/project.html)
 
+- [Sample Size Calculator](https://liuminzhao.shinyapps.io/samplesize/)
 - [Patient Data Dashboard](https://liuminzhao.shinyapps.io/rshiny)
 - Falls Prevention Project
 - [Effects of an Intervention to Increase Bed Alarm Use for Falls Prevention](http://annals.org/article.aspx?articleid=1392191)
